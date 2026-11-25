@@ -292,11 +292,11 @@ export function shotsA(S) {
   });
   add("b3", "s27", L("b3f") - 0.15, "character", (c) => {
     const p = c.p, g = hall(p + "-set");
-    const ms = actor(p + "-ms", "muhammadShah", 960, 960, 1.6, { pose: { armL: [14, 10], armR: [-20, -40] }, over: { brows: "worried" } }, c.t0, c.t1);
+    const ms = actor(p + "-ms", "muhammadShah", 960, 960, 1.6, { pose: { armL: [14, 10], armR: [-20, -40] }, over: { brows: "worried", prop: "none" } }, c.t0, c.t1);
     const drums = rows(p, p + "-mu", [{ y: 1000, s: 1.2, n: 2, x0: 260, dx: 1380 }]);
     const svg = SVG(symbols(p) + g + drums.svg + ms.svg + `<g id="${p}-rs" transform="translate(1080,640) scale(0.7,0.7)">${rose(p + "-ro")}</g>`);
     let js = cam(p + "-cam", c.t0, c.t1, [1.05, 0, 40], [1.16, 0, 70]) + ms.js + crowd(drums.ids, c.t0 + 1.2, c.t1, 14, 0.3, 4);
-    js += tr(`${p}-rs`, [[c.t0, [1080, 640, 0.7]], [c.t0 + 1.4, [1080, 640, 0.7]], [c.t0 + 2.4, [1150, 1010, 0.7], "power2.in"], [c.t1, [1150, 1010, 0.7]]]);
+    js += tr(`${p}-rs`, [[c.t0, [1085, 660, 0.7]], [c.t0 + 1.4, [1085, 660, 0.7]], [c.t0 + 2.4, [1150, 1010, 0.7], "power2.in"], [c.t1, [1150, 1010, 0.7]]]);
     js += `CC.track(tl,'${p}-ro','rot',[[${r1(c.t0 + 1.4)},0],[${r1(c.t0 + 2.4)},80]]);`;
     js += rot(`${p}-ms-armR-lower`, [[c.t0, -40], [c.t0 + 1.4, -40], [c.t0 + 2, 20]]) + rot(`${p}-ms-head`, [[c.t0 + 1.4, 0], [c.t0 + 2.4, 10], [c.t1, 6]]);
     return { svg, ov: stamp(p + "-stp", "WAR", 1220, 160), js: js + stampIn(p + "-stp", L("b3f") + 4.2) };
