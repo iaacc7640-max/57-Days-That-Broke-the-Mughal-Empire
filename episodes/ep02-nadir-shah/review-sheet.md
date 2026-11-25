@@ -90,5 +90,27 @@ Years are spoken as words (1739 → "seventeen thirty-nine").
 - Google Drive: the pack is uploaded to "ClearCut History/ep02-nadir-shah/" (see the delivery list at the end).
 - `ahir.pdf` is missing, so I could not check page numbers or the quote against the book.
 
-## 6. A12 checklist
-(filled in after the final render — see below)
+## 6. A12 pre-export checklist
+| # | Item | Result | Evidence |
+|---|---|---|---|
+| 1 | Hook | **PASS*** | No intro, logo or greeting; the first line is the conflict. Picture changes at 0:02.6, 0:05.2, 0:08.0, 0:09.4, 0:10.7, 0:13.6, 0:16.7, 0:18.1. *The question lands at 0:11–0:17 rather than by 0:15, because the verbatim cold open runs 16.8 s (see §4). |
+| 2 | Open loops | PASS | All 3 ★ lines are verbatim (b2g, b4g, b6h), each with an unresolved sting; the cold-open "How?" and the tease get stings too. |
+| 3 | Re-hooks ≤ 60 s | PASS | Beat cuts with a 0.25 s push and a label chip at 0:18, 0:56 (re-hook), 1:29, 2:14, 2:54, 3:42, 4:16, 5:13, 5:50 (re-hook), 6:17. The longest gap is 45 s. |
+| 4 | Pacing | PASS | 61 shots, 1.3–11.5 s each, none over 12 s. No more than two shots of the same type in a row (checked by script). The QA script found no 2-second window without motion across all 7 render chunks. 1 archival shot out of 61, framed and credited. |
+| 5 | Crisp picture | PASS | Code search finds no blur, backdrop-filter, feGaussianBlur, fog, haze or glow (only in comments). Shadows are hard offsets (6/12 px, 0 blur). Grain is 3.5 % and moves: mean difference between frames 1/15 s apart is 3.3–5.3. Vignette ≤ 12 %, dark edges only. Hard cuts and 0.25 s pushes, no crossfades. Darkest pixels: the raw render bottomed out at 34–38 on some ink-only frames, so the master applies a gentle shadow curve; measured after it: 21–23. |
+| 6 | Characters | PASS | 7 rigs animated: blink, breathe, talk (3 mouths), point/gesture (Nadir, Baji Rao, Company merchant, nobles), walk (Nadir ×3, Abdali), react (brows). Crowds of 16–88 figures each with their own bob. |
+| 7 | Name cards / chips / text size | PASS | Name cards on first appearance for Muhammad Shah, Nizam-ul-Mulk, Baji Rao I, Rajiv Ahir, Nadir Shah, Saadat Khan, Jon Wilson and Ahmad Shah Abdali. A label chip at every beat. All text ≥ 36 px, kept clear of faces. |
+| 8 | Maps | PASS | MAP SIMPLIFIED on all 14 map shots. The first map opens on the assumed Ep 1 state (1707 green + Company pin). `anchor-states.json` saves the ep02 state. The contested 500-horsemen claim carries a trust tag. |
+| 9 | Audio | PASS (measured) | Narration is −1 dB in the mix. Music sits ~13 dB under the voice during speech and is ducked. 165 SFX cues, ducked 3 dB under speech. Final mix −14.0 LUFS integrated, true peak −1.5 dBTP. Shots are timed from the measured line starts, so picture and voice stay in sync. The mix was measured, not listened to. |
+| 10 | Story | PASS | Script check finds 0 uses of "and then" / "after that" / "next," / sentence-initial "Then". The beats are linked by but/so/therefore. The ending gives a takeaway (reputation of being untouchable) and a tease (Abdali → Panipat). |
+| 11 | Accuracy | PASS with flags | VERIFY done (§3). Estimates are hedged on screen. The Wilson quote is verbatim from the brief and labelled "quoted in Ahir, p. 65". Check it against the book: the PDF was missing. |
+| 12 | Length | PASS | 6:58.4, inside the 6:00–7:00 target. |
+| 13 | Packaging | PASS | Title is 36 characters. Thumbnails have 3 elements and 2 words each ("HE TOOK EVERYTHING" / "DELHI FELL"), are readable at 320×180, keep the bottom-right corner clear, and don't repeat the title. The description has 9 chapters, the first at 00:00 and each ≥ 10 s. The pinned comment and 5 replies are ready. `captions.srt` has 109 cues of ≤ 2×42 characters with correct spellings. |
+| 14 | Delivery | see §8 | |
+
+## 7. Known weak spots
+- The Baji Rao horse is simple and stiff; it's the weakest drawing in the film (s19, 1:48).
+- The cold-open question lands about 2 s late because the verbatim text runs long.
+- The score is synthesised and functional rather than lush. If you have a preferred music bed, it can be swapped in.
+- The quote cards leave white space under the text on purpose, so the attribution line stays in a fixed spot.
+- Wikimedia's rate limit cost us the second archival painting.
