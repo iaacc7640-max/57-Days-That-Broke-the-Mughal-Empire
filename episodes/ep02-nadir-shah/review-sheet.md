@@ -87,7 +87,7 @@ Years are spoken as words (1739 → "seventeen thirty-nine").
 ## 5. Skipped or failed
 - Wikimedia Commons rate-limited downloads (HTTP 429) for over 15 minutes, so the second archival image was skipped. I did not try other routes around the limit.
 - Openverse and Internet Archive are blocked by the network proxy (403), so I used Wikimedia only.
-- No Google Drive connector is attached to this session, so there was no Drive upload.
+- Google Drive: the pack is uploaded to "ClearCut History/ep02-nadir-shah/" (see the delivery list at the end).
 - `ahir.pdf` is missing, so I could not check page numbers or the quote against the book.
 
 ## 6. A12 checklist
