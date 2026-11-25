@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <title>57 Days That Broke the Mughal Empire</title>
+    <script src="assets/vendor/gsap.min.js"></script>
+    <style>
+
+@font-face{font-family:"CC Bebas";src:url("assets/fonts/bebas-neue-latin-400-normal.woff2") format("woff2");font-weight:400}
+@font-face{font-family:"CC Inter";src:url("assets/fonts/inter-latin-400-normal.woff2") format("woff2");font-weight:400}
+@font-face{font-family:"CC Inter";src:url("assets/fonts/inter-latin-600-normal.woff2") format("woff2");font-weight:600}
+@font-face{font-family:"CC Inter";src:url("assets/fonts/inter-latin-800-normal.woff2") format("woff2");font-weight:800}
+@font-face{font-family:"CC Garamond";src:url("assets/fonts/eb-garamond-latin-500-normal.woff2") format("woff2");font-weight:500}
+@font-face{font-family:"CC Garamond";src:url("assets/fonts/eb-garamond-latin-500-italic.woff2") format("woff2");font-weight:500;font-style:italic}
+@font-face{font-family:"CC Garamond";src:url("assets/fonts/eb-garamond-latin-600-normal.woff2") format("woff2");font-weight:600}
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { margin: 0; width: 1920px; height: 1080px; overflow: hidden; background: #E9DCC0; }
+      #main { position: absolute; inset: 0; }
+      #fx { position: absolute; inset: 0; pointer-events: none; z-index: 50; }
+      #grain { position: absolute; left: -200px; top: -200px; width: 2320px; height: 1480px; background-image: url("assets/grain.png"); background-repeat: repeat; opacity: 0.035; }
+      #vignette { position: absolute; inset: 0; background: radial-gradient(ellipse at center, rgba(20,16,14,0) 62%, rgba(20,16,14,0.12) 100%); }
+    </style>
+  </head>
+  <body>
+    <div id="main" data-composition-id="main" data-start="0" data-duration="418.4" data-width="1920" data-height="1080">
+      <div id="cold" data-composition-id="cold" data-composition-src="compositions/cold.html" data-start="0" data-duration="18.062" data-track-index="1" data-track-kind="graphics" data-width="1920" data-height="1080"></div>
+      <div id="b1" data-composition-id="b1" data-composition-src="compositions/b1.html" data-start="18.062" data-duration="70.902" data-track-index="1" data-track-kind="graphics" data-width="1920" data-height="1080"></div>
+      <div id="b2" data-composition-id="b2" data-composition-src="compositions/b2.html" data-start="88.964" data-duration="45.312" data-track-index="1" data-track-kind="graphics" data-width="1920" data-height="1080"></div>
+      <div id="b3" data-composition-id="b3" data-composition-src="compositions/b3.html" data-start="134.276" data-duration="39.623" data-track-index="1" data-track-kind="graphics" data-width="1920" data-height="1080"></div>
+      <div id="b4" data-composition-id="b4" data-composition-src="compositions/b4.html" data-start="173.899" data-duration="47.879" data-track-index="1" data-track-kind="graphics" data-width="1920" data-height="1080"></div>
+      <div id="b5" data-composition-id="b5" data-composition-src="compositions/b5.html" data-start="221.778" data-duration="33.778" data-track-index="1" data-track-kind="graphics" data-width="1920" data-height="1080"></div>
+      <div id="b6" data-composition-id="b6" data-composition-src="compositions/b6.html" data-start="255.556" data-duration="57.88" data-track-index="1" data-track-kind="graphics" data-width="1920" data-height="1080"></div>
+      <div id="b7" data-composition-id="b7" data-composition-src="compositions/b7.html" data-start="313.436" data-duration="63.652" data-track-index="1" data-track-kind="graphics" data-width="1920" data-height="1080"></div>
+      <div id="b8" data-composition-id="b8" data-composition-src="compositions/b8.html" data-start="377.088" data-duration="41.312" data-track-index="1" data-track-kind="graphics" data-width="1920" data-height="1080"></div>
+      <div id="fx" data-composition-id="fx" data-composition-src="compositions/fx.html" data-start="0" data-duration="418.4" data-track-index="2" data-track-kind="graphics" data-width="1920" data-height="1080"></div>
+      <audio id="mix" class="clip" src="assets/audio/mix.wav" data-start="0" data-duration="418.4" data-track-index="3" data-volume="1"></audio>
+    </div>
+    <script>
+      window.__timelines["main"] = gsap.timeline({ paused: true });
+    </script>
+  </body>
+</html>

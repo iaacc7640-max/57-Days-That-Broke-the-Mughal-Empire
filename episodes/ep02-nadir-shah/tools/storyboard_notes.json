@@ -1,0 +1,490 @@
+{
+"s01": [
+"c1",
+"Delhi gate at dawn; 66 Persian soldiers in 3 rows march with turquoise banners",
+"—",
+"slow push 1.00→1.08, parallax, rows march, banners flutter",
+"—",
+"marching feet"
+],
+"s02": [
+"c1",
+"Nadir Shah strides through the gate (walk cycle, blink, breathe)",
+"Nadir Shah: walk",
+"0.25 s push-in then slow push",
+"—",
+"whoosh"
+],
+"s03": [
+"c2",
+"Carts of chests roll away from Delhi's walls; soldiers march out",
+"crowd",
+"pan, wheels turn, rows march",
+"DELHI (sign)",
+"cart creak"
+],
+"s04": [
+"c2",
+"The Peacock Throne lowered on ropes onto a cart",
+"—",
+"0.25 s push; throne drops, tilts, cart rolls",
+"—",
+"whoosh, heavy cart creak, thud"
+],
+"s05": [
+"c2",
+"Kohinoor in a steel gauntlet; flat four-point sparkle turns",
+"—",
+"quick push, rays rotate, sparkle rotates/scales",
+"—",
+"gem glint"
+],
+"s06": [
+"c3",
+"Anchor map 1707 (Mughal green) + Company pin; turquoise invasion-arrow draws from the north-west to Delhi",
+"—",
+"zoom toward Punjab; dashed arrow draws with army icon",
+"MAP SIMPLIFIED",
+"whoosh, march"
+],
+"s07": [
+"c3",
+"Zoom to Bengal: tiny Company ensign flicks on and off",
+"—",
+"zoom 1.5→1.9; flag blinks",
+"A TRADING COMPANY · MAP SIMPLIFIED",
+"ticks"
+],
+"s08": [
+"c4",
+"Empty throne platform in a cool marble hall",
+"—",
+"slow push",
+"—",
+"STING (How?)"
+],
+"s09": [
+"b1a",
+"Split screen: four panels slide up — emperor, conqueror, governor, minister",
+"Muhammad Shah, Nadir Shah, Saadat Khan (hands clasped), Nizam (arms folded): idle + blink",
+"panels slide in on each noun",
+"chip DELHI · 1719 | THE PLEASURE KING; panel titles",
+"whoosh, paper, ticks"
+],
+"s10": [
+"b1b",
+"Durbar: Muhammad Shah with rose on a red cushion throne",
+"Muhammad Shah: talk (3 mouths), rose arm moves, head tilt",
+"0.25 s push then push-in",
+"name card 1719 · Muhammad Shah · Mughal emperor, 1719–1748",
+"paper"
+],
+"s11": [
+"b1c",
+"Musicians play, rose petals fall; the emperor sways",
+"Muhammad Shah: sways head and arm; 4 musicians bob",
+"pan + parallax, petals fall",
+"RANGEELA = “THE COLOURFUL ONE”",
+"court music (score), paper"
+],
+"s12": [
+"b1d",
+"puppet-strings: kingmaker hands jerk an emperor puppet; the strings vanish and he drops free",
+"Muhammad Shah as puppet: arms jerk",
+"puppet bobs; hands withdraw",
+"stamp KINGMAKERS",
+"stamp thud, ring, thud"
+],
+"s12b": [
+"b1d",
+"The empty Peacock Throne; a crack draws down its frame",
+"—",
+"slow push; crack draws",
+"—",
+"crack"
+],
+"s13": [
+"b1e",
+"Anchor map, 1707 state (first map beat: India in Mughal green + Company pin at Calcutta)",
+"—",
+"0.25 s push, slow zoom",
+"chip INDIA · 1720s | STATES WITHIN THE STATE (re-hook); MUGHAL EMPIRE; Delhi; MAP SIMPLIFIED",
+"whoosh"
+],
+"s14": [
+"b1f",
+"Nizam-ul-Mulk, arms folded, a crown floating beside him",
+"Nizam: talk, head turn, blink",
+"pan + parallax",
+"name card 1724 · Nizam-ul-Mulk · Founder of Hyderabad state",
+"paper"
+],
+"s15": [
+"b1g",
+"Map: Bengal, Awadh, Punjab wipe in their own colours beside Hyderabad",
+"—",
+"hard-edged wipes; zoom",
+"BENGAL, AWADH, PUNJAB, HYDERABAD; TAXES AND ARMIES KEPT AT HOME; MAP SIMPLIFIED",
+"paper ×4"
+],
+"s16": [
+"b1h",
+"A giant crown wobbles on the raised arms of three governors",
+"3 governors: arms up, breathe, blink",
+"crown wobbles; push",
+"MUGHAL EMPIRE, 1730s",
+"creak"
+],
+"s17": [
+"b2a",
+"Neglected frontier fort in the passes; tattered green flag",
+"—",
+"0.25 s push, parallax pan, flag flutters",
+"chip NORTH-WEST FRONTIER · 1737 | WARNING SHOTS; FORTS UNPAID · PASSES UNWATCHED",
+"whoosh, wind, paper"
+],
+"s18": [
+"b2b–b2c",
+"Map: saffron Maratha arrow Pune → Delhi; Delhi pulses",
+"—",
+"zoom north; arrow draws; pin drops; pulse",
+"MARATHAS, Pune, Delhi; MAP SIMPLIFIED",
+"hooves, tick"
+],
+"s19": [
+"b2d",
+"Baji Rao on horseback at dusk; riders on the horizon",
+"Baji Rao: talk, arm raised; horse bobs; 16 riders",
+"pan + parallax, riders gallop",
+"name card 1737 · Baji Rao I · Maratha Peshwa; versus card AHIR: “JUST 500 HORSEMEN” / OTHER ACCOUNTS: A FAR LARGER ARMY; HISTORIANS DISAGREE · SOURCES BELOW; name card BOOK · Rajiv Ahir · A Brief History of Modern India",
+"hooves, paper"
+],
+"s20": [
+"b2e",
+"Map: zoom on Delhi, the Maratha arrow at its gates, Delhi pulses",
+"—",
+"zoom in; pulse",
+"DELHI COULD NOT DEFEND DELHI; stamp UNDEFENDED; MAP SIMPLIFIED",
+"paper, thud"
+],
+"s21": [
+"b2f–b2g ★",
+"Night tent: Nadir in silhouette studies a map of India by lamplight",
+"Nadir (silhouette): head turn, arm",
+"slow push; flame flickers",
+"—",
+"hush; STING"
+],
+"s22": [
+"b3a–b3b",
+"Nadir Shah revealed in his tent",
+"Nadir: stern brows, talk, head turn",
+"0.25 s push",
+"chip PERSIA · 1738 | THE STORM; name card 1736 · Nadir Shah · Shah of Persia from 1736",
+"whoosh, paper, sword ring"
+],
+"s23": [
+"b3b",
+"ARCHIVAL: portrait of Nadir Shah, Iran, c. 1740 (British Library; public domain) in a paper frame",
+"—",
+"2.5D push + slight rotate",
+"credit line",
+"paper"
+],
+"s24": [
+"b3c",
+"Map: coins pop over the rich provinces; crack lines split them",
+"—",
+"zoom; coins pop; cracks draw",
+"RICH · BUT DIVIDED; MAP SIMPLIFIED",
+"coins, tick"
+],
+"s25": [
+"b3d",
+"invasion-arrow: Kandahar → Ghazni → Kabul → Peshawar → Lahore with army icon",
+"—",
+"zoom NW; arrow draws; pins drop",
+"Kabul · 1738; Lahore · 1739; MAP SIMPLIFIED",
+"march, ticks"
+],
+"s26": [
+"b3e",
+"Court argues: two nobles gesture, emperor looks between them, Nizam aside",
+"4 rigs: talk, gestures, head turns",
+"pan + parallax",
+"THE NIZAM: HEARD, NOT TRUSTED",
+"court murmur"
+],
+"s27": [
+"b3f",
+"Court music cut off by war drums; the rose falls from the emperor's hand",
+"Muhammad Shah: arm drops, head turn; drummers",
+"push; rose falls",
+"stamp WAR",
+"war drums (score), thud"
+],
+"s28": [
+"b4a",
+"Karnal plain: the vast Mughal tent city, green banners",
+"—",
+"0.25 s push, parallax pan",
+"chip KARNAL · FEBRUARY 1739 | THE BATTLE; ≈120 KM NORTH OF DELHI",
+"whoosh, paper"
+],
+"s29": [
+"b4b",
+"Versus card over two armies in rows",
+"60 Mughal + 18 Persian figures sway",
+"cards pop",
+"MUGHAL CAMP ≈300,000 … / NADIR'S ARMY SMALLER …; ESTIMATE · ONE CONTEMPORARY COUNT",
+"paper ×2"
+],
+"s30": [
+"b4c",
+"Persian army: 88 uniformed musketeers + 6 camels with swivel guns march",
+"crowd",
+"rows march at different speeds, parallax",
+"LIGHT GUNS ON CAMELS",
+"marching"
+],
+"s31": [
+"b4d",
+"Saadat Khan flanked by two Persian guards",
+"Saadat Khan: talk, worried head turns",
+"0.25 s push",
+"name card 1722 · Saadat Khan · Governor (Nawab) of Awadh; stamp CAPTURED",
+"whoosh, paper, thud"
+],
+"s32": [
+"b4e",
+"Map: pulsing battle marker at Karnal (no fighting shown)",
+"—",
+"zoom; marker pulses",
+"Karnal, Delhi; stamp DEFEATED; MAP SIMPLIFIED",
+"distant cannon, thud"
+],
+"s33": [
+"b4f",
+"Nadir's tent: Nadir points; Muhammad Shah slumped, hands empty",
+"Nadir: point; Muhammad Shah: talk, slump",
+"push",
+"AN EMPEROR WHO COULD NOT LEAVE",
+"paper"
+],
+"s34": [
+"b4g ★",
+"Turquoise banners advance across the plain toward Delhi's walls",
+"—",
+"banners march; parallax",
+"NEXT STOP: DELHI",
+"march; STING"
+],
+"s35": [
+"b5a",
+"TRAGEDY GRADE. Grey-sepia gate; Nadir's silhouette strides in",
+"Nadir (silhouette): walk",
+"0.25 s push",
+"chip DELHI · 20 MARCH 1739 | THE CITY",
+"paper, footsteps"
+],
+"s36": [
+"b5b",
+"Night street; silhouettes hurry past shut doors; flat smoke shapes",
+"citizen silhouettes",
+"run across; smoke drifts",
+"A RUMOUR: “NADIR IS DEAD”",
+"whispers"
+],
+"s37": [
+"b5c",
+"Nadir's silhouette on a rooftop raises his arm (the order)",
+"Nadir (silhouette): arm raise",
+"slow push",
+"—",
+"crowd hush"
+],
+"s38": [
+"b5d",
+"Empty street, doors shut, smoke rising — no people, no bodies",
+"—",
+"slow pan",
+"AN ESTIMATED 20,000–30,000 PEOPLE KILLED IN A FEW HOURS; ESTIMATE · TRUE NUMBER UNKNOWN",
+"silence, distant dog bark"
+],
+"s39": [
+"b5e",
+"Close on doors shutting one by one",
+"—",
+"slow drift",
+"—",
+"door thuds"
+],
+"s40": [
+"b5f",
+"A scroll fills with stylised script",
+"—",
+"lines draw",
+"stamp A HUGE FINE",
+"quill, thud"
+],
+"s41": [
+"b6a–b6b",
+"Treasury vault: soldiers drag chests out",
+"crowd",
+"0.25 s push, chests slide out",
+"chip DELHI · 1739 | THE LOOT",
+"whoosh, drag creak, march"
+],
+"s42": [
+"b6c",
+"treasure-count: coin stacks rise",
+"—",
+"coins stack",
+"70 CRORE · RUPEES · ONE ESTIMATE · 1 crore = 10 million; ESTIMATE · RAJIV AHIR'S HISTORY",
+"coins pouring"
+],
+"s43": [
+"b6d",
+"The Peacock Throne, the Kohinoor and the Darya-i-Noor appear on dark cloth",
+"—",
+"objects pop in; sparkles turn",
+"PEACOCK THRONE; KOHINOOR; DARYA-I-NOOR · “SEA OF LIGHT”",
+"paper, glints"
+],
+"s44": [
+"b6e",
+"A scroll of demands; coin stacks drain",
+"—",
+"lines draw; coins vanish",
+"stamp DEMANDS",
+"quill, thud, coins"
+],
+"s45": [
+"b6e",
+"Saadat Khan's death spoken gently: only an empty plum seat and a lamp",
+"—",
+"very slow push; flame",
+"—",
+"near silence"
+],
+"s46": [
+"b6f",
+"Map: land west of the Indus wipes turquoise; Indus highlighted",
+"—",
+"hard wipe; zoom",
+"Kabul; RIVER INDUS; TO PERSIA; MAP SIMPLIFIED",
+"paper, tick"
+],
+"s47": [
+"b6g",
+"Nadir places the crown back on Muhammad Shah's head and walks away",
+"Nadir: arms, walk; Muhammad Shah: head",
+"crown arcs over; push",
+"A THRONE WITHOUT ITS TREASURE",
+"coin, footsteps"
+],
+"s48": [
+"b6h ★",
+"Map: Nadir's arrow goes home; Afghan, Maratha and Company arrows reach toward Delhi",
+"—",
+"arrows draw; Delhi pulses",
+"AFGHANS; MARATHAS; A COMPANY OF MERCHANTS; MAP SIMPLIFIED",
+"march, ticks; STING"
+],
+"s49": [
+"b7a",
+"Desk with a drawn book cover, INDIA CONQUERED",
+"—",
+"0.25 s push",
+"chip INDIA · AFTER 1739 | AFTERSHOCKS; name card 2016 · Jon Wilson · Historian; Book cover drawn for illustration",
+"whoosh, paper"
+],
+"s50": [
+"b7b",
+"QUOTE (kinetic type, word by word, key words crimson)",
+"—",
+"words appear in time with the voice",
+"Wilson quote part 1 + source line",
+"paper"
+],
+"s51": [
+"b7c",
+"QUOTE continued",
+"—",
+"word by word",
+"Wilson quote part 2 + source line",
+"paper"
+],
+"s52": [
+"b7d–b7e",
+"Diagram: Delhi's open, empty chest; payment lines to Hyderabad, Awadh, Bengal and the army get crossed out",
+"—",
+"lines draw; X marks pop",
+"stamp EMPTY",
+"ticks, thud"
+],
+"s53": [
+"b7f",
+"Map: Hyderabad, Bengal, Awadh wipe in; Maratha arrows push north",
+"—",
+"0.25 s push; wipes; arrows draw",
+"chip INDIA · 1740s | THE SCRAMBLE (re-hook); NO LONGER WAITING FOR DELHI; labels; MAP SIMPLIFIED",
+"paper"
+],
+"s54": [
+"b7g",
+"Bengal river: Company ships, warehouse, small fort with ensign; a merchant points",
+"Company merchant: talk, point",
+"parallax; ship drifts; flag",
+"SHIPS · GUNS · HIRED SOLDIERS",
+"waves, timber"
+],
+"s55": [
+"b7h",
+"Split screen: a 57-day clock vs a long, fading decline chart",
+"—",
+"clock hand turns; bars fade",
+"ONE VIEW · WILSON / ANOTHER VIEW; HISTORIANS DISAGREE · SOURCES BELOW",
+"paper, clock ticks"
+],
+"s56": [
+"b8a–b8b",
+"A crown under a glass dome; the dome cracks and falls away in crisp shards",
+"—",
+"0.25 s push; crack draws; shards fall",
+"chip DELHI · 1739 | THE TAKEAWAY; stamp UNTOUCHABLE?",
+"thud, glass crack"
+],
+"s57": [
+"b8c",
+"Anchor map, Ep 2 end state; every rival's arrow converges on Delhi",
+"—",
+"arrows draw at once; Delhi pulses",
+"stamp EVERY RIVAL AT ONCE; MAP SIMPLIFIED",
+"march, thud"
+],
+"s58": [
+"b8d",
+"Question card on the desk (bottom-right kept clear: end screen)",
+"—",
+"slow push",
+"Was Nadir Shah's invasion the real beginning of British India?; TELL ME IN THE COMMENTS",
+"paper"
+],
+"s59": [
+"b8e",
+"Ahmad Shah Abdali at a mountain pass at dusk",
+"Abdali: blink, breathe, walk",
+"parallax; walk",
+"name card 1747 · Ahmad Shah Abdali · Afghan commander, later king of Afghanistan",
+"wind, paper"
+],
+"s60": [
+"b8e",
+"Map: Afghan arrow to PANIPAT; pin drops (bottom-right clear for end screen)",
+"—",
+"zoom; arrow draws; pulse",
+"NEXT EPISODE · WHY INDIA'S FATE WAS DECIDED AT PANIPAT; MAP SIMPLIFIED (left)",
+"hooves; final STING"
+]
+}
