@@ -87,7 +87,7 @@ Years are spoken as words (1739 → "seventeen thirty-nine").
 ## 5. Skipped or failed
 - Wikimedia Commons rate-limited downloads (HTTP 429) for over 15 minutes, so the second archival image was skipped. I did not try other routes around the limit.
 - Openverse and Internet Archive are blocked by the network proxy (403), so I used Wikimedia only.
-- Google Drive: the pack is uploaded to "ClearCut History/ep02-nadir-shah/" (see the delivery list at the end).
+- Google Drive: thumbnails, captions and all documents are uploaded to "ClearCut History/ep02-nadir-shah/". master.mp4 and review.mp4 could NOT go to Drive: the Drive connector refuses uploads over 10 MB. Both videos were sent directly in the chat; drag them into that Drive folder if you want them there.
 - `ahir.pdf` is missing, so I could not check page numbers or the quote against the book.
 
 ## 6. A12 pre-export checklist
@@ -106,7 +106,7 @@ Years are spoken as words (1739 → "seventeen thirty-nine").
 | 11 | Accuracy | PASS with flags | VERIFY done (§3). Estimates are hedged on screen. The Wilson quote is verbatim from the brief and labelled "quoted in Ahir, p. 65". Check it against the book: the PDF was missing. |
 | 12 | Length | PASS | 6:58.4, inside the 6:00–7:00 target. |
 | 13 | Packaging | PASS | Title is 36 characters. Thumbnails have 3 elements and 2 words each ("HE TOOK EVERYTHING" / "DELHI FELL"), are readable at 320×180, keep the bottom-right corner clear, and don't repeat the title. The description has 9 chapters, the first at 00:00 and each ≥ 10 s. The pinned comment and 5 replies are ready. `captions.srt` has 109 cues of ≤ 2×42 characters with correct spellings. |
-| 14 | Delivery | see §8 | |
+| 14 | Delivery | PASS | All A9 files were sent with the file-sending tool, master.mp4 first. The episode folder is pushed (videos kept out of git). Drive has everything except the two videos, which are over the connector's 10 MB limit (see §5). |
 
 ## 7. Known weak spots
 - The Baji Rao horse is simple and stiff; it's the weakest drawing in the film (s19, 1:48).
@@ -114,3 +114,31 @@ Years are spoken as words (1739 → "seventeen thirty-nine").
 - The score is synthesised and functional rather than lush. If you have a preferred music bed, it can be swapped in.
 - The quote cards leave white space under the text on purpose, so the attribution line stays in a fixed spot.
 - Wikimedia's rate limit cost us the second archival painting.
+
+## 8. Delivery
+`master.mp4` was first encoded at 8.0 Mbps (409 MiB), which is over the 400 MiB send limit. It was re-encoded at 7.6 Mbps
+(379 MiB); the spec asks for about 8 Mbps, so it is still inside it. The 8 Mbps file is kept locally at `renders/master-8M.mp4` (not in git).
+
+| File | Size | Purpose |
+|---|---|---|
+| master.mp4 | 379.0 MiB | upload file: 1920×1080, 30 fps, H.264 High, yuv420p, ~7.6 Mbps, AAC-LC 48 kHz stereo, faststart, 6:58.4 |
+| review.mp4 | 132.1 MiB | 720p copy for phone review |
+| thumbnail-a.jpg | 545 KiB | thumbnail A, 3840×2160: HE TOOK EVERYTHING |
+| thumbnail-b.jpg | 475 KiB | thumbnail B, 3840×2160: DELHI FELL |
+| captions.srt | 9 KiB | English captions, 109 cues |
+| youtube.md | 5 KiB | title, description + chapters, tags, pinned comment, end screen |
+| script.md | 7 KiB | narration script with times |
+| sources.md | 5 KiB | fact, image and audio sources with licences |
+| review-sheet.md | ~15 KiB | this sheet |
+
+Repository: branch `claude/elegant-cannon-6drkdb` (kit in `assets/`, episode in `episodes/ep02-nadir-shah/`; mp4/wav are never committed).
+Drive: `ClearCut History/ep02-nadir-shah/` (thumbnails, captions and documents; the videos are too large for the connector).
+
+## 9. Change template (fill in and send everything at once)
+```
+CHANGES FOR ep02-nadir-shah (send all at once)
+1. [mm:ss] [what is wrong] -> [what I want instead]
+2. ...
+THUMBNAIL: [A or B] + changes
+TITLE: [keep / alternate / new]
+```
