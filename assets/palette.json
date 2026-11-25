@@ -1,0 +1,14 @@
+{
+  "paper": "#E9DCC0",
+  "paper_dark": "#D8C7A3",
+  "ink": "#2B2622",
+  "ink_deep": "#1E1A17",
+  "company_red": "#B8362E",
+  "mughal_green": "#4F7A3A",
+  "maratha_saffron": "#D9822B",
+  "bengal_teal": "#3F7F7A",
+  "sea": "#5E8C8A",
+  "sky": "#CFE0D6",
+  "gold": "#C9A24A",
+  "notes": "Skill palette. For 'The Fall of the Mughals' the power colours in assets/series/mughals/series-colours.json override these."
+}

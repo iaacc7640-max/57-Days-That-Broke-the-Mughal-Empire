@@ -1,0 +1,20 @@
+{
+  "series": "The Fall of the Mughals",
+  "powers": {
+    "mughal": {"fill": "#2F5D3A", "accent": "#C9A24A", "label": "Mughal Empire"},
+    "marathas": {"fill": "#D9822B", "label": "Marathas"},
+    "afghans": {"fill": "#5B6770", "label": "Afghans"},
+    "persia": {"fill": "#3E8E8A", "label": "Persia (Afsharid)"},
+    "sikhs": {"fill": "#4A5F86", "label": "Sikhs"},
+    "jats": {"fill": "#B8892E", "label": "Jats"},
+    "rajputs": {"fill": "#C0462C", "label": "Rajputs"},
+    "hyderabad": {"fill": "#3F7F6A", "label": "Hyderabad (Nizam)"},
+    "awadh": {"fill": "#7A4B6B", "label": "Awadh"},
+    "bengal": {"fill": "#6F7A3A", "label": "Bengal Nawabs"},
+    "mysore": {"fill": "#7E2F3A", "label": "Mysore"},
+    "travancore": {"fill": "#7E8B5A", "label": "Travancore"},
+    "company": {"fill": "#A8322D", "label": "English East India Company"}
+  },
+  "base": {"paper": "#E9DCC0", "ink": "#2B2622", "sea": "#5E8C8A", "sky": "#CFE0D6", "gold": "#C9A24A"},
+  "grade": {"tragedy": {"paper": "#CFC6B6", "light": "#B9AF9E", "mid": "#8E857A", "dark": "#4A443E", "ink": "#221F1C", "note": "grey-sepia, silhouettes only"}}
+}

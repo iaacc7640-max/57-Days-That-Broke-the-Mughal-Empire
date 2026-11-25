@@ -1,0 +1,84 @@
+{
+  "_about": "Anchor-map states for 'The Fall of the Mughals'. Region keys refer to REGIONS in assets/kit/map.mjs (simplified polygons, lon/lat). Each episode's first map beat opens on the previous episode's end state, then saves its own end state here.",
+  "_order": [
+    "base_1707",
+    "ep01",
+    "ep02"
+  ],
+  "base_1707": {
+    "label": "India at Aurangzeb's death, 1707",
+    "regions": {
+      "persiaEdge": {
+        "fill": "#3E8E8A",
+        "op": 0.55
+      },
+      "mughal1707": {
+        "fill": "#2F5D3A"
+      }
+    },
+    "pins": [],
+    "flags": []
+  },
+  "ep01": {
+    "label": "NOT YET BUILT. Episode 2 (released first) assumed Episode 1 ends on base_1707 plus a crimson Company pin at Calcutta.",
+    "assumed": true,
+    "regions": {
+      "persiaEdge": {
+        "fill": "#3E8E8A",
+        "op": 0.55
+      },
+      "mughal1707": {
+        "fill": "#2F5D3A"
+      }
+    },
+    "flags": [
+      {
+        "id": "company",
+        "city": "calcutta"
+      }
+    ]
+  },
+  "ep02": {
+    "label": "After Nadir Shah, May 1739: lands west of the Indus (incl. Kabul) to Persia; Hyderabad, Bengal and Awadh run their own affairs; Marathas expanding; Company pin at Calcutta.",
+    "regions": {
+      "persiaEdge": {
+        "fill": "#3E8E8A",
+        "op": 0.55
+      },
+      "mughal1707": {
+        "fill": "#2F5D3A"
+      },
+      "westOfIndus": {
+        "fill": "#3E8E8A"
+      },
+      "hyderabad": {
+        "fill": "#3F7F6A",
+        "op": 0.85
+      },
+      "bengal": {
+        "fill": "#6F7A3A",
+        "op": 0.85
+      },
+      "awadh": {
+        "fill": "#7A4B6B",
+        "op": 0.85
+      },
+      "maratha": {
+        "fill": "#D9822B",
+        "op": 0.85
+      }
+    },
+    "flags": [
+      {
+        "id": "company",
+        "city": "calcutta"
+      }
+    ],
+    "markers": [
+      {
+        "id": "panipat",
+        "city": "panipat"
+      }
+    ]
+  }
+}

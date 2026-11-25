@@ -1,0 +1,9 @@
+node_modules/
+renders/
+frames/
+*.mp4
+*.wav
+*.mov
+.hyperframes/
+__pycache__/
+episodes/*/tools/thumb-*.html

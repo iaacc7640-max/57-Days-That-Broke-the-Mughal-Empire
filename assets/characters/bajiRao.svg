@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" width="600" height="800"><rect width="600" height="800" fill="#E9DCC0"/><g id="bajiRao-root" transform="translate(300,760) scale(1.9,1.9)"><g id="bajiRao-walk" transform="translate(0,0)"><g transform="scale(1)">
+    <g transform="translate(-16,-84)"><g id="bajiRao-legL" transform="rotate(0)">
+    <path d="M-12,0 L12,0 L9,74 L-9,74Z" fill="#F4EEE2" stroke="#2B2622" stroke-width="2"/>
+    <path d="M-12,74 L12,74 C12,74 -30,70 -28,80 L-26,86 L-12,86Z" fill="#6B4A2E" stroke="#2B2622" stroke-width="2"/>
+  </g></g><g transform="translate(16,-84)"><g id="bajiRao-legR" transform="rotate(0)">
+    <path d="M-12,0 L12,0 L9,74 L-9,74Z" fill="#F4EEE2" stroke="#2B2622" stroke-width="2"/>
+    <path d="M-12,74 L12,74 C28,74 30,70 28,80 L26,86 L-12,86Z" fill="#6B4A2E" stroke="#2B2622" stroke-width="2"/>
+  </g></g>
+    <g transform="translate(0,-84)"><g id="bajiRao-body" transform="scale(1,1)"><g transform="translate(0,84)">
+      <g transform="translate(-38,-242)"><g id="bajiRao-armL-upper" transform="rotate(8)">
+      <path d="M-12,-4 C-12,-12 12,-12 12,-4 L11,62 L-11,62Z" fill="#d7d1c7" stroke="#2B2622" stroke-width="2"/>
+      <g transform="translate(0,58)"><g id="bajiRao-armL-lower" transform="rotate(6)">
+        <path d="M-10,0 L10,0 L9,48 L-9,48Z" fill="#d7d1c7" stroke="#2B2622" stroke-width="2"/>
+        <rect x="-10" y="42" width="20" height="7" fill="#D9822B" stroke="#2B2622" stroke-width="1.5"/>
+        <circle cx="0" cy="60" r="11" fill="#A87449" stroke="#2B2622" stroke-width="2"/>
+        
+      </g></g>
+    </g></g>
+      <g id="bajiRao-torso">
+    <clipPath id="bajiRao-tclip"><path d="M-38,-252 C-20,-258 20,-258 38,-252 L32,-160 C46,-130 58,-100 66,-70 L-66,-70 C-58,-100 -46,-130 -32,-160Z"/></clipPath>
+    <path d="M-38,-252 C-20,-258 20,-258 38,-252 L32,-160 C46,-130 58,-100 66,-70 L-66,-70 C-58,-100 -46,-130 -32,-160Z" fill="#F4EEE2" stroke="#2B2622" stroke-width="2"/>
+    <g clip-path="url(#bajiRao-tclip)">
+      
+      
+      <path d="M-66,-70 L-60,-96 L-40,-70Z M66,-70 L60,-96 L40,-70Z" fill="#c3beb5"/>
+      <path d="M14,-160 C26,-126 36,-100 42,-70 L66,-70 C58,-100 46,-130 32,-160Z" fill="#c3beb5" opacity="0.55"/>
+    </g>
+    <path d="M-14,-254 L4,-214 L14,-252" fill="none" stroke="#c3beb5" stroke-width="4"/>
+    
+    <rect x="-36" y="-170" width="72" height="16" rx="3" fill="#D9822B" stroke="#2B2622" stroke-width="2"/>
+    <path d="M-6,-156 L-12,-104 L4,-104 L6,-156Z" fill="#D9822B" stroke="#2B2622" stroke-width="2"/>
+    
+    
+  </g>
+      <g transform="translate(0,-254)"><g id="bajiRao-head" transform="rotate(0)">
+        <rect x="-12" y="-14" width="24" height="18" fill="#8f633e" stroke="#2B2622" stroke-width="2"/>
+        
+    <circle cx="-48" cy="-50" r="9" fill="#976842" stroke="#2B2622" stroke-width="2"/>
+    <circle cx="48" cy="-50" r="9" fill="#976842" stroke="#2B2622" stroke-width="2"/>
+    <circle cx="0" cy="-52" r="48" fill="#A87449" stroke="#2B2622" stroke-width="2"/>
+    
+    
+    
+    <g id="bajiRao-eyes">
+      <g id="bajiRao-eyes-open"><circle cx="-17" cy="-58" r="5.5" fill="#2B2622"/><circle cx="17" cy="-58" r="5.5" fill="#2B2622"/></g>
+      <g id="bajiRao-eyes-shut" opacity="0"><path d="M-23,-58 L-11,-58 M11,-58 L23,-58" stroke="#2B2622" stroke-width="3" stroke-linecap="round"/></g>
+    </g>
+    <g id="bajiRao-brows" transform="translate(0,0)"><path d="M-27,-71 L-9,-72" stroke="#2B2622" stroke-width="4" stroke-linecap="round" fill="none"/><path d="M9,-72 L27,-71" stroke="#2B2622" stroke-width="4" stroke-linecap="round" fill="none"/></g>
+    <path d="M0,-52 C-3,-46 -3,-42 2,-40" stroke="#68482d" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M-16,-36 C-8,-42 8,-42 16,-36 C8,-38 -8,-38 -16,-36Z" fill="#1E1A17" stroke="#2B2622" stroke-width="1.5"/>
+    <g id="bajiRao-mouth">
+      <path id="bajiRao-m0" d="M-9,-28 C-3,-25 3,-25 9,-28" stroke="#2B2622" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <ellipse id="bajiRao-m1" cx="0" cy="-27" rx="7" ry="4" fill="#5A2A24" stroke="#2B2622" stroke-width="1.5" opacity="0"/>
+      <ellipse id="bajiRao-m2" cx="0" cy="-26" rx="8" ry="8" fill="#5A2A24" stroke="#2B2622" stroke-width="1.5" opacity="0"/>
+    </g>
+        <g id="bajiRao-hat">
+      <path d="M-52,-72 C-58,-112 -26,-130 6,-128 C40,-126 58,-104 52,-72 C30,-82 -30,-82 -52,-72Z" fill="#D9822B" stroke="#2B2622" stroke-width="2"/>
+      <path d="M-30,-118 C-10,-140 30,-140 46,-118 C30,-122 0,-122 -30,-118Z" fill="#b86f25" stroke="#2B2622" stroke-width="2"/>
+      <path d="M-50,-86 L50,-96 M-48,-100 L46,-110" stroke="#B8892E" stroke-width="5"/>
+      <path d="M40,-112 C58,-118 66,-132 60,-146 C52,-132 46,-124 34,-118Z" fill="#b86f25" stroke="#2B2622" stroke-width="2"/>
+    </g>
+      </g></g>
+      <g transform="translate(38,-242)"><g id="bajiRao-armR-upper" transform="rotate(-8)">
+      <path d="M-12,-4 C-12,-12 12,-12 12,-4 L11,62 L-11,62Z" fill="#f4eee2" stroke="#2B2622" stroke-width="2"/>
+      <g transform="translate(0,58)"><g id="bajiRao-armR-lower" transform="rotate(-6)">
+        <path d="M-10,0 L10,0 L9,48 L-9,48Z" fill="#f4eee2" stroke="#2B2622" stroke-width="2"/>
+        <rect x="-10" y="42" width="20" height="7" fill="#D9822B" stroke="#2B2622" stroke-width="1.5"/>
+        <circle cx="0" cy="60" r="11" fill="#A87449" stroke="#2B2622" stroke-width="2"/>
+        
+      </g></g>
+    </g></g>
+    </g></g></g>
+  </g></g></g></svg>

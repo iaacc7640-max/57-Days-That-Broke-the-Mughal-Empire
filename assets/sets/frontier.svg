@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080"><rect width="1920" height="1080" fill="#E9DCC0"/><g id="frontier-sky" transform="translate(0,0)"><rect x="-240" y="-10" width="2400" height="140" fill="#cfe0d6"/><rect x="-240" y="120" width="2400" height="140" fill="#d5e1d5"/><rect x="-240" y="250" width="2400" height="140" fill="#dce2d4"/><rect x="-240" y="380" width="2400" height="140" fill="#e2e4d4"/><rect x="-240" y="510" width="2400" height="140" fill="#e9e5d3"/><rect x="-240" y="640" width="2400" height="1100" fill="#efe6d2"/></g><g id="frontier-far" transform="translate(0,0)"><path d="M-240,620 L80,300 L300,470 L560,220 L860,520 L1120,260 L1420,500 L1700,240 L2160,560 L2160,700 L-240,700Z" fill="#9AA6A0" stroke="#2B2622" stroke-width="2"/>
+    <path d="M560,220 L620,290 L590,300 L560,270 L530,300 L500,280Z M1120,260 L1170,320 L1140,330 L1120,300 L1090,330 L1060,316Z M1700,240 L1756,300 L1726,312 L1700,282 L1670,310Z" fill="#F4EEE2"/></g><g id="frontier-mid" transform="translate(0,0)"><path d="M-240,760 L120,540 L420,640 L760,500 L1100,660 L1500,520 L2160,700 L2160,800 L-240,800Z" fill="#8A7A62" stroke="#2B2622" stroke-width="2"/><g transform="translate(1180,600)">
+      <rect x="-260" y="-150" width="520" height="160" fill="#B08A64" stroke="#2B2622" stroke-width="2.5"/>
+      <path d="M-260,-150 L-230,-150 L-230,-170 L-200,-170 L-200,-150 L-140,-150 L-140,-172 L-110,-172 L-110,-150 L-60,-150 L-40,-128 L-10,-150 L60,-150 L60,-170 L90,-170 L90,-150 L170,-150 L170,-166 L200,-166 L200,-150 L260,-150" fill="none" stroke="#2B2622" stroke-width="2.5"/>
+      <path d="M-60,-150 L-40,-128 L-10,-150 L-30,-90 L-70,-110Z" fill="#8A7A62" stroke="#2B2622" stroke-width="2"/>
+      <path d="M120,10 L140,-60 L180,-40 L170,10Z" fill="#8A7A62"/>
+      <rect x="-330" y="-300" width="100" height="310" fill="#9C7A56" stroke="#2B2622" stroke-width="2.5"/>
+      <path d="M-340,-300 L-220,-300 L-230,-320 L-330,-320Z" fill="#8A6A4A" stroke="#2B2622" stroke-width="2"/>
+      <rect x="-300" y="-270" width="40" height="50" fill="#2B2622"/>
+      <path d="M-280,-320 L-280,-420" stroke="#4A3A2C" stroke-width="6"/>
+      <g id="frontier-flag" transform="translate(-280,-420)"><g id="frontier-flagcloth" transform="skewY(0)"><path d="M0,0 L80,10 L60,24 L78,40 L30,36 L44,52 L0,46Z" fill="#2F5D3A" stroke="#2B2622" stroke-width="2"/></g></g>
+      <path d="M-120,10 L-120,-60 C-120,-90 -60,-90 -60,-60 L-60,10Z" fill="#2B2622"/>
+    </g></g><g id="frontier-ground" transform="translate(0,0)"><path d="M-240,800 L2160,800 L2160,1100 L-240,1100Z" fill="#A08A68"/><path d="M-240,800 L2160,800" stroke="#2B2622" stroke-width="2"/>
+    <path d="M400,1080 C600,960 900,900 1240,800 L1320,800 C1040,920 900,980 760,1080Z" fill="#C2A77E"/></g></svg>

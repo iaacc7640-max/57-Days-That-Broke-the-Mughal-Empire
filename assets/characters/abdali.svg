@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" width="600" height="800"><rect width="600" height="800" fill="#E9DCC0"/><g id="abdali-root" transform="translate(300,760) scale(1.9,1.9)"><g id="abdali-walk" transform="translate(0,0)"><g transform="scale(1)">
+    <g transform="translate(-16,-84)"><g id="abdali-legL" transform="rotate(0)">
+    <path d="M-12,0 L12,0 L9,74 L-9,74Z" fill="#3A3330" stroke="#2B2622" stroke-width="2"/>
+    <path d="M-12,74 L12,74 C12,74 -30,70 -28,80 L-26,86 L-12,86Z" fill="#2B2622" stroke="#2B2622" stroke-width="2"/>
+  </g></g><g transform="translate(16,-84)"><g id="abdali-legR" transform="rotate(0)">
+    <path d="M-12,0 L12,0 L9,74 L-9,74Z" fill="#3A3330" stroke="#2B2622" stroke-width="2"/>
+    <path d="M-12,74 L12,74 C28,74 30,70 28,80 L26,86 L-12,86Z" fill="#2B2622" stroke="#2B2622" stroke-width="2"/>
+  </g></g>
+    <g transform="translate(0,-84)"><g id="abdali-body" transform="scale(1,1)"><g transform="translate(0,84)">
+      <g transform="translate(-38,-242)"><g id="abdali-armL-upper" transform="rotate(8)">
+      <path d="M-12,-4 C-12,-12 12,-12 12,-4 L11,62 L-11,62Z" fill="#505b63" stroke="#2B2622" stroke-width="2"/>
+      <g transform="translate(0,58)"><g id="abdali-armL-lower" transform="rotate(6)">
+        <path d="M-10,0 L10,0 L9,48 L-9,48Z" fill="#505b63" stroke="#2B2622" stroke-width="2"/>
+        <rect x="-10" y="42" width="20" height="7" fill="#C9A24A" stroke="#2B2622" stroke-width="1.5"/>
+        <circle cx="0" cy="60" r="11" fill="#B98458" stroke="#2B2622" stroke-width="2"/>
+        
+      </g></g>
+    </g></g>
+      <g id="abdali-torso">
+    <clipPath id="abdali-tclip"><path d="M-38,-252 C-20,-258 20,-258 38,-252 L32,-160 C46,-130 58,-100 66,-70 L-66,-70 C-58,-100 -46,-130 -32,-160Z"/></clipPath>
+    <path d="M-38,-252 C-20,-258 20,-258 38,-252 L32,-160 C46,-130 58,-100 66,-70 L-66,-70 C-58,-100 -46,-130 -32,-160Z" fill="#5B6770" stroke="#2B2622" stroke-width="2"/>
+    <g clip-path="url(#abdali-tclip)">
+      
+      
+      <path d="M-66,-70 L-60,-96 L-40,-70Z M66,-70 L60,-96 L40,-70Z" fill="#49525a"/>
+      <path d="M14,-160 C26,-126 36,-100 42,-70 L66,-70 C58,-100 46,-130 32,-160Z" fill="#49525a" opacity="0.55"/>
+    </g>
+    <path d="M-14,-254 L4,-214 L14,-252" fill="none" stroke="#49525a" stroke-width="4"/>
+    
+    <rect x="-36" y="-170" width="72" height="16" rx="3" fill="#C9A24A" stroke="#2B2622" stroke-width="2"/>
+    <path d="M-6,-156 L-12,-104 L4,-104 L6,-156Z" fill="#C9A24A" stroke="#2B2622" stroke-width="2"/>
+    
+    
+  </g>
+      <g transform="translate(0,-254)"><g id="abdali-head" transform="rotate(0)">
+        <rect x="-12" y="-14" width="24" height="18" fill="#9d704b" stroke="#2B2622" stroke-width="2"/>
+        
+    <circle cx="-48" cy="-50" r="9" fill="#a7774f" stroke="#2B2622" stroke-width="2"/>
+    <circle cx="48" cy="-50" r="9" fill="#a7774f" stroke="#2B2622" stroke-width="2"/>
+    <circle cx="0" cy="-52" r="48" fill="#B98458" stroke="#2B2622" stroke-width="2"/>
+    
+    <path d="M-40,-40 C-38,-8 -16,6 0,6 C16,6 38,-8 40,-40 C28,-22 -28,-22 -40,-40Z" fill="#1E1A17" stroke="#2B2622" stroke-width="2"/>
+    
+    <g id="abdali-eyes">
+      <g id="abdali-eyes-open"><circle cx="-17" cy="-58" r="5.5" fill="#2B2622"/><circle cx="17" cy="-58" r="5.5" fill="#2B2622"/></g>
+      <g id="abdali-eyes-shut" opacity="0"><path d="M-23,-58 L-11,-58 M11,-58 L23,-58" stroke="#2B2622" stroke-width="3" stroke-linecap="round"/></g>
+    </g>
+    <g id="abdali-brows" transform="translate(0,0)"><path d="M-28,-76 L-8,-68" stroke="#2B2622" stroke-width="4" stroke-linecap="round" fill="none"/><path d="M8,-68 L28,-76" stroke="#2B2622" stroke-width="4" stroke-linecap="round" fill="none"/></g>
+    <path d="M0,-52 C-3,-46 -3,-42 2,-40" stroke="#735237" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M-16,-36 C-8,-42 8,-42 16,-36 C8,-38 -8,-38 -16,-36Z" fill="#1E1A17" stroke="#2B2622" stroke-width="1.5"/>
+    <g id="abdali-mouth">
+      <path id="abdali-m0" d="M-9,-28 C-3,-25 3,-25 9,-28" stroke="#2B2622" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <ellipse id="abdali-m1" cx="0" cy="-27" rx="7" ry="4" fill="#5A2A24" stroke="#2B2622" stroke-width="1.5" opacity="0"/>
+      <ellipse id="abdali-m2" cx="0" cy="-26" rx="8" ry="8" fill="#5A2A24" stroke="#2B2622" stroke-width="1.5" opacity="0"/>
+    </g>
+        <g id="abdali-hat">
+      <path d="M-50,-74 C-56,-108 -30,-128 0,-128 C30,-128 56,-108 50,-74 C30,-84 -30,-84 -50,-74Z" fill="#E9DCC0" stroke="#2B2622" stroke-width="2"/>
+      <path d="M-48,-88 C-20,-104 22,-110 48,-92" fill="none" stroke="#bfb49d" stroke-width="5"/>
+      <path d="M-46,-100 C-18,-116 22,-118 44,-104" fill="none" stroke="#bfb49d" stroke-width="5"/>
+      <path d="M-50,-74 C-30,-84 30,-84 50,-74 L50,-68 C30,-77 -30,-77 -50,-68Z" fill="#5B6770" stroke="#2B2622" stroke-width="2"/>
+      
+      
+    </g>
+      </g></g>
+      <g transform="translate(38,-242)"><g id="abdali-armR-upper" transform="rotate(-8)">
+      <path d="M-12,-4 C-12,-12 12,-12 12,-4 L11,62 L-11,62Z" fill="#5b6770" stroke="#2B2622" stroke-width="2"/>
+      <g transform="translate(0,58)"><g id="abdali-armR-lower" transform="rotate(-6)">
+        <path d="M-10,0 L10,0 L9,48 L-9,48Z" fill="#5b6770" stroke="#2B2622" stroke-width="2"/>
+        <rect x="-10" y="42" width="20" height="7" fill="#C9A24A" stroke="#2B2622" stroke-width="1.5"/>
+        <circle cx="0" cy="60" r="11" fill="#B98458" stroke="#2B2622" stroke-width="2"/>
+        
+      </g></g>
+    </g></g>
+    </g></g></g>
+  </g></g></g></svg>
