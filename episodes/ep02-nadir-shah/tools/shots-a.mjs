@@ -201,7 +201,7 @@ export function shotsA(S) {
   });
   add("b2", "s18", L("b2b") - 0.2, "map", (c) => {
     const p = c.p, t = c.t0;
-    const svg = mapSVG(p, { regions: { ...BASE, maratha: { fill: PW.marathas.fill, op: 0.9 } }, flags: [{ id: "co", city: "calcutta", s: 1.1 }], arrows: [{ id: "br", cities: ["pune", "delhi"], col: PW.marathas.fill, w: 16 }], markers: [{ id: "dl", city: "delhi", col: "#A8322D" }], pins: [{ id: "pu", city: "pune", label: "Pune", side: "l" }, { id: "dlp", city: "delhi", label: "Delhi", t: 1 }], labels: [{ id: "mr", ll: [76.9, 19.3], text: "MARATHAS", size: 44, col: "#F4EEE2" }] });
+    const svg = mapSVG(p, { regions: { ...BASE, maratha: { fill: PW.marathas.fill, op: 0.9 } }, flags: [{ id: "co", city: "calcutta", s: 1.1 }], arrows: [{ id: "br", cities: ["pune", "delhi"], col: PW.marathas.fill, w: 16 }], markers: [{ id: "dl", city: "delhi", col: "#A8322D" }], pins: [{ id: "pu", city: "pune", label: "Pune", side: "l" }, { id: "dlp", city: "delhi", label: "Delhi", t: 1 }], labels: [{ id: "mr", ll: [78.6, 20.4], dy: 0, text: "MARATHAS", size: 44, col: "#D9822B" }] });
     let js = cam(p + "-cam", c.t0, c.t1, camTo(900, 560, 1.15), camTo(940, 400, 1.35)) + mapJS.arrow(p, "br", L("b2c") + 1.2, 4.2, true, 1.1) + mapJS.pin(p, "dlp", L("b2c") + 5.2) + mapJS.pulse(p, "dl", L("b2c") + 5.4, c.t1, 0.9);
     return { svg, ov: mapTag(p + "-mt"), js };
   });
