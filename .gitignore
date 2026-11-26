@@ -7,3 +7,4 @@ frames/
 .hyperframes/
 __pycache__/
 episodes/*/tools/thumb-*.html
+episodes/*/tools/thumb-map.html
