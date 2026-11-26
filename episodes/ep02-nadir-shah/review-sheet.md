@@ -126,12 +126,12 @@ Phoneme-decoder agreement with the target sound (0–1): Saadat 0.92 · Abdali 0
 | 1 | Hook | **PASS*** | No intro; picture changes at 0:02.5, 0:05.2, 0:08.0, 0:09.4, 0:10.7, 0:13.6, 0:16.7, 0:18.0; *question lands at 0:11–0:17 (verbatim cold open is 16.8 s). |
 | 2 | Open loops | PASS | 3 ★ lines verbatim (b2g, b4g, b6h) + cold-open and tease stings. |
 | 3 | Re-hooks ≤ 60 s | PASS | Chip + 0.25 s push at 00:18, 00:56, 01:29, 02:14, 02:54, 03:41, 04:15, 05:13, 05:49, 06:17. |
-| 4 | Pacing | PASS | 69 shots, 1.3–11.5 s; no 3 of a type in a row; still 2-s windows in the render: n/a; text-only cards 9.9 s and 6.4 s (≤ 10 s); no black or near-black frames: n/a; 1 archival shot in 69. |
-| 5 | Crisp picture | PASS | No blur/backdrop-filter/feGaussianBlur/fog/haze/glow in code; hard shadows; grain moves (mean frame difference 1/15 s apart n/a); darkest pixels after the shadow curve: n/a. |
-| 6 | Characters, hands, scale, animals | PASS | 10 rigs animated (blink, breathe, talk, point, walk with knee bend, seated); every hand is a drawn mitten with a thumb and wraps what it holds (rose, scroll, musket, ledger, Kohinoor); adults in a shot at the same scale (±3%); horse and camels rigged with jointed legs and recognisable at 320×180; legs differ 0.25 s apart: n/a. |
+| 4 | Pacing | PASS | 69 shots, 1.3–11.5 s; no 3 of a type in a row; still 2-s windows in the render: 0 (all 7 chunks); text-only cards 9.9 s and 6.4 s (≤ 10 s); no black or near-black frames: none (frame mean ≥ 60 everywhere; darkest pixel ≤ 23 after the curve); 1 archival shot in 69. |
+| 5 | Crisp picture | PASS | No blur/backdrop-filter/feGaussianBlur/fog/haze/glow in code; hard shadows; grain moves (mean frame difference 1/15 s apart 3.3–5.5); darkest pixels after the shadow curve: ≤ 23 on every frame sampled every 3 s. |
+| 6 | Characters, hands, scale, animals | PASS | 10 rigs animated (blink, breathe, talk, point, walk with knee bend, seated); every hand is a drawn mitten with a thumb and wraps what it holds (rose, scroll, musket, ledger, Kohinoor); adults in a shot at the same scale (±3%); horse and camels rigged with jointed legs and recognisable at 320×180; legs differ 0.25 s apart: horse legs differ 8–11 (mean abs, leg region) between frames 0.25 s apart; camel legs visibly alternate. |
 | 7 | Name cards / chips / text | PASS | Name cards for Muhammad Shah, Nizam-ul-Mulk, Baji Rao I, Rajiv Ahir, Nadir Shah, Saadat Khan, Jon Wilson, Ahmad Shah Abdali; chip at every beat; text ≥ 36 px, off faces. |
 | 8 | Maps and period symbols | PASS | MAP SIMPLIFIED on every map; Persia from real borders; pins from real coordinates; no crowns on Indian or Persian rulers (sarpech, chhatra, throne instead); only Company ensigns in red-and-white; Persian army teal. |
-| 9 | Audio | PASS |  music ~13 dB under speech; SFX ducked under speech; picture and voice built from the same measured timings. Measured, not heard. |
+| 9 | Audio | PASS | Master −14.1 LUFS integrated, true peak −1.4 dBTP (limit −1). music ~13 dB under speech; SFX ducked under speech; picture and voice built from the same measured timings. Measured, not heard. |
 | 10 | Story | PASS | 0 "and then"/"after that"/"next,"/sentence-initial "Then"; takeaway + tease. |
 | 11 | Accuracy | PASS with flags | VERIFY in §3; Wilson quote to be checked against the book (PDF missing). |
 | 12 | Length | PASS | 06:58 (418.9 s), inside 6:00–7:00. |
@@ -145,7 +145,21 @@ Phoneme-decoder agreement with the target sound (0–1): Saadat 0.92 · Abdali 0
 - Score is synthesised and functional; music can be swapped for a bed of your choice.
 
 ## 8. Delivery (v2)
-(filled at delivery)
+All changed files are sent with a v2 suffix, master first. The repository keeps the unsuffixed names (`master.mp4` is not committed).
+
+| File | Size | Purpose |
+|---|---|---|
+| master-v2.mp4 | 379.4 MiB | upload file: 1920×1080, 30 fps, H.264 High, yuv420p, 7.6 Mbps, AAC-LC 48 kHz stereo, faststart, 6:58.9 |
+| review-v2.mp4 | 131.9 MiB | 720p copy for phone review |
+| thumbnail-a-v2.jpg | 427 KiB | thumbnail A, 3840×2160: Kohinoor close-up over Delhi skyline with smoke, DELHI FELL |
+| thumbnail-b-v2.jpg | 550 KiB | thumbnail B, 3840×2160: Nadir Shah, gauntlet gripping the Kohinoor, Peacock Throne, DELHI FELL |
+| captions-v2.srt | 9 KiB | English captions, re-timed to the re-voiced narration |
+| youtube-v2.md | 5 KiB | chapters re-timed; thumbnail note; end-screen times |
+| script-v2.md | 7 KiB | script with new timings (b1h now says "throne") |
+| sources-v2.md | 5 KiB | adds Natural Earth borders, places.json, pronunciation check method |
+| review-sheet-v2.md | ~25 KiB | this sheet |
+
+Drive `ClearCut History/ep02-nadir-shah/`: v2 thumbnails, captions and documents uploaded; the two videos exceed the Drive connector's 10 MB limit, so they are sent here only.
 
 ## 9. Change template (fill in and send everything at once)
 ```
