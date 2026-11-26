@@ -61,6 +61,8 @@ var CC = (function(){
     for (var t=t0; t<=t1+0.001; t+=step/2, i++){ var ph = i%4; var a = [22,0,-22,0][ph];
       keysL.push([t, a]); keysR.push([t, -a]); bob.push([t,[0, ph%2? -8:0]]); kA.push([t, 8 - a*0.5]); kB.push([t, -8 + a*0.5]); }
     track(tl,L,'rot',keysL,'sine.inOut'); track(tl,R,'rot',keysR,'sine.inOut'); track(tl,W,'mv',bob,'sine.inOut');
+    var KL=$(p+'-legL-lower'), KR=$(p+'-legR-lower');
+    if (KL && KR){ var kl=[], kr=[]; keysL.forEach(function(k,j){ var ph=j%4; kl.push([k[0], ph===1?24:(ph===3?4:8)]); kr.push([k[0], ph===3?24:(ph===1?4:8)]); }); track(tl,KL,'rot',kl,'sine.inOut'); track(tl,KR,'rot',kr,'sine.inOut'); }
     if (aL) track(tl,aL,'rot',kA,'sine.inOut'); if (aR) track(tl,aR,'rot',kB,'sine.inOut');
   }
   // crowd: each <use> (or g) bobs with its own phase; rows can march via a separate track.

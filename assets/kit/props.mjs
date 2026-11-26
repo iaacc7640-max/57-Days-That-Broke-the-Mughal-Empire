@@ -137,3 +137,48 @@ export function companyFlag(p, s = 1) {
   return `<g id="${p}" transform="scale(${s})"><path d="M0,0 L0,-90" stroke="${INK}" stroke-width="5"/>
     <g id="${p}-cloth"><rect x="0" y="-90" width="60" height="40" fill="#F4EEE2"/>${[0, 2, 4, 6].map((k) => `<rect x="0" y="${-90 + k * 5.7}" width="60" height="5.7" fill="#A8322D"/>`).join("")}<rect x="0" y="-90" width="24" height="17" fill="#F4EEE2" stroke="${INK}" stroke-width="1.2"/><path d="M12,-90 L12,-73 M0,-81.5 L24,-81.5" stroke="#A8322D" stroke-width="3"/><rect x="0" y="-90" width="60" height="40" fill="none" stroke="${INK}" stroke-width="2"/></g></g>`;
 }
+
+// sarpech / jigha: jewelled turban ornament (period symbol of Mughal royalty)
+export function sarpech(p, s = 1) {
+  return `<g id="${p}" transform="scale(${s})">
+    <path d="M0,40 C-6,0 -4,-60 8,-120 C20,-80 18,-20 10,40Z" fill="#F4EEE2" stroke="${INK}" stroke-width="3"/>
+    <path d="M6,-110 C2,-60 4,-10 8,30" stroke="#D9CFBD" stroke-width="3" fill="none"/>
+    <path d="M-44,40 C-30,10 30,10 44,40 L36,58 L-36,58Z" fill="${GOLD}" stroke="${INK}" stroke-width="3"/>
+    <circle cx="0" cy="36" r="14" fill="#2E7D6B" stroke="${INK}" stroke-width="3"/><circle cx="-26" cy="44" r="7" fill="#B8362E" stroke="${INK}" stroke-width="2"/><circle cx="26" cy="44" r="7" fill="#B8362E" stroke="${INK}" stroke-width="2"/>
+    ${[-30, -15, 0, 15, 30].map((x) => `<circle cx="${x}" cy="66" r="5" fill="#F4EEE2" stroke="${INK}" stroke-width="1.5"/>`).join("")}
+  </g>`;
+}
+// chhatra: royal umbrella (pole at x=0, canopy top at y=-h)
+export function chhatra(p, h = 300, col = "#B8362E") {
+  let fringe = "";
+  for (let x = -110; x <= 110; x += 20) fringe += `<path d="M${x},${-h + 70} L${x + 10},${-h + 92} L${x + 20},${-h + 70}" fill="${GOLD}" stroke="${INK}" stroke-width="1.5"/>`;
+  return `<g id="${p}"><path d="M0,0 L0,${-h}" stroke="#5A3E26" stroke-width="10"/>
+    <path d="M-120,${-h + 70} C-110,${-h - 10} 110,${-h - 10} 120,${-h + 70}Z" fill="${col}" stroke="${INK}" stroke-width="3"/>
+    <path d="M-120,${-h + 70} L120,${-h + 70}" stroke="${GOLD}" stroke-width="8"/>${fringe}
+    <circle cx="0" cy="${-h - 14}" r="12" fill="${GOLD}" stroke="${INK}" stroke-width="2"/></g>`;
+}
+// throne split in two so a character can be seated between them: back (canopy, peacocks, bolster) and front (seat edge, base)
+export function throneBack(p) {
+  const full = peacockThrone(p, { empty: true });
+  return full.replace(/<rect x="-200" y="-40"[^>]*\/>/, "").replace(/<path d="M-190,-40 L-170,-90 L170,-90 L190,-40Z"[^>]*\/>/, "");
+}
+export function throneFront(p) {
+  let jewels = "";
+  for (let x = -150; x <= 150; x += 30) jewels += `<circle cx="${x}" cy="-70" r="7" fill="${(x / 30) % 2 ? "#B8362E" : "#2E7D6B"}" stroke="${INK}" stroke-width="1.5"/>`;
+  return `<g id="${p}"><rect x="-200" y="-40" width="400" height="40" fill="${GOLD_D}" stroke="${INK}" stroke-width="2"/>
+    <path d="M-190,-40 L-176,-96 L176,-96 L190,-40Z" fill="${GOLD}" stroke="${INK}" stroke-width="2"/>${jewels}
+    <path d="M-150,-96 C-150,-120 150,-120 150,-96Z" fill="#B8362E" stroke="${INK}" stroke-width="2"/></g>`;
+}
+// a steel-gauntleted hand whose fingers wrap around the Kohinoor (palm behind the gem, fingers and thumb in front)
+export function handWithGem(p, { gem = "#DCEAF0" } = {}) {
+  const steel = "#8A9094", steelD = "#6E7478";
+  const finger = (x, y, r) => `<g transform="translate(${x},${y}) rotate(${r})"><path d="M-14,0 C-16,-30 -12,-60 0,-66 C12,-60 16,-30 14,0Z" fill="${steel}" stroke="${INK}" stroke-width="3"/><path d="M-12,-26 L12,-26 M-10,-48 L10,-48" stroke="${steelD}" stroke-width="3"/></g>`;
+  return `<g id="${p}">
+    <path d="M-120,320 L-70,120 L70,120 L120,320Z" fill="${steelD}" stroke="${INK}" stroke-width="4"/>
+    <path d="M-104,260 L104,260 M-90,200 L90,200 M-78,150 L78,150" stroke="#55595C" stroke-width="6"/>
+    <path d="M-90,130 C-110,40 -80,-30 0,-40 C80,-30 110,40 90,130Z" fill="${steel}" stroke="${INK}" stroke-width="4"/>
+    <g transform="translate(0,-28)">${kohinoor(p + "-kn", { col: gem, size: 1.25 })}</g>
+    ${finger(-66, 14, -14)}${finger(-22, 4, -4)}${finger(22, 4, 4)}${finger(66, 14, 14)}
+    <g transform="translate(96,70) rotate(-58)"><path d="M-16,0 C-18,-34 -12,-70 2,-76 C16,-70 18,-34 16,0Z" fill="${steel}" stroke="${INK}" stroke-width="3"/></g>
+  </g>`;
+}

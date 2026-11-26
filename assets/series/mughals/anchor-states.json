@@ -1,5 +1,5 @@
 {
-  "_about": "Anchor-map states for 'The Fall of the Mughals'. Region keys refer to REGIONS in assets/kit/map.mjs (simplified polygons, lon/lat). Each episode's first map beat opens on the previous episode's end state, then saves its own end state here.",
+  "_about": "Anchor-map states for 'The Fall of the Mughals'. Region keys refer to REGIONS in assets/kit/map.mjs (simplified polygons, lon/lat). Each episode's first map beat opens on the previous episode's end state, then saves its own end state here. persiaEdge is drawn from real Natural Earth borders (Iran + Afghanistan), with the Mughal polygon on top (Kabul and Ghazni were Mughal until 1738-39).",
   "_order": [
     "base_1707",
     "ep01",

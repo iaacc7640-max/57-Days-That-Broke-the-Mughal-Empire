@@ -9,8 +9,8 @@
 ],
 "s02": [
 "c1",
-"Nadir Shah strides through the gate (walk cycle, blink, breathe)",
-"Nadir Shah: walk",
+"Nadir Shah strides through the gate; his army stands back by the walls (distant)",
+"Nadir Shah: walk (knees bend)",
 "0.25 s push-in then slow push",
 "—",
 "whoosh"
@@ -33,9 +33,9 @@
 ],
 "s05": [
 "c2",
-"Kohinoor in a steel gauntlet; flat four-point sparkle turns",
+"Kohinoor gripped in a drawn steel gauntlet (fingers wrap the gem), in a lit treasury vault",
 "—",
-"quick push, rays rotate, sparkle rotates/scales",
+"quick push, hand rises, sparkle turns",
 "—",
 "gem glint"
 ],
@@ -65,27 +65,27 @@
 ],
 "s09": [
 "b1a",
-"Split screen: four panels slide up — emperor, conqueror, governor, minister",
-"Muhammad Shah, Nadir Shah, Saadat Khan (hands clasped), Nizam (arms folded): idle + blink",
-"panels slide in on each noun",
-"chip DELHI · 1719 | THE PLEASURE KING; panel titles",
-"whoosh, paper, ticks"
+"OPENS STRAIGHT ON THE COURT: lit durbar hall, Muhammad Shah seated on the Peacock Throne, nobles, six musicians playing",
+"Muhammad Shah seated; 4 courtiers idle/blink; musicians bob",
+"slow push, parallax",
+"chip DELHI · 1719 | THE PLEASURE KING",
+"whoosh, paper, court murmur"
 ],
 "s10": [
 "b1b",
-"Durbar: Muhammad Shah with rose on a red cushion throne",
-"Muhammad Shah: talk (3 mouths), rose arm moves, head tilt",
-"0.25 s push then push-in",
+"WIDE COURT: Muhammad Shah on the Peacock Throne, nobles in rows",
+"Muhammad Shah seated: talk, arm; 4 nobles",
+"0.25 s push then slow push",
 "name card 1719 · Muhammad Shah · Mughal emperor, 1719–1748",
 "paper"
 ],
 "s11": [
 "b1c",
-"Musicians play, rose petals fall; the emperor sways",
-"Muhammad Shah: sways head and arm; 4 musicians bob",
-"pan + parallax, petals fall",
+"CLOSE-UP of Muhammad Shah holding a rose (fingers around the stem); petals fall",
+"Muhammad Shah: head sway, blink",
+"slow push; petals fall",
 "RANGEELA = “THE COLOURFUL ONE”",
-"court music (score), paper"
+"paper"
 ],
 "s12": [
 "b1d",
@@ -113,9 +113,9 @@
 ],
 "s14": [
 "b1f",
-"Nizam-ul-Mulk, arms folded, a crown floating beside him",
-"Nizam: talk, head turn, blink",
-"pan + parallax",
+"Nizam-ul-Mulk below his Deccan fort; a royal umbrella (chhatra) opens over him; a jewelled sarpech beside him",
+"Nizam: talk, head turn",
+"pan + parallax; chhatra unfolds",
 "name card 1724 · Nizam-ul-Mulk · Founder of Hyderabad state",
 "paper"
 ],
@@ -129,9 +129,9 @@
 ],
 "s16": [
 "b1h",
-"A giant crown wobbles on the raised arms of three governors",
+"A throne resting on borrowed shoulders: three governors hold the Peacock Throne aloft; it wobbles",
 "3 governors: arms up, breathe, blink",
-"crown wobbles; push",
+"throne wobbles; push",
 "MUGHAL EMPIRE, 1730s",
 "creak"
 ],
@@ -153,10 +153,10 @@
 ],
 "s19": [
 "b2d",
-"Baji Rao on horseback at dusk; riders on the horizon",
-"Baji Rao: talk, arm raised; horse bobs; 16 riders",
-"pan + parallax, riders gallop",
-"name card 1737 · Baji Rao I · Maratha Peshwa; versus card AHIR: “JUST 500 HORSEMEN” / OTHER ACCOUNTS: A FAR LARGER ARMY; HISTORIANS DISAGREE · SOURCES BELOW; name card BOOK · Rajiv Ahir · A Brief History of Modern India",
+"Baji Rao seated on a rigged horse (head, neck, mane, jointed legs, hooves) in a 4-beat walk, foot in the stirrup; small riders on the horizon (legs alternate)",
+"Baji Rao: talk, arm raised; horse: walk cycle, head nod, tail swing",
+"pan + parallax",
+"name cards Baji Rao I and Rajiv Ahir (book); versus card; HISTORIANS DISAGREE · SOURCES BELOW",
 "hooves, paper"
 ],
 "s20": [
@@ -164,16 +164,16 @@
 "Map: zoom on Delhi, the Maratha arrow at its gates, Delhi pulses",
 "—",
 "zoom in; pulse",
-"DELHI COULD NOT DEFEND DELHI; stamp UNDEFENDED; MAP SIMPLIFIED",
+"THE CAPITAL WAS UNDEFENDED; stamp UNDEFENDED; MAP SIMPLIFIED",
 "paper, thud"
 ],
 "s21": [
-"b2f–b2g ★",
-"Night tent: Nadir in silhouette studies a map of India by lamplight",
-"Nadir (silhouette): head turn, arm",
-"slow push; flame flickers",
+"b2f",
+"Nadir Shah in his LIT tent at a map table, pointing at India",
+"Nadir: point, head turn; lamp flickers",
+"slow push",
 "—",
-"hush; STING"
+"lamp hush"
 ],
 "s22": [
 "b3a–b3b",
@@ -233,24 +233,24 @@
 ],
 "s29": [
 "b4b",
-"Versus card over two armies in rows",
-"60 Mughal + 18 Persian figures sway",
-"cards pop",
-"MUGHAL CAMP ≈300,000 … / NADIR'S ARMY SMALLER …; ESTIMATE · ONE CONTEMPORARY COUNT",
+"Versus card; both armies advance (Mughal green, Persian teal)",
+"60 Mughal + 18 Persian figures bob and advance",
+"cards pop; rows advance",
+"MUGHAL CAMP ≈300,000 … / NADIR'S ARMY SMALLER …; ESTIMATE",
 "paper ×2"
 ],
 "s30": [
 "b4c",
-"Persian army: 88 uniformed musketeers + 6 camels with swivel guns march",
-"crowd",
-"rows march at different speeds, parallax",
-"LIGHT GUNS ON CAMELS",
+"Persian infantry in teal advances in three rows",
+"crowd (88)",
+"rows advance at different speeds, parallax",
+"UNIFORMED, DRILLED MUSKETEERS",
 "marching"
 ],
 "s31": [
 "b4d",
-"Saadat Khan flanked by two Persian guards",
-"Saadat Khan: talk, worried head turns",
+"Saadat Khan between two full-size Persian guards",
+"Saadat: talk, head turns; guards idle",
 "0.25 s push",
 "name card 1722 · Saadat Khan · Governor (Nawab) of Awadh; stamp CAPTURED",
 "whoosh, paper, thud"
@@ -265,7 +265,7 @@
 ],
 "s33": [
 "b4f",
-"Nadir's tent: Nadir points; Muhammad Shah slumped, hands empty",
+"Nadir's tent: Nadir points; Muhammad Shah slumped, hands empty (same height)",
 "Nadir: point; Muhammad Shah: talk, slump",
 "push",
 "AN EMPEROR WHO COULD NOT LEAVE",
@@ -337,15 +337,15 @@
 ],
 "s42": [
 "b6c",
-"treasure-count: coin stacks rise",
+"treasure-count in a dim but visible vault: coin stacks rise",
 "—",
-"coins stack",
-"70 CRORE · RUPEES · ONE ESTIMATE · 1 crore = 10 million; ESTIMATE · RAJIV AHIR'S HISTORY",
+"coins stack; pan",
+"70 CRORE · RUPEES · ONE ESTIMATE; ESTIMATE · RAJIV AHIR'S HISTORY",
 "coins pouring"
 ],
 "s43": [
 "b6d",
-"The Peacock Throne, the Kohinoor and the Darya-i-Noor appear on dark cloth",
+"The Peacock Throne, the Kohinoor and the Darya-i-Noor in the vault",
 "—",
 "objects pop in; sparkles turn",
 "PEACOCK THRONE; KOHINOOR; DARYA-I-NOOR · “SEA OF LIGHT”",
@@ -361,9 +361,9 @@
 ],
 "s45": [
 "b6e",
-"Saadat Khan's death spoken gently: only an empty plum seat and a lamp",
+"Saadat Khan's death spoken gently: his empty seat in his plum tent, dim but visible, lamp",
 "—",
-"very slow push; flame",
+"slow push; flame",
 "—",
 "near silence"
 ],
@@ -377,11 +377,11 @@
 ],
 "s47": [
 "b6g",
-"Nadir places the crown back on Muhammad Shah's head and walks away",
-"Nadir: arms, walk; Muhammad Shah: head",
-"crown arcs over; push",
-"A THRONE WITHOUT ITS TREASURE",
-"coin, footsteps"
+"Nadir 'restores' Muhammad Shah: he walks him to the Peacock Throne and seats him, then strides away (no crown)",
+"Muhammad Shah: walk, seated; Nadir: gesture, walk",
+"slow push",
+"RESTORED — TO A THRONE WITHOUT ITS TREASURE",
+"footsteps, seat thud"
 ],
 "s48": [
 "b6h ★",
@@ -401,27 +401,27 @@
 ],
 "s50": [
 "b7b",
-"QUOTE (kinetic type, word by word, key words crimson)",
+"QUOTE card 1 (≤10 s, word by word, key words crimson)",
 "—",
-"words appear in time with the voice",
+"words appear with the voice",
 "Wilson quote part 1 + source line",
 "paper"
 ],
 "s51": [
 "b7c",
-"QUOTE continued",
+"QUOTE card 2 (≤10 s)",
 "—",
-"word by word",
+"words appear with the voice",
 "Wilson quote part 2 + source line",
 "paper"
 ],
 "s52": [
 "b7d–b7e",
-"Diagram: Delhi's open, empty chest; payment lines to Hyderabad, Awadh, Bengal and the army get crossed out",
+"Coins drain out of Delhi's chest along the lines to Hyderabad, Awadh, Bengal and the army; the lines are crossed out",
 "—",
-"lines draw; X marks pop",
+"coins fly out, stack empties, X marks pop",
 "stamp EMPTY",
-"ticks, thud"
+"coins draining, thud"
 ],
 "s53": [
 "b7f",
@@ -449,7 +449,7 @@
 ],
 "s56": [
 "b8a–b8b",
-"A crown under a glass dome; the dome cracks and falls away in crisp shards",
+"The emperor's jewelled sarpech (turban ornament) under a glass dome; the dome cracks and falls away in crisp shards",
 "—",
 "0.25 s push; crack draws; shards fall",
 "chip DELHI · 1739 | THE TAKEAWAY; stamp UNTOUCHABLE?",
@@ -481,10 +481,74 @@
 ],
 "s60": [
 "b8e",
-"Map: Afghan arrow to PANIPAT; pin drops (bottom-right clear for end screen)",
+"Map: Afghan arrow to PANIPAT; framed so the Company flag sits left of the end-screen corner",
 "—",
 "zoom; arrow draws; pulse",
 "NEXT EPISODE · WHY INDIA'S FATE WAS DECIDED AT PANIPAT; MAP SIMPLIFIED (left)",
 "hooves; final STING"
+],
+"s09b": [
+"b1a",
+"Quick cut: the emperor in his court",
+"Muhammad Shah: head turn, blink",
+"slow push",
+"THE EMPEROR · DELHI",
+"whoosh"
+],
+"s09c": [
+"b1a",
+"Quick cut: the conqueror in the Persian camp (teal/red tents, teal soldiers)",
+"Nadir Shah; 14 soldiers bob",
+"pan + parallax",
+"THE CONQUEROR · PERSIA",
+"whoosh"
+],
+"s09d": [
+"b1a",
+"Quick cut: the governor before his riverside palace in Awadh (plum)",
+"Saadat Khan: hands clasped, head turns",
+"pan + parallax",
+"THE GOVERNOR · AWADH",
+"whoosh"
+],
+"s09e": [
+"b1a",
+"Quick cut: the minister below a Deccan hill fort",
+"Nizam-ul-Mulk: arms folded, head turn; banner flutters",
+"pan + parallax",
+"THE MINISTER · THE DECCAN",
+"whoosh"
+],
+"s10b": [
+"b1c",
+"MUSICIANS AND POETS: two poets recite from scrolls, musicians play",
+"2 poets: talk, gesture; 4 musicians bob",
+"pan + parallax",
+"MUSIC · POETRY · LUXURY",
+"court murmur, paper"
+],
+"s21b": [
+"b2g ★",
+"Close on the map: a steel-gauntleted finger comes to rest on Delhi",
+"—",
+"finger slides in; Delhi pulses; push",
+"MAP SIMPLIFIED",
+"map slide, tick; STING"
+],
+"s30b": [
+"b4c",
+"Three rigged camels walk; the swivel guns on their backs fire flat smoke puffs",
+"camels: pace walk, neck sway; guns recoil",
+"parallax; puffs grow and fade",
+"LIGHT GUNS ON CAMELS",
+"camel steps, muffled gun pops"
+],
+"s50b": [
+"b7b–b7c",
+"Between the quote halves: a Company ship under sail off the Bengal trading post",
+"—",
+"ship sails; parallax; flags flutter",
+"THE EAST INDIA COMPANY",
+"waves, timber"
 ]
 }

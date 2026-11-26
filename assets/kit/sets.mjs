@@ -106,10 +106,10 @@ export function plain(p, { tone = "normal", tents = false, dusk = false, trees =
 // Empty Delhi street (tragedy grade by default): shut doors, jharokha balconies, flat smoke shapes.
 export function street(p, { tone = "sepia", night = false } = {}) {
   const c = T[tone];
-  const sky = skyBands(p, night ? "#4A443E" : c.sky1, night ? "#6B635A" : c.sky2);
+  const sky = skyBands(p, night ? "#7A7268" : c.sky1, night ? "#958C80" : c.sky2);
   let far = "";
-  for (let i = 0; i < 6; i++) far += `<g id="${p}-smoke${i}" transform="translate(${-100 + i * 400},${430 - (i % 2) * 60})"><path d="M0,0 C-30,-40 10,-80 -10,-130 C30,-120 60,-160 50,-210 C90,-170 80,-110 110,-90 C120,-50 80,-10 60,0Z" fill="${night ? "#3A3530" : "#9C9384"}" stroke="${INK}" stroke-width="2"/></g>`;
-  far += skyline(tone, 520, night ? "#2E2A26" : "#8E857A", 12, 5);
+  for (let i = 0; i < 6; i++) far += `<g id="${p}-smoke${i}" transform="translate(${-100 + i * 400},${430 - (i % 2) * 60})"><path d="M0,0 C-30,-40 10,-80 -10,-130 C30,-120 60,-160 50,-210 C90,-170 80,-110 110,-90 C120,-50 80,-10 60,0Z" fill="${night ? "#6B635A" : "#9C9384"}" stroke="${INK}" stroke-width="2"/></g>`;
+  far += skyline(tone, 520, night ? "#5A534B" : "#8E857A", 12, 5);
   let mid = "";
   const houses = [[-240, 380], [140, 340], [520, 400], [940, 360], [1340, 390], [1740, 350]];
   houses.forEach(([x, w], i) => {
@@ -166,10 +166,11 @@ export function frontier(p, { fort = true, dusk = false } = {}) {
 }
 
 // Tent interior (Nadir's camp): striped canvas, map table.
-export function tent(p, { night = true } = {}) {
+export function tent(p, { night = true, col = null, col2 = null } = {}) {
   let stripes = "";
-  for (let x = -240; x < 2160; x += 160) stripes += `<rect x="${x}" y="0" width="80" height="900" fill="${night ? "#5E2420" : "#9E2B25"}"/>`;
-  const far = `<rect x="-240" y="0" width="2400" height="900" fill="${night ? "#7A2E28" : "#B8362E"}"/>${stripes}
+  const c1 = col || (night ? "#7A2E28" : "#B8362E"), c2 = col2 || (night ? "#5E2420" : "#9E2B25");
+  for (let x = -240; x < 2160; x += 160) stripes += `<rect x="${x}" y="0" width="80" height="900" fill="${c2}"/>`;
+  const far = `<rect x="-240" y="0" width="2400" height="900" fill="${c1}"/>${stripes}
     <path d="M-240,0 L960,-60 L2160,0 L2160,120 C1500,200 420,200 -240,120Z" fill="${night ? "#3A1A17" : "#7A2E28"}" stroke="${INK}" stroke-width="2"/>
     <path d="M960,-60 L960,880" stroke="#4A3A2C" stroke-width="18"/>`;
   const ground = `<rect x="-240" y="860" width="2400" height="260" fill="#5A3E2A"/><path d="M-240,860 L2160,860" stroke="${INK}" stroke-width="2.5"/>
@@ -208,4 +209,52 @@ export function desk(p, { col = "#6E4A32" } = {}) {
   let grain = "";
   for (let y = 0; y < 1100; y += 34) grain += `<path d="M-240,${y} C300,${y + 10} 900,${y - 8} 2160,${y + 6}" stroke="${shade(col, 0.85)}" stroke-width="4" fill="none"/>`;
   return L(p, "sky", `<rect x="-240" y="-40" width="2400" height="1160" fill="${col}"/>${grain}`) + L(p, "far", "") + L(p, "mid", "") + L(p, "ground", "");
+}
+
+// Palace by a river (Awadh, plum by default): arcaded facade, domes, garden, river band.
+export function palace(p, { wall = "#E8D3C9", accent = "#7A4B6B", dome = "#F2ECE0", tone = "normal", dim = false } = {}) {
+  const c = T[tone];
+  const sky = skyBands(p, dim ? "#B99A8E" : "#F2D2A8", dim ? "#9E8478" : "#EFE6D2");
+  let arch = "";
+  for (let i = 0; i < 9; i++) { const x = 340 + i * 140; arch += `<path d="M${x},620 L${x},520 C${x},480 ${x + 100},480 ${x + 100},520 L${x + 100},620Z" fill="${accent}" stroke="${INK}" stroke-width="2"/>`; }
+  const far = `<path d="M-240,560 C300,540 700,560 1100,548 C1500,536 1900,556 2160,548 L2160,640 L-240,640Z" fill="${dim ? "#8A7A6A" : "#B9C6A0"}"/>`;
+  const mid = `<rect x="300" y="380" width="1320" height="260" fill="${wall}" stroke="${INK}" stroke-width="2.5"/>${arch}
+    <rect x="300" y="360" width="1320" height="26" fill="${accent}" stroke="${INK}" stroke-width="2"/>
+    ${[460, 960, 1460].map((x, i) => `<path d="M${x - (i === 1 ? 150 : 90)},362 C${x - (i === 1 ? 150 : 90)},${i === 1 ? 200 : 270} ${x + (i === 1 ? 150 : 90)},${i === 1 ? 200 : 270} ${x + (i === 1 ? 150 : 90)},362Z" fill="${dome}" stroke="${INK}" stroke-width="2.5"/><path d="M${x},${i === 1 ? 206 : 274} L${x},${i === 1 ? 160 : 240}" stroke="${INK}" stroke-width="4"/><circle cx="${x}" cy="${i === 1 ? 156 : 236}" r="7" fill="#C9A24A"/>`).join("")}
+    ${[300, 1620].map((x) => `<rect x="${x - 26}" y="250" width="52" height="390" fill="${wall}" stroke="${INK}" stroke-width="2.5"/><path d="M${x - 34},250 C${x - 34},200 ${x + 34},200 ${x + 34},250Z" fill="${dome}" stroke="${INK}" stroke-width="2"/>`).join("")}`;
+  const ground = `<rect x="-240" y="640" width="2400" height="120" fill="${dim ? "#7E8E6A" : "#9DB07A"}"/><path d="M-240,640 L2160,640" stroke="${INK}" stroke-width="2"/>
+    ${Array.from({ length: 16 }, (_, i) => `<circle cx="${-200 + i * 150}" cy="${700 + (i % 2) * 20}" r="${26 + (i % 3) * 6}" fill="${dim ? "#5E6E4A" : "#6F8A4A"}" stroke="${INK}" stroke-width="2"/>`).join("")}
+    <rect x="-240" y="760" width="2400" height="340" fill="${dim ? "#4E6E70" : "#5E8C8A"}"/><path d="M-240,760 L2160,760" stroke="${INK}" stroke-width="2"/>
+    ${Array.from({ length: 14 }, (_, i) => `<path d="M${-200 + i * 170},${830 + (i % 3) * 70} l70,0" stroke="#8FB3B0" stroke-width="5" stroke-linecap="round"/>`).join("")}`;
+  return L(p, "sky", sky) + L(p, "far", far) + L(p, "mid", mid) + L(p, "ground", ground);
+}
+
+// Deccan hill fort: rocky boulders, bastioned walls on a granite hill, banner.
+export function deccanFort(p, { flag = "#3F7F6A" } = {}) {
+  const sky = skyBands(p, "#E9C996", "#EFE6D2");
+  const far = `<path d="M-240,640 L100,520 L380,600 L700,480 L1000,580 L1300,470 L1640,590 L2160,500 L2160,700 L-240,700Z" fill="#B7A98C" stroke="${INK}" stroke-width="2"/>`;
+  let rocks = "";
+  [[200, 760, 90], [380, 720, 120], [1520, 740, 110], [1720, 780, 80], [880, 700, 70], [1080, 690, 80]].forEach(([x, y, r]) => { rocks += `<ellipse cx="${x}" cy="${y}" rx="${r}" ry="${r * 0.7}" fill="#9C8E74" stroke="${INK}" stroke-width="2"/><path d="M${x - r * 0.4},${y - r * 0.2} l${r * 0.3},${-r * 0.2}" stroke="#7E7058" stroke-width="4"/>`; });
+  const mid = `<path d="M560,700 L760,420 L1160,420 L1360,700Z" fill="#A89878" stroke="${INK}" stroke-width="2"/>
+    <rect x="700" y="300" width="520" height="140" fill="#B8A07A" stroke="${INK}" stroke-width="2.5"/>
+    ${[700, 860, 1060, 1220].map((x) => `<path d="M${x - 40},440 L${x - 40},270 C${x - 40},240 ${x + 40},240 ${x + 40},270 L${x + 40},440Z" fill="#A88E68" stroke="${INK}" stroke-width="2.5"/>`).join("")}
+    ${Array.from({ length: 13 }, (_, i) => `<rect x="${704 + i * 40}" y="286" width="22" height="16" fill="#B8A07A" stroke="${INK}" stroke-width="2"/>`).join("")}
+    <path d="M920,440 L920,370 C920,340 1000,340 1000,370 L1000,440Z" fill="#2B2622"/>
+    <path d="M960,300 L960,170" stroke="${INK}" stroke-width="6"/><g id="${p}-flag" transform="translate(960,170)"><g id="${p}-flagcloth" transform="skewY(0)"><path d="M0,0 L96,10 L80,30 L96,52 L0,48Z" fill="${flag}" stroke="${INK}" stroke-width="2"/></g></g>${rocks}`;
+  const ground = `<rect x="-240" y="760" width="2400" height="340" fill="#B49A72"/><path d="M-240,760 L2160,760" stroke="${INK}" stroke-width="2"/>`;
+  return L(p, "sky", sky) + L(p, "far", far) + L(p, "mid", mid) + L(p, "ground", ground);
+}
+
+// Persian camp: teal and red tents, Persian banners, a plain under a high sky.
+export function persianCamp(p) {
+  const sky = skyBands(p, "#D6E4DC", "#EFE6D2");
+  let far = `<path d="M-240,600 L200,470 L520,560 L900,430 L1260,560 L1640,450 L2160,580 L2160,640 L-240,640Z" fill="#A9B4A6" stroke="${INK}" stroke-width="2"/>`;
+  let mid = "";
+  const cols = ["#3E8E8A", "#B8362E", "#E9DCC0", "#2E5A5E"];
+  for (let r = 0; r < 2; r++) for (let i = 0; i < 9; i++) {
+    const x = -160 + i * 270 + r * 130, y = 660 + r * 60, s = 0.9 + r * 0.35, col = cols[(i + r) % 4];
+    mid += `<g transform="translate(${x},${y}) scale(${s})"><path d="M-90,0 L-70,-80 L0,-120 L70,-80 L90,0Z" fill="${col}" stroke="${INK}" stroke-width="2"/><path d="M-14,0 L0,-60 L14,0Z" fill="${shade(col, 0.55)}"/><path d="M0,-120 L0,-150" stroke="${INK}" stroke-width="3"/><path d="M0,-150 L26,-142 L0,-134Z" fill="#3E8E8A" stroke="${INK}" stroke-width="1.5"/></g>`;
+  }
+  const ground = `<rect x="-240" y="640" width="2400" height="460" fill="#CDB88E"/><path d="M-240,640 L2160,640" stroke="${INK}" stroke-width="2"/>`;
+  return L(p, "sky", sky) + L(p, "far", far) + L(p, "mid", mid) + L(p, "ground", ground);
 }

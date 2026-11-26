@@ -26,7 +26,7 @@ export const CAST = {
   nadirShah: {
     name: "Nadir Shah", skin: "#B98458", jama: "#9E2B25", mail: true, breastplate: true, sash: "#2B2622", trousers: "#3A3330",
     shoes: "#2B2622", head: "nadir", headColor: "#B8362E", headBand: "#1E1A17", beard: "full", hair: "#1E1A17", brows: "stern",
-    prop: "dagger", gauntlet: true, age: 50, tall: 1.06,
+    prop: "dagger", gauntlet: true, age: 50, tall: 1.03,
   },
   saadatKhan: {
     name: "Saadat Khan", skin: "#C39069", jama: "#7A4B6B", sash: "#E2C98F", trousers: "#E9DCC0", shoes: "#6B4A2E",
@@ -51,6 +51,20 @@ export const CAST = {
     head: "turban", headColor: "#E9DCC0", headBand: "#5B6770", beard: "short", hair: "#1E1A17", brows: "stern", prop: "none", age: 25,
   },
 };
+Object.assign(CAST, {
+  persianSoldier: {
+    name: "Persian musketeer", skin: "#B98458", jama: "#3E8E8A", sash: "#C9A24A", trousers: "#2E3A3E", shoes: "#2B2622",
+    head: "nadir", headColor: "#B8362E", headBand: "#1E1A17", beard: "short", hair: "#1E1A17", brows: "stern", prop: "musket", age: 30,
+  },
+  poet: {
+    name: "court poet", skin: "#C59168", jama: "#E9DCC0", sash: "#4F7A3A", trousers: "#F4EEE2", shoes: "#6B4A2E",
+    head: "turban", headColor: "#4F7A3A", headBand: "#C9A24A", beard: "short", hair: "#2A211C", brows: "soft", prop: "scroll", age: 40,
+  },
+  courtier: {
+    name: "Mughal noble", skin: "#BE8C62", jama: "#4F7A3A", sash: "#C9A24A", trousers: "#E9DCC0", shoes: "#2B2622",
+    head: "turban", headColor: "#F4EBDD", headBand: "#C9A24A", beard: "short", hair: "#2A211C", brows: "flat", prop: "none", age: 45,
+  },
+});
 export function spec(key, over = {}) {
   let s = CAST[key];
   if (s.base) s = { ...CAST[s.base], ...s };
@@ -172,31 +186,52 @@ function torso(s, p) {
   </g>`;
 }
 
+// mitten hand with a thumb (drawn at the wrist, pointing down the forearm); `front` adds fingers that wrap a held prop
+function hand(col, side, gripped) {
+  const t = side === "L" ? -1 : 1; // thumb toward the body's front
+  return `<g class="hand"><path d="M-10,0 C-12,10 -10,20 0,21 C10,20 12,10 10,0Z" fill="${col}" stroke="${INK}" stroke-width="${sw}"/>
+    <path d="M${8 * t},3 C${17 * t},2 ${19 * t},11 ${11 * t},13Z" fill="${col}" stroke="${INK}" stroke-width="${sw}"/>
+    ${gripped ? "" : `<path d="M-5,14 L-5,19 M0,15 L0,20 M5,14 L5,19" stroke="${shade(col, 0.7)}" stroke-width="1.6"/>`}</g>`;
+}
+const fingersOver = (col) => `<path d="M-11,6 C-11,13 11,13 11,6 L11,12 C11,19 -11,19 -11,12Z" fill="${col}" stroke="${INK}" stroke-width="${sw}"/><path d="M-4,8 L-4,16 M3,8 L3,16" stroke="${shade(col, 0.7)}" stroke-width="1.6"/>`;
+
 function arm(s, p, side, pose) {
-  // side: "L" = screen-left shoulder (x=-40), "R" = screen-right (x=+40)
+  // side: "L" = screen-left shoulder (x=-38), "R" = screen-right (x=+38). Tapered upper and lower arm, elbow joint, mitten hand.
   const x = side === "L" ? -38 : 38;
   const sleeve = s.mail ? "#9AA0A4" : s.coat ? s.jama : shade(s.jama, side === "L" ? 0.88 : 1);
-  const hand = s.gauntlet ? "#6E7478" : s.skin;
+  const hc = s.gauntlet ? "#6E7478" : s.skin;
   const [u, l] = pose || [side === "L" ? 8 : -8, side === "L" ? 6 : -6];
-  let prop = "";
-  if (side === "R" && s.prop === "rose") prop = `<g transform="translate(0,64)"><path d="M0,0 L-4,-46" stroke="#4F7A3A" stroke-width="4"/><path d="M-4,-24 C-16,-30 -18,-20 -6,-18Z" fill="#4F7A3A"/><g transform="translate(-4,-50)"><circle r="12" fill="#C0392B" stroke="${INK}" stroke-width="${sw}"/><path d="M-6,-2 C-2,-8 4,-6 6,0 M-3,4 C0,0 4,2 5,5" stroke="#7E1F18" stroke-width="2" fill="none"/></g></g>`;
-  if (side === "R" && s.prop === "ledger") prop = `<g transform="translate(-4,60) rotate(-10)"><rect x="-18" y="-12" width="36" height="46" rx="3" fill="#7A2A22" stroke="${INK}" stroke-width="${sw}"/><rect x="-14" y="-8" width="4" height="38" fill="#C9A24A"/></g>`;
+  let prop = "", grip = false;
+  if (side === "R" && s.prop === "rose") { grip = true; prop = `<g transform="translate(0,58)"><path d="M0,14 L-4,-40" stroke="#4F7A3A" stroke-width="4"/><path d="M-3,-18 C-15,-24 -17,-14 -5,-12Z" fill="#4F7A3A"/><g transform="translate(-4,-46)"><circle r="12" fill="#C0392B" stroke="${INK}" stroke-width="${sw}"/><path d="M-6,-2 C-2,-8 4,-6 6,0 M-3,4 C0,0 4,2 5,5" stroke="#7E1F18" stroke-width="2" fill="none"/></g></g>`; }
+  if (side === "R" && s.prop === "ledger") { grip = true; prop = `<g transform="translate(-2,66) rotate(-10)"><rect x="-18" y="-14" width="36" height="46" rx="3" fill="#7A2A22" stroke="${INK}" stroke-width="${sw}"/><rect x="-14" y="-10" width="4" height="38" fill="#C9A24A"/></g>`; }
+  if (side === "R" && s.prop === "musket") { grip = true; prop = `<g transform="translate(0,62) rotate(-8)"><path d="M-4,-150 L4,-150 L6,40 L12,70 L-6,70 L-4,40Z" fill="#5A3E2A" stroke="${INK}" stroke-width="${sw}"/><rect x="-2.5" y="-170" width="5" height="40" fill="#7E8488" stroke="${INK}" stroke-width="1.5"/></g>`; }
+  if (side === "R" && s.prop === "scroll") { grip = true; prop = `<g transform="translate(0,66) rotate(-20)"><rect x="-30" y="-8" width="60" height="16" rx="8" fill="#EFE3C8" stroke="${INK}" stroke-width="${sw}"/><rect x="-34" y="-10" width="8" height="20" rx="3" fill="#8A5A3A"/><rect x="26" y="-10" width="8" height="20" rx="3" fill="#8A5A3A"/></g>`; }
   return `<g transform="translate(${x},-242)"><g id="${p}-arm${side}-upper" transform="rotate(${u})">
-      <path d="M-12,-4 C-12,-12 12,-12 12,-4 L11,62 L-11,62Z" fill="${sleeve}" stroke="${INK}" stroke-width="${sw}"/>
+      <path d="M-13,-4 C-13,-14 13,-14 13,-4 L10,60 L-10,60Z" fill="${sleeve}" stroke="${INK}" stroke-width="${sw}"/>
       <g transform="translate(0,58)"><g id="${p}-arm${side}-lower" transform="rotate(${l})">
-        <path d="M-10,0 L10,0 L9,48 L-9,48Z" fill="${sleeve}" stroke="${INK}" stroke-width="${sw}"/>
-        ${s.gauntlet ? `<rect x="-11" y="32" width="22" height="18" fill="#6E7478" stroke="${INK}" stroke-width="${sw}"/>` : `<rect x="-10" y="42" width="20" height="7" fill="${s.sash}" stroke="${INK}" stroke-width="1.5"/>`}
-        <circle cx="0" cy="60" r="11" fill="${hand}" stroke="${INK}" stroke-width="${sw}"/>
+        <circle cx="0" cy="0" r="10" fill="${sleeve}" stroke="${INK}" stroke-width="${sw}"/>
+        <path d="M-10,0 L10,0 L8,46 L-8,46Z" fill="${sleeve}" stroke="${INK}" stroke-width="${sw}"/>
+        <path d="M-9,-2 L9,-2" stroke="${sleeve}" stroke-width="5"/>
+        ${s.gauntlet ? `<path d="M-11,30 L11,30 L10,50 L-10,50Z" fill="#6E7478" stroke="${INK}" stroke-width="${sw}"/>` : `<rect x="-9" y="40" width="18" height="7" fill="${s.sash}" stroke="${INK}" stroke-width="1.5"/>`}
+        <g transform="translate(0,46)"><g id="${p}-arm${side}-hand">${hand(hc, side, grip)}</g></g>
         ${prop}
+        ${grip ? `<g transform="translate(0,46)">${fingersOver(hc)}</g>` : ""}
       </g></g>
     </g></g>`;
 }
 
-function leg(s, p, side) {
+function leg(s, p, side, seated) {
+  // hip pivot at (x,-84); thigh 40, knee joint, shin 34 + shoe. `seated`: thigh forward, shin down (riders, throne).
   const x = side === "L" ? -16 : 16, dir = side === "L" ? -1 : 1;
-  return `<g transform="translate(${x},-84)"><g id="${p}-leg${side}" transform="rotate(0)">
-    <path d="M-12,0 L12,0 L9,74 L-9,74Z" fill="${s.trousers}" stroke="${INK}" stroke-width="${sw}"/>
-    <path d="M${-12 * 1},74 L12,74 C${12 + 16 * (dir > 0 ? 1 : 0)},74 ${dir > 0 ? 30 : -30},${dir > 0 ? 70 : 70} ${dir > 0 ? 28 : -28},${80} L${dir > 0 ? 26 : -26},86 L-12,86Z" fill="${s.shoes}" stroke="${INK}" stroke-width="${sw}"/>
+  const [hu, kl] = seated ? [-80, 80] : [0, 0];
+  const shoe = `<path d="M-10,34 L10,34 C${dir > 0 ? 24 : -4},34 ${dir > 0 ? 30 : -30},38 ${dir > 0 ? 28 : -28},44 L${dir > 0 ? 26 : -26},48 L-10,48Z" fill="${s.shoes}" stroke="${INK}" stroke-width="${sw}"/>`;
+  return `<g transform="translate(${x},-84)"><g id="${p}-leg${side}" transform="rotate(${hu})">
+    <path d="M-12,0 L12,0 L10,40 L-10,40Z" fill="${s.trousers}" stroke="${INK}" stroke-width="${sw}"/>
+    <g transform="translate(0,38)"><g id="${p}-leg${side}-lower" transform="rotate(${kl})">
+      <circle r="10" fill="${s.trousers}" stroke="${INK}" stroke-width="${sw}"/><path d="M-10,0 L10,0 L8,36 L-8,36Z" fill="${s.trousers}" stroke="${INK}" stroke-width="${sw}"/><path d="M-9,-2 L9,-2" stroke="${s.trousers}" stroke-width="5"/>
+      ${shoe}
+      ${seated && side === "R" ? `<path d="M-14,40 L14,40 L14,50 L-14,50Z" fill="none" stroke="#8A6A3A" stroke-width="3"/><path d="M0,40 L0,-40" stroke="#8A6A3A" stroke-width="3"/>` : ""}
+    </g></g>
   </g></g>`;
 }
 
@@ -206,7 +241,7 @@ export function character(key, p, opts = {}) {
   const pose = opts.pose || {};
   const k = (s.tall || 1);
   return `<g id="${p}-walk" transform="translate(0,0)"><g transform="scale(${k})">
-    ${leg(s, p, "L")}${leg(s, p, "R")}
+    ${opts.seated ? leg(s, p, "R", true) : leg(s, p, "L") + leg(s, p, "R")}
     <g transform="translate(0,-84)"><g id="${p}-body" transform="scale(1,1)"><g transform="translate(0,84)">
       ${arm(s, p, "L", pose.armL)}
       ${torso(s, p)}
@@ -230,8 +265,8 @@ export function symPersianSoldier(id) {
   // ~150 units tall; origin at feet; turquoise sash, red-and-black cap, musket on shoulder
   return `<symbol id="${id}" overflow="visible">
     <path d="M-10,-56 L-14,0 L-4,0 L0,-40 L4,0 L14,0 L10,-56Z" fill="#3A3330" stroke="${INK}" stroke-width="2"/>
-    <path d="M-20,-112 L20,-112 L24,-50 L-24,-50Z" fill="#9E2B25" stroke="${INK}" stroke-width="2"/>
-    <rect x="-24" y="-80" width="48" height="10" fill="#3E8E8A" stroke="${INK}" stroke-width="1.5"/>
+    <path d="M-20,-112 L20,-112 L24,-50 L-24,-50Z" fill="#3E8E8A" stroke="${INK}" stroke-width="2"/>
+    <rect x="-24" y="-80" width="48" height="10" fill="#C9A24A" stroke="${INK}" stroke-width="1.5"/>
     <path d="M16,-108 L44,-170" stroke="#4A3A2C" stroke-width="6" stroke-linecap="round"/><path d="M40,-160 L48,-176" stroke="#7E8488" stroke-width="4"/>
     <circle cx="0" cy="-126" r="17" fill="#B98458" stroke="${INK}" stroke-width="2"/>
     <path d="M-9,-117 C-6,-106 6,-106 9,-117 C4,-114 -4,-114 -9,-117Z" fill="#1E1A17"/><circle cx="-6" cy="-128" r="2.4" fill="#1E1A17"/><circle cx="6" cy="-128" r="2.4" fill="#1E1A17"/>

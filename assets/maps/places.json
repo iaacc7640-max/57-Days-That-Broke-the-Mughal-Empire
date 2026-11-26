@@ -1,0 +1,7 @@
+{
+  "_about": "Real coordinates [longitude, latitude] for every map pin (WGS84). Used by assets/kit/map.mjs.",
+  "delhi": [77.21, 28.66], "karnal": [76.99, 29.69], "panipat": [76.97, 29.39], "lahore": [74.34, 31.55],
+  "kabul": [69.17, 34.53], "ghazni": [68.42, 33.55], "kandahar": [65.71, 31.62], "peshawar": [71.57, 34.01],
+  "attock": [72.36, 33.89], "calcutta": [88.36, 22.57], "murshidabad": [88.27, 24.18], "hyderabad": [78.47, 17.38],
+  "faizabad": [82.13, 26.78], "lucknow": [80.95, 26.85], "pune": [73.86, 18.52], "isfahan": [51.67, 32.65], "mashhad": [59.61, 36.30]
+}

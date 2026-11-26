@@ -6,13 +6,8 @@ ROOT = sys.argv[1] if len(sys.argv) > 1 else '.'
 k = Kokoro('/root/.cache/hyperframes/tts/models/kokoro-v1.0.onnx', '/root/.cache/hyperframes/tts/voices/voices-v1.0.bin')
 VOICE, SPEED, LANG = 'bm_george', 0.97, 'en-gb'
 # name -> IPA used for Kokoro (espeak gets everything else)
-IPA = {
- "Nizam-ul-Mulk": "nɪzˈɑːm ʊl mˈʊlk", "Darya-i-Noor": "dˈɑːɹjɑː iː nˈʊə", "Kohinoor": "kˈəʊɪnʊə",
- "Rangeela": "ɹʌŋɡˈiːlɑː", "Indus": "ˈɪndəs", "Awadh": "ɐwˈʌd", "Abdali": "ɐbdˈɑːliː",
- "Mughal": "mˈuːɡʌl", "Nadir": "nˈɑːdiə", "Nader": "nˈɑːdiə", "Nadir's": "nˈɑːdiəz", "Panipat": "pˈɑːniːpʌt",
- "Baji": "bˈɑːdʒiː", "Saadat": "sɐˈɑːdʌt", "Ahir's": "ɑːhˈiəz", "Ahir": "ɑːhˈiə", "Karnal": "kˈɑːnʌl",
- "Peshwa": "pˈeɪʃwɑː", "Jahan": "dʒɐhˈɑːn", "Ahmad": "ˈɑːmʌd", "Rajiv": "ɹˈɑːdʒiːv", "Kabul": "kˈɑːbʊl", "Maratha": "mɐɹˈɑːtə", "Marathas": "mɐɹˈɑːtəz", "Punjab": "pʌndʒˈɑːb",
-}
+_P = json.load(open(__import__('os').path.join(__import__('os').path.dirname(__file__), '../../../assets/characters/pronunciation.json')))
+IPA = {k: v['ipa'] for k, v in _P.items() if not k.startswith('_')}
 NUM = {"1739": "seventeen thirty-nine", "1719": "seventeen nineteen", "1724": "seventeen twenty-four",
        "1730s": "seventeen-thirties", "1737": "seventeen thirty-seven", "1736": "seventeen thirty-six",
        "1738": "seventeen thirty-eight"}

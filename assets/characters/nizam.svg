@@ -1,18 +1,31 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" width="600" height="800"><rect width="600" height="800" fill="#E9DCC0"/><g id="nizam-root" transform="translate(300,760) scale(1.9,1.9)"><g id="nizam-walk" transform="translate(0,0)"><g transform="scale(1)">
     <g transform="translate(-16,-84)"><g id="nizam-legL" transform="rotate(0)">
-    <path d="M-12,0 L12,0 L9,74 L-9,74Z" fill="#E9DCC0" stroke="#2B2622" stroke-width="2"/>
-    <path d="M-12,74 L12,74 C12,74 -30,70 -28,80 L-26,86 L-12,86Z" fill="#2B2622" stroke="#2B2622" stroke-width="2"/>
+    <path d="M-12,0 L12,0 L10,40 L-10,40Z" fill="#E9DCC0" stroke="#2B2622" stroke-width="2"/>
+    <g transform="translate(0,38)"><g id="nizam-legL-lower" transform="rotate(0)">
+      <circle r="10" fill="#E9DCC0" stroke="#2B2622" stroke-width="2"/><path d="M-10,0 L10,0 L8,36 L-8,36Z" fill="#E9DCC0" stroke="#2B2622" stroke-width="2"/><path d="M-9,-2 L9,-2" stroke="#E9DCC0" stroke-width="5"/>
+      <path d="M-10,34 L10,34 C-4,34 -30,38 -28,44 L-26,48 L-10,48Z" fill="#2B2622" stroke="#2B2622" stroke-width="2"/>
+      
+    </g></g>
   </g></g><g transform="translate(16,-84)"><g id="nizam-legR" transform="rotate(0)">
-    <path d="M-12,0 L12,0 L9,74 L-9,74Z" fill="#E9DCC0" stroke="#2B2622" stroke-width="2"/>
-    <path d="M-12,74 L12,74 C28,74 30,70 28,80 L26,86 L-12,86Z" fill="#2B2622" stroke="#2B2622" stroke-width="2"/>
+    <path d="M-12,0 L12,0 L10,40 L-10,40Z" fill="#E9DCC0" stroke="#2B2622" stroke-width="2"/>
+    <g transform="translate(0,38)"><g id="nizam-legR-lower" transform="rotate(0)">
+      <circle r="10" fill="#E9DCC0" stroke="#2B2622" stroke-width="2"/><path d="M-10,0 L10,0 L8,36 L-8,36Z" fill="#E9DCC0" stroke="#2B2622" stroke-width="2"/><path d="M-9,-2 L9,-2" stroke="#E9DCC0" stroke-width="5"/>
+      <path d="M-10,34 L10,34 C24,34 30,38 28,44 L26,48 L-10,48Z" fill="#2B2622" stroke="#2B2622" stroke-width="2"/>
+      
+    </g></g>
   </g></g>
     <g transform="translate(0,-84)"><g id="nizam-body" transform="scale(1,1)"><g transform="translate(0,84)">
       <g transform="translate(-38,-242)"><g id="nizam-armL-upper" transform="rotate(8)">
-      <path d="M-12,-4 C-12,-12 12,-12 12,-4 L11,62 L-11,62Z" fill="#37705d" stroke="#2B2622" stroke-width="2"/>
+      <path d="M-13,-4 C-13,-14 13,-14 13,-4 L10,60 L-10,60Z" fill="#37705d" stroke="#2B2622" stroke-width="2"/>
       <g transform="translate(0,58)"><g id="nizam-armL-lower" transform="rotate(6)">
-        <path d="M-10,0 L10,0 L9,48 L-9,48Z" fill="#37705d" stroke="#2B2622" stroke-width="2"/>
-        <rect x="-10" y="42" width="20" height="7" fill="#E9DCC0" stroke="#2B2622" stroke-width="1.5"/>
-        <circle cx="0" cy="60" r="11" fill="#BE8C62" stroke="#2B2622" stroke-width="2"/>
+        <circle cx="0" cy="0" r="10" fill="#37705d" stroke="#2B2622" stroke-width="2"/>
+        <path d="M-10,0 L10,0 L8,46 L-8,46Z" fill="#37705d" stroke="#2B2622" stroke-width="2"/>
+        <path d="M-9,-2 L9,-2" stroke="#37705d" stroke-width="5"/>
+        <rect x="-9" y="40" width="18" height="7" fill="#E9DCC0" stroke="#2B2622" stroke-width="1.5"/>
+        <g transform="translate(0,46)"><g id="nizam-armL-hand"><g class="hand"><path d="M-10,0 C-12,10 -10,20 0,21 C10,20 12,10 10,0Z" fill="#BE8C62" stroke="#2B2622" stroke-width="2"/>
+    <path d="M-8,3 C-17,2 -19,11 -11,13Z" fill="#BE8C62" stroke="#2B2622" stroke-width="2"/>
+    <path d="M-5,14 L-5,19 M0,15 L0,20 M5,14 L5,19" stroke="#856245" stroke-width="1.6"/></g></g></g>
+        
         
       </g></g>
     </g></g>
@@ -63,11 +76,16 @@
     </g>
       </g></g>
       <g transform="translate(38,-242)"><g id="nizam-armR-upper" transform="rotate(-8)">
-      <path d="M-12,-4 C-12,-12 12,-12 12,-4 L11,62 L-11,62Z" fill="#3f7f6a" stroke="#2B2622" stroke-width="2"/>
+      <path d="M-13,-4 C-13,-14 13,-14 13,-4 L10,60 L-10,60Z" fill="#3f7f6a" stroke="#2B2622" stroke-width="2"/>
       <g transform="translate(0,58)"><g id="nizam-armR-lower" transform="rotate(-6)">
-        <path d="M-10,0 L10,0 L9,48 L-9,48Z" fill="#3f7f6a" stroke="#2B2622" stroke-width="2"/>
-        <rect x="-10" y="42" width="20" height="7" fill="#E9DCC0" stroke="#2B2622" stroke-width="1.5"/>
-        <circle cx="0" cy="60" r="11" fill="#BE8C62" stroke="#2B2622" stroke-width="2"/>
+        <circle cx="0" cy="0" r="10" fill="#3f7f6a" stroke="#2B2622" stroke-width="2"/>
+        <path d="M-10,0 L10,0 L8,46 L-8,46Z" fill="#3f7f6a" stroke="#2B2622" stroke-width="2"/>
+        <path d="M-9,-2 L9,-2" stroke="#3f7f6a" stroke-width="5"/>
+        <rect x="-9" y="40" width="18" height="7" fill="#E9DCC0" stroke="#2B2622" stroke-width="1.5"/>
+        <g transform="translate(0,46)"><g id="nizam-armR-hand"><g class="hand"><path d="M-10,0 C-12,10 -10,20 0,21 C10,20 12,10 10,0Z" fill="#BE8C62" stroke="#2B2622" stroke-width="2"/>
+    <path d="M8,3 C17,2 19,11 11,13Z" fill="#BE8C62" stroke="#2B2622" stroke-width="2"/>
+    <path d="M-5,14 L-5,19 M0,15 L0,20 M5,14 L5,19" stroke="#856245" stroke-width="1.6"/></g></g></g>
+        
         
       </g></g>
     </g></g>

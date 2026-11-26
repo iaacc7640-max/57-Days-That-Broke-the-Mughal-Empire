@@ -1,7 +1,9 @@
 // Episode 2 shots: B4 Karnal, B5 Delhi (tragedy grade), B6 the loot, B7 aftershocks, B8 takeaway.
+import { seated } from "./lib.mjs";
+import { camel, camelWalkJS, camelFireJS } from "../../../assets/kit/animals.mjs";
 import { actor, talk, rot, tr, mv, cam, camTo, wipe, stampIn, popIn, draw, parallax, symbols, rows, crowd, mapSVG, mapJS, city, P, PW, r1, j } from "./lib.mjs";
 import { delhiGate, hall, plain, frontier, tent, street, vault, tradingPost, desk } from "../../../assets/kit/sets.mjs";
-import { peacockThrone, cart, kohinoor, crown, coinStack, chest, lamp, banner, scroll, scriptLines, companyFlag } from "../../../assets/kit/props.mjs";
+import { peacockThrone, cart, kohinoor, crown, coinStack, chest, lamp, banner, scroll, scriptLines, companyFlag, sarpech, throneBack, throneFront } from "../../../assets/kit/props.mjs";
 import { INK } from "../../../assets/kit/rig.mjs";
 import { chip, nameCard, stamp, tag, mapTag, quote } from "../../../assets/kit/ui.mjs";
 import { BASE } from "./shots-a.mjs";
@@ -27,30 +29,41 @@ export function shotsB(S) {
   });
   add("b4", "s29", L("b4b") - 0.15, "stat", (c) => {
     const p = c.p;
-    const ra = rows(p, p + "-sm", [{ y: 900, s: 0.62, n: 20, x0: 70, dx: 40 }, { y: 960, s: 0.62, n: 20, x0: 90, dx: 40 }, { y: 1020, s: 0.62, n: 20, x0: 70, dx: 40 }]);
-    const rb = rows(p, p + "-sp", [{ y: 960, s: 0.62, n: 9, x0: 1230, dx: 52, sym: p + "-sp" }, { y: 1020, s: 0.62, n: 9, x0: 1250, dx: 52, sym: p + "-sp" }]);
+    const ra = rows(p, p + "-sm", [{ y: 900, s: 0.62, n: 20, x0: 40, dx: 40 }, { y: 960, s: 0.62, n: 20, x0: 60, dx: 40 }, { y: 1020, s: 0.62, n: 20, x0: 40, dx: 40 }]);
+    const rb = rows(p, p + "-sp", [{ y: 960, s: 0.62, n: 9, x0: 1330, dx: 52, sym: p + "-sp" }, { y: 1020, s: 0.62, n: 9, x0: 1350, dx: 52, sym: p + "-sp" }]);
     const svg = SVG(symbols(p) + `<rect x="-200" y="-200" width="2320" height="1480" fill="#E9DCC0"/><rect x="960" y="-200" width="1200" height="1480" fill="#DCE8E2"/><path d="M960,-200 L960,1300" stroke="${INK}" stroke-width="6"/>` + ra.svg + rb.svg);
     const ov = `<div id="${p}-a" class="card" style="left:96px;top:110px;width:780px;padding:26px 32px;opacity:0"><div class="big" style="font-size:44px;color:#2F5D3A">MUGHAL CAMP</div><div class="big" style="font-size:150px">≈300,000</div><div style="font-size:36px;font-weight:600">people, incl. servants &amp; camp followers</div></div>
       <div id="${p}-b" class="card" style="left:1040px;top:110px;width:780px;padding:26px 32px;opacity:0"><div class="big" style="font-size:44px;color:${TQ}">NADIR'S ARMY</div><div class="big" style="font-size:110px">SMALLER</div><div style="font-size:36px;font-weight:600">faster · drilled · uniformed musketeers</div></div>` + tag(p + "-tg", "ESTIMATE · ONE CONTEMPORARY COUNT", 96, 560);
-    let js = cam(p + "-cam", c.t0, c.t1, [1.0], [1.05]) + crowd(ra.ids.concat(rb.ids), c.t0, c.t1, 4, 0.7, 5) + popIn(p + "-a", c.t0 + 0.3, { x: -60 }) + popIn(p + "-b", L("b4c") - 1.0 > c.t0 + 2 ? c.t0 + 2.6 : c.t0 + 2.6, { x: 60 }) + popIn(p + "-tg", c.t0 + 1.3);
+    let js = cam(p + "-cam", c.t0, c.t1, [1.0], [1.05]) + crowd(ra.ids.concat(rb.ids), c.t0, c.t1, 5, 0.5, 5) + popIn(p + "-a", c.t0 + 0.3, { x: -60 }) + popIn(p + "-b", c.t0 + 2.6, { x: 60 }) + popIn(p + "-tg", c.t0 + 1.3);
+    js += ra.rowIds.map((id, i) => mv(id, [[c.t0, [0, 0]], [c.t1, [70 + i * 10, 0]]], "none")).join("") + rb.rowIds.map((id, i) => mv(id, [[c.t0, [0, 0]], [c.t1, [-160 - i * 20, 0]]], "none")).join("");
     return { svg, ov, js };
   });
   add("b4", "s30", L("b4c") - 0.15, "crowd", (c) => {
+    // the Persian infantry (teal) advances
     const p = c.p, g = plain(p + "-set", { trees: false });
     const r = rows(p, p + "-sp", [{ y: 760, s: 0.6, n: 34, x0: -400, dx: 72 }, { y: 860, s: 0.78, n: 30, x0: -460, dx: 92 }, { y: 990, s: 1.0, n: 24, x0: -520, dx: 118 }]);
-    const camels = rows(p, p + "-cg", [{ y: 1080, s: 1.15, n: 6, x0: -300, dx: 420, sym: p + "-cg" }]);
-    const svg = SVG(symbols(p) + g + r.svg + camels.svg);
-    let js = cam(p + "-cam", c.t0, c.t1, [1.02, 0, 0], [1.1, -60, 0]) + parallax(p + "-set", c.t0, c.t1, 80) + crowd(r.ids, c.t0, c.t1, 6, 0.48, 8) + crowd(camels.ids, c.t0, c.t1, 8, 0.7, 9);
-    js += r.rowIds.concat(camels.rowIds).map((id, i) => mv(id, [[c.t0, [0, 0]], [c.t1, [180 + i * 40, 0]]], "none")).join("");
-    const ov = tag(p + "-tg", "LIGHT GUNS ON CAMELS", 96, 66) ;
-    return { svg, ov, js: js + popIn(p + "-tg", L("b4c") + 5.0) };
+    const svg = SVG(symbols(p) + g + r.svg);
+    let js = cam(p + "-cam", c.t0, c.t1, [1.02, 0, 0], [1.1, -60, 0]) + parallax(p + "-set", c.t0, c.t1, 80) + crowd(r.ids, c.t0, c.t1, 9, 0.46, 8);
+    js += r.rowIds.map((id, i) => mv(id, [[c.t0, [0, 0]], [c.t1, [260 + i * 70, 0]]], "none")).join("");
+    return { svg, ov: tag(p + "-tg", "UNIFORMED, DRILLED MUSKETEERS", 96, 66), js: js + popIn(p + "-tg", c.t0 + 0.8) };
+  });
+  add("b4", "s30b", L("b4c") + 4.1, "crowd", (c) => {
+    // camels walk; the light swivel guns on their backs fire (flat smoke puffs)
+    const p = c.p, g = plain(p + "-set", { trees: false });
+    const cams = [[300, 1000, 0.95], [880, 1010, 1.0], [1480, 1000, 0.95]];
+    const svg = SVG(g + cams.map(([x, y, s], i) => `<g transform="translate(${x},${y}) scale(${s})">${camel(`${p}-c${i}`, { gun: true })}</g>`).join(""));
+    let js = cam(p + "-cam", c.t0, c.t1, [1.02, 0, 0], [1.08, -40, 0]) + parallax(p + "-set", c.t0, c.t1, 140);
+    cams.forEach((_, i) => { js += camelWalkJS(`${p}-c${i}`, c.t0, c.t1, { period: 1.3 + i * 0.07 }) + camelFireJS(`${p}-c${i}`, c.t0 + 0.6 + i * 0.9); });
+    return { svg, ov: tag(p + "-tg", "LIGHT GUNS ON CAMELS", 96, 66), js: js + popIn(p + "-tg", c.t0 + 0.3) };
   });
   add("b4", "s31", L("b4d") - 0.15, "character", (c) => {
+    // Saadat Khan, captured, between two full-size Persian guards
     const p = c.p, g = plain(p + "-set", { trees: true });
-    const sk = actor(p + "-sk", "saadatKhan", 960, 980, 1.6, { pose: { armL: [-10, -70], armR: [10, 70] } }, c.t0, c.t1);
-    const guards = rows(p, p + "-sp", [{ y: 1010, s: 1.45, n: 2, x0: 620, dx: 700 }]);
-    const svg = SVG(symbols(p) + g + guards.svg + sk.svg);
-    let js = cam(p + "-cam", c.t0, c.t0 + 0.25, [1.12], [1.02], "power3.out") + cam(p + "-cam", c.t0 + 0.25, c.t1, [1.02], [1.1, 0, 50]) + sk.js + talk(p + "-sk", L("b4d") + 0.1, L("b4d") + 2.4, 31) + crowd(guards.ids, c.t0, c.t1, 4, 0.9, 2);
+    const sk = actor(p + "-sk", "saadatKhan", 960, 1000, 1.55, { pose: { armL: [-10, -70], armR: [10, 70] } }, c.t0, c.t1);
+    const g1 = actor(p + "-g1", "persianSoldier", 560, 1000, 1.55, { seed: 3 }, c.t0, c.t1);
+    const g2 = actor(p + "-g2", "persianSoldier", 1360, 1000, 1.55, { seed: 6, flip: true }, c.t0, c.t1);
+    const svg = SVG(g + g1.svg + g2.svg + sk.svg);
+    let js = cam(p + "-cam", c.t0, c.t0 + 0.25, [1.12], [1.02], "power3.out") + cam(p + "-cam", c.t0 + 0.25, c.t1, [1.02], [1.08, 0, 40]) + sk.js + g1.js + g2.js + talk(p + "-sk", L("b4d") + 0.1, L("b4d") + 2.4, 31);
     js += rot(`${p}-sk-head`, [[c.t0, 0], [c.t0 + 1.4, -8], [c.t0 + 2.8, 6], [c.t1, -4]]);
     const ov = nameCard(p + "-nc", "1722", "Saadat Khan", "Governor (Nawab) of Awadh", PW.awadh.fill) + stamp(p + "-stp", "CAPTURED", 1100, 150, "font-size:120px");
     return { svg, ov, js: js + wipe(p + "-nc", c.t0 + 0.4, c.t1 - 0.3) + stampIn(p + "-stp", E("b4d") - 0.9) };
@@ -63,14 +76,13 @@ export function shotsB(S) {
   });
   add("b4", "s33", L("b4f") - 0.15, "character", (c) => {
     const p = c.p, g = tent(p + "-set", { night: false });
-    const nd = actor(p + "-nd", "nadirShah", 640, 980, 1.6, { pose: { armL: [8, 6], armR: [-80, -30] } }, c.t0, c.t1);
+    const nd = actor(p + "-nd", "nadirShah", 640, 990, 1.45, { pose: { armL: [8, 6], armR: [-80, -30] } }, c.t0, c.t1);
     const ms = actor(p + "-ms", "muhammadShah", 1320, 990, 1.45, { pose: { armL: [6, 4], armR: [-6, -4] }, over: { prop: "none", brows: "worried" }, seed: 12 }, c.t0, c.t1);
     const svg = SVG(g + nd.svg + ms.svg);
     let js = cam(p + "-cam", c.t0, c.t1, [1.02, 0, 20], [1.1, -40, 40]) + nd.js + ms.js + talk(p + "-ms", L("b4f") + 0.1, L("b4f") + 1.5, 4);
     js += rot(`${p}-nd-armR-upper`, [[c.t0, -60], [c.t0 + 0.8, -95], [c.t0 + 3.5, -95], [c.t0 + 4.2, -30]]) + rot(`${p}-ms-head`, [[c.t0, 0], [c.t0 + 1.2, 12], [c.t1, 14]]);
     js += `CC.track(tl,'${p}-ms-body','sc',[[${r1(c.t0)},[1,1]],[${r1(c.t0 + 1.6)},[1.02,0.96]],[${r1(c.t1)},[1.02,0.95]]]);`;
-    const ov = tag(p + "-tg", "AN EMPEROR WHO COULD NOT LEAVE", 96, 66);
-    return { svg, ov, js: js + popIn(p + "-tg", L("b4f") + 3.6) };
+    return { svg, ov: tag(p + "-tg", "AN EMPEROR WHO COULD NOT LEAVE", 96, 66), js: js + popIn(p + "-tg", L("b4f") + 3.6) };
   });
   add("b4", "s34", L("b4g") - 0.15, "set", (c) => {
     const p = c.p, g = plain(p + "-set", { trees: false });
@@ -145,18 +157,18 @@ export function shotsB(S) {
     return { svg, ov, js: js + wipe(p + "-chip", c.t0 + 0.2, c.t1 - 0.4) };
   });
   add("b6", "s42", L("b6c") - 0.15, "stat", (c) => {
-    // treasure-count: coin stacks rise beside "70 CRORE · ONE ESTIMATE"
-    const p = c.p;
+    // treasure-count in a dim but visible vault: coin stacks rise
+    const p = c.p, g = vault(p + "-set");
     const stacks = [0, 1, 2, 3, 4, 5, 6].map((i) => `<g transform="translate(${1060 + i * 110},${1000 - (i % 2) * 20})">${coinStack(p + "-k" + i, 14 + (i * 5) % 9)}</g>`).join("");
-    const svg = SVG(`<rect x="-200" y="-200" width="2320" height="1480" fill="#3A3027"/><rect x="-200" y="1000" width="2320" height="300" fill="#2B2622"/>` + stacks);
-    let js = cam(p + "-cam", c.t0, c.t1, [1.0], [1.06, -30, 0]);
+    const svg = SVG(g + stacks);
+    let js = cam(p + "-cam", c.t0, c.t1, [1.0], [1.06, -30, 0]) + parallax(p + "-set", c.t0, c.t1, 30);
     for (let i = 0; i < 7; i++) { const n = 14 + (i * 5) % 9; for (let k = 0; k < n; k++) js += `tl.set(CC.$('${p}-k${i}-c${k}'),{attr:{opacity:0}},${r1(c.t0)});tl.set(CC.$('${p}-k${i}-c${k}'),{attr:{opacity:1}},${r1(c.t0 + 0.2 + i * 0.12 + k * 0.11)});`; }
     const ov = `<div id="${p}-st" class="card" style="left:96px;top:150px;width:860px;padding:28px 36px;opacity:0"><div class="big" style="font-size:200px;color:#9C7A2E">70 CRORE</div><div class="big" style="font-size:64px">RUPEES · ONE ESTIMATE</div><div style="font-size:38px;font-weight:600;margin-top:10px">1 crore = 10 million</div></div>` + tag(p + "-tg", "ESTIMATE · RAJIV AHIR'S HISTORY", 96, 700);
     return { svg, ov, js: js + popIn(p + "-st", L("b6c") + 1.6, { x: -60 }) + popIn(p + "-tg", L("b6c") + 2.4) };
   });
   add("b6", "s43", L("b6d") - 0.15, "object", (c) => {
-    const p = c.p, b = L("b6d");
-    const svg = SVG(`<rect x="-200" y="-200" width="2320" height="1480" fill="#2E3A3E"/><rect x="-200" y="880" width="2320" height="400" fill="#4A2A26"/>` +
+    const p = c.p, b = L("b6d"), g = vault(p + "-set");
+    const svg = SVG(g + `<rect x="-200" y="880" width="2320" height="400" fill="#7A2E28"/>` +
       `<g transform="translate(620,880) scale(1.05)"><g id="${p}-th" opacity="0">${peacockThrone(p + "-pt")}</g></g>` +
       `<g transform="translate(1260,560)"><g id="${p}-g1" opacity="0">${kohinoor(p + "-kn", { size: 1.1 })}</g></g>` +
       `<g transform="translate(1600,620)"><g id="${p}-g2" opacity="0">${kohinoor(p + "-dn", { col: "#F2C6CF", size: 1.1 })}</g></g>`);
@@ -174,12 +186,11 @@ export function shotsB(S) {
     return { svg, ov: stamp(p + "-stp", "DEMANDS", 1180, 170, "font-size:120px"), js: js + stampIn(p + "-stp", c.t0 + 1.0) };
   });
   add("b6", "s45", L("b6e") + 4.4, "object", (c) => {
-    // Saadat Khan's death is spoken gently; on screen only an empty seat in Awadh's plum and a lamp
-    const p = c.p;
-    const svg = SVG(`<rect x="-200" y="-200" width="2320" height="1480" fill="#3A2E34"/><rect x="-200" y="860" width="2320" height="400" fill="#2B2226"/>
-      <g transform="translate(960,860)"><rect x="-260" y="-90" width="520" height="90" rx="20" fill="#7A4B6B" stroke="${INK}" stroke-width="3"/><rect x="-220" y="-250" width="440" height="170" rx="40" fill="#8E5C7E" stroke="${INK}" stroke-width="3"/><path d="M-200,-90 L-200,-80 M200,-90 L200,-80" stroke="${INK}"/></g>
-      <g transform="translate(1380,860) scale(1.6)">${lamp(p + "-lp")}</g>`);
-    let js = cam(p + "-cam", c.t0, c.t1, [1.0, 0, 0], [1.06, 0, 30], "none") + `CC.track(tl,'${p}-lp-flame','sc',${j(Array.from({ length: 16 }, (_, i) => [r1(c.t0 + i * (c.t1 - c.t0) / 15), [1, i % 2 ? 1.12 : 0.94]]))});`;
+    // Saadat Khan's death is spoken gently; on screen only his empty seat in his tent, dim but visible, slow push
+    const p = c.p, g = tent(p + "-set", { night: false, col: "#8E6A7E", col2: "#7A566C" });
+    const svg = SVG(g + `<g transform="translate(900,880)"><rect x="-280" y="-96" width="560" height="96" rx="20" fill="#7A4B6B" stroke="${INK}" stroke-width="3"/><rect x="-240" y="-270" width="480" height="180" rx="40" fill="#9A6A8C" stroke="${INK}" stroke-width="3"/><circle cx="-200" cy="-96" r="34" fill="#C9A24A" stroke="${INK}" stroke-width="3"/><circle cx="200" cy="-96" r="34" fill="#C9A24A" stroke="${INK}" stroke-width="3"/></g>
+      <g transform="translate(1380,880) scale(1.6)">${lamp(p + "-lp")}</g>`);
+    let js = cam(p + "-cam", c.t0, c.t1, [1.0, 0, 0], [1.08, 0, 30], "none") + `CC.track(tl,'${p}-lp-flame','sc',${j(Array.from({ length: 16 }, (_, i) => [r1(c.t0 + i * (c.t1 - c.t0) / 15), [1, i % 2 ? 1.12 : 0.94]]))});`;
     return { svg, ov: "", js };
   });
   add("b6", "s46", L("b6f") - 0.15, "map", (c) => {
@@ -189,16 +200,19 @@ export function shotsB(S) {
     return { svg, ov: mapTag(p + "-mt"), js };
   });
   add("b6", "s47", L("b6g") - 0.15, "character", (c) => {
+    // Nadir "restores" Muhammad Shah by seating him on the throne, then strides away
     const p = c.p, g = hall(p + "-set"), b = L("b6g");
-    const nd = actor(p + "-nd", "nadirShah", 1300, 980, 1.5, { pose: { armL: [-60, -60], armR: [60, 60] } }, c.t0, c.t1);
-    const ms = actor(p + "-ms", "muhammadShah", 720, 990, 1.45, { pose: { armL: [6, 4], armR: [-6, -4] }, over: { prop: "none" }, seed: 14 }, c.t0, c.t1);
-    const svg = SVG(g + `<g transform="translate(720,1000)"><path d="M-280,0 L280,0 L250,-50 L-250,-50Z" fill="#9C8A6A" stroke="${INK}" stroke-width="2"/></g>` + ms.svg + nd.svg + `<g id="${p}-cr" transform="translate(1180,520) scale(0.7,0.7)">${crown(p + "-crn")}</g>`);
-    let js = cam(p + "-cam", c.t0, c.t1, [1.0, 0, 30], [1.08, 60, 40]) + nd.js + ms.js;
-    js += tr(`${p}-cr`, [[c.t0, [1180, 520, 0.7]], [b + 1.0, [1180, 520, 0.7]], [b + 2.6, [720, 425, 0.7], "power2.inOut"], [c.t1, [720, 428, 0.7]]]);
-    js += rot(`${p}-nd-armL-upper`, [[c.t0, -60], [b + 1.0, -60], [b + 2.6, -100], [b + 3.6, 8]]) + rot(`${p}-nd-armR-upper`, [[c.t0, 60], [b + 1.0, 60], [b + 2.6, 10], [b + 3.6, -8]]);
-    js += tr(`${p}-nd-root`, [[b + 3.4, [1300, 980, 1.5]], [c.t1, [1560, 980, 1.5]]]) + `CC.walk(tl,'${p}-nd',${r1(b + 3.4)},${r1(c.t1)},0.55);`;
-    js += rot(`${p}-ms-head`, [[c.t0, 6], [b + 2.6, 6], [c.t1, 14]]);
-    return { svg, ov: tag(p + "-tg", "A THRONE WITHOUT ITS TREASURE", 96, 66), js: js + popIn(p + "-tg", b + 4.0) };
+    const S0 = 1.42, tx = 700, ty = 990;
+    const nd = actor(p + "-nd", "nadirShah", 1500, ty, S0, { pose: { armL: [8, 6], armR: [-80, -20] } }, c.t0, c.t1);
+    const ms = actor(p + "-ms", "muhammadShah", 1080, ty, S0, { pose: { armL: [6, 4], armR: [-6, -4] }, over: { prop: "none" }, seed: 14 }, c.t0, c.t1);
+    const st = seated(p + "-mt", "muhammadShah", tx, ty, S0, { over: { prop: "none" }, pose: { armL: [14, 10], armR: [-14, -10] }, seed: 15 }, c.t0, c.t1);
+    const svg = SVG(g + `<g id="${p}-seat" opacity="0">${st.svg}</g><g transform="translate(${tx},${ty}) scale(${S0})"><g id="${p}-empty">${throneBack(p + "-eb")}${throneFront(p + "-ef")}</g></g><g id="${p}-stand">${ms.svg}</g>` + nd.svg);
+    let js = cam(p + "-cam", c.t0, c.t1, [1.0, 0, 30], [1.06, 40, 40]) + nd.js + ms.js + st.js;
+    js += rot(`${p}-nd-armR-upper`, [[c.t0, -60], [b + 0.6, -95], [b + 2.4, -95], [b + 3.0, -10]]);
+    js += `CC.walk(tl,'${p}-ms',${r1(b + 0.8)},${r1(b + 2.4)},0.55);` + tr(`${p}-ms-root`, [[b + 0.8, [1080, ty, S0]], [b + 2.4, [tx + 10, ty, S0]]], "none");
+    js += `CC.show(tl,'${p}-stand',${r1(c.t0)},1);CC.show(tl,'${p}-seat',${r1(c.t0)},0);CC.show(tl,'${p}-empty',${r1(c.t0)},1);CC.show(tl,'${p}-stand',${r1(b + 2.45)},0);CC.show(tl,'${p}-empty',${r1(b + 2.45)},0);CC.show(tl,'${p}-seat',${r1(b + 2.45)},1);`;
+    js += tr(`${p}-nd-root`, [[b + 3.4, [1500, ty, S0]], [c.t1, [1760, ty, S0]]]) + `CC.walk(tl,'${p}-nd',${r1(b + 3.4)},${r1(c.t1)},0.55);` + rot(`${p}-mt-head`, [[b + 2.5, 0], [c.t1, 10]]);
+    return { svg, ov: tag(p + "-tg", "RESTORED — TO A THRONE WITHOUT ITS TREASURE", 96, 66, "font-size:40px"), js: js + popIn(p + "-tg", b + 3.6) };
   });
   add("b6", "s48", L("b6h") - 0.15, "map", (c) => {
     const p = c.p, b = L("b6h");
@@ -220,29 +234,46 @@ export function shotsB(S) {
     const ov = chip(p + "-chip", "INDIA · AFTER 1739", "AFTERSHOCKS") + nameCard(p + "-nc", "2016", "Jon Wilson", "Historian · author of India Conquered", "#1F3A4A") + `<div class="lbl" style="left:96px;top:160px;font-size:36px;font-weight:600;opacity:1">Book cover drawn for illustration</div>`;
     return { svg, ov, js: js + wipe(p + "-chip", c.t0 + 0.2, c.t1 - 0.4) + wipe(p + "-nc", c.t0 + 0.8, c.t1 - 0.2) };
   });
-  const quoteShot = (lid, id, words, keys, typ) => add("b7", id, L(lid) - 0.15, typ, (c) => {
-    const p = c.p, a = L(lid), d = E(lid) - a;
-    const svg = SVG(`<rect x="-200" y="-200" width="2320" height="1480" fill="#6E4A32"/>${Array.from({ length: 30 }, (_, i) => `<path d="M-200,${i * 40} C400,${i * 40 + 12} 1200,${i * 40 - 10} 2120,${i * 40 + 6}" stroke="#5E3E2A" stroke-width="4" fill="none"/>`).join("")}<rect id="${p}-paper" x="150" y="90" width="1620" height="${keys.short ? 760 : 860}" fill="#F2E8D2" stroke="${INK}" stroke-width="4"/><rect x="164" y="104" width="1620" height="${keys.short ? 760 : 860}" fill="none" stroke="${INK}" stroke-width="3"/>`);
+  // quote cards: at most 10 s each; a Company ship shot sits between the halves
+  const quoteCard = (id, at, end, lid, words, keys, revealEnd, short) => add("b7", id, at, "quote", (c) => {
+    const p = c.p, a = L(lid), stop = Math.min(E(lid), revealEnd != null ? a + revealEnd : E(lid));
+    const svg = SVG(`<rect x="-200" y="-200" width="2320" height="1480" fill="#6E4A32"/>${Array.from({ length: 30 }, (_, i) => `<path d="M-200,${i * 40} C400,${i * 40 + 12} 1200,${i * 40 - 10} 2120,${i * 40 + 6}" stroke="#5E3E2A" stroke-width="4" fill="none"/>`).join("")}<rect x="150" y="90" width="1620" height="${short ? 760 : 860}" fill="#F2E8D2" stroke="${INK}" stroke-width="4"/><rect x="164" y="104" width="1620" height="${short ? 760 : 860}" fill="none" stroke="${INK}" stroke-width="3"/>`);
     const totalChars = words.reduce((s, w) => s + w.length + 1, 0);
     let acc = 0, js = cam(p + "-cam", c.t0, c.t1, [1.0], [1.04]);
-    words.forEach((w, i) => { const t = a + (acc / totalChars) * d; acc += w.length + 1; js += `tl.set(CC.$('${p}-q-w${i}'),{opacity:0},${r1(c.t0)});tl.fromTo(CC.$('${p}-q-w${i}'),{opacity:0,y:14},{opacity:1,y:0,duration:0.16,ease:'power2.out',immediateRender:false},${r1(t - 0.05)});`; });
-    const ov = quote(p + "-q", words, keys.idx) + `<div class="lbl" style="left:220px;top:${keys.short ? 720 : 830}px;font-size:38px">— Jon Wilson, <i>India Conquered</i> (quoted in Ahir, p. 65)</div>`;
+    words.forEach((w, i) => { const t = Math.max(c.t0 + 0.05, a + (acc / totalChars) * (stop - a)); acc += w.length + 1; js += `tl.set(CC.$('${p}-q-w${i}'),{opacity:0},${r1(c.t0)});tl.fromTo(CC.$('${p}-q-w${i}'),{opacity:0,y:14},{opacity:1,y:0,duration:0.16,ease:'power2.out',immediateRender:false},${r1(t - 0.05)});`; });
+    const ov = quote(p + "-q", words, keys) + `<div class="lbl" style="left:220px;top:${short ? 720 : 830}px;font-size:38px">— Jon Wilson, <i>India Conquered</i> (quoted in Ahir, p. 65)</div>`;
     return { svg, ov, js };
   });
   const q1 = "“Nader Shah was Mughal emperor for only fifty-seven days, in 1739, but those days created aftershocks that transformed India's politics…".split(" ");
-  quoteShot("b7b", "s50", q1, { idx: [7, 8, 14] }, "quote");
   const q2 = "Those fifty-seven days laid the ground which allowed the East India Company to conquer territory in India for the first time.”".split(" ");
-  quoteShot("b7c", "s51", q2, { idx: [1, 2, 9, 10, 11, 13, 14], short: true }, "quote");
+  quoteCard("s50", L("b7b") - 0.15, null, "b7b", q1, [7, 8, 14], 9.3, false);
+  add("b7", "s50b", L("b7b") + 9.7, "set", (c) => {
+    // between the two halves of the quote: a Company ship under sail
+    const p = c.p, g = tradingPost(p + "-set");
+    const ship = `<g id="${p}-sh" transform="translate(900,860)"><g transform="scale(1.9)"><path d="M-160,0 L160,0 L130,60 L-130,60Z" fill="#5A3E2A" stroke="${INK}" stroke-width="2.5"/><path d="M-40,0 L-40,-260 M60,0 L60,-220" stroke="#4A3A2C" stroke-width="8"/><path d="M-36,-250 L-36,-60 L-130,-70 C-110,-150 -110,-200 -36,-250Z M64,-210 L64,-60 L150,-70 C140,-130 130,-170 64,-210Z" fill="#F4EEE2" stroke="${INK}" stroke-width="2"/>${companyFlag(p + "-fl", 1).replace('<g id="' + p + '-fl"', '<g id="' + p + '-fl" transform="translate(-40,-260)"')}</g></g>`;
+    const svg = SVG(g + ship);
+    let js = cam(p + "-cam", c.t0, c.t1, [1.05, 0, 0], [1.1, -40, 0]) + parallax(p + "-set", c.t0, c.t1, 60) + tr(`${p}-sh`, [[c.t0, [820, 860, 1]], [c.t1, [980, 866, 1]]], "none");
+    js += `CC.track(tl,'${p}-set-flagcloth','sk',${j(Array.from({ length: 8 }, (_, i) => [r1(c.t0 + i * (c.t1 - c.t0) / 7), i % 2 ? 6 : -5]))});`;
+    return { svg, ov: tag(p + "-tg", "THE EAST INDIA COMPANY", 96, 66), js: js + popIn(p + "-tg", c.t0 + 0.3) };
+  });
+  quoteCard("s51", L("b7c") + 2.0, null, "b7c", q2, [1, 2, 9, 10, 11, 13, 14], null, true);
   add("b7", "s52", L("b7d") - 0.15, "stat", (c) => {
-    // why it mattered: an empty Delhi chest, broken payment lines to the governors and the army
+    // coins drain out of Delhi's chest toward the governors and the army, then the lines are cut
     const p = c.p, b = L("b7e");
     const node = (x, y, col, txt) => `<g transform="translate(${x},${y})"><circle r="92" fill="${col}" stroke="${INK}" stroke-width="4"/><text y="14" text-anchor="middle" font-family="CC Bebas" font-size="46" fill="#F4EEE2">${txt}</text></g>`;
+    const ends = [[420, 300], [1500, 300], [420, 850], [1500, 850]];
+    let coins = "";
+    ends.forEach(([x, y], i) => { for (let k = 0; k < 3; k++) coins += `<g id="${p}-cf${i}${k}" transform="translate(960,560)" opacity="0"><ellipse rx="22" ry="8" fill="#E3C77A" stroke="${INK}" stroke-width="2"/></g>`; });
     const svg = SVG(`<rect x="-200" y="-200" width="2320" height="1480" fill="#E9DCC0"/>` +
-      `<path id="${p}-l1" d="M960,560 L420,300" stroke="${INK}" stroke-width="10" stroke-dasharray="30 18"/><path id="${p}-l2" d="M960,560 L1500,300" stroke="${INK}" stroke-width="10" stroke-dasharray="30 18"/><path id="${p}-l3" d="M960,560 L420,850" stroke="${INK}" stroke-width="10" stroke-dasharray="30 18"/><path id="${p}-l4" d="M960,560 L1500,850" stroke="${INK}" stroke-width="10" stroke-dasharray="30 18"/>` +
+      ends.map(([x, y], i) => `<path id="${p}-l${i + 1}" d="M960,560 L${x},${y}" stroke="${INK}" stroke-width="10" stroke-dasharray="30 18"/>`).join("") +
       node(420, 300, PW.hyderabad.fill, "HYDERABAD") + node(1500, 300, PW.awadh.fill, "AWADH") + node(420, 850, PW.bengal.fill, "BENGAL") + node(1500, 850, PW.mughal.fill, "ARMY") +
-      `<g transform="translate(960,640) scale(1.4)">${chest(p + "-ch", { open: true, gold: false })}</g><text x="960" y="760" text-anchor="middle" font-family="CC Bebas" font-size="64" fill="${INK}">DELHI'S TREASURY</text>` +
+      `<g transform="translate(960,640) scale(1.4)">${chest(p + "-ch", { open: true, gold: false })}<g transform="translate(0,-96)">${coinStack(p + "-k", 9)}</g></g><text x="960" y="760" text-anchor="middle" font-family="CC Bebas" font-size="64" fill="${INK}">DELHI'S TREASURY</text>` + coins +
       [1, 2, 3, 4].map((i) => `<g transform="translate(${i % 2 ? 690 : 1230},${i < 3 ? 430 : 705})"><g id="${p}-x${i}" opacity="0"><path d="M-30,-30 L30,30 M30,-30 L-30,30" stroke="#A8322D" stroke-width="14" stroke-linecap="round"/></g></g>`).join(""));
-    let js = cam(p + "-cam", c.t0, c.t1, [1.0], [1.06]) + [1, 2, 3, 4].map((i) => draw(`${p}-l${i}`, c.t0 + 0.2 + i * 0.25, 0.6) + `CC.popIn(tl,'${p}-x${i}',${r1(b + 0.6 + i * 0.5)},{scale:0.3});`).join("");
+    let js = cam(p + "-cam", c.t0, c.t1, [1.0], [1.06]) + [1, 2, 3, 4].map((i) => draw(`${p}-l${i}`, c.t0 + 0.2 + i * 0.25, 0.6)).join("");
+    // coins leave the chest one by one along the lines; the stack drains
+    for (let k = 8; k >= 0; k--) js += `tl.set(CC.$('${p}-k-c${k}'),{attr:{opacity:1}},${r1(c.t0)});tl.set(CC.$('${p}-k-c${k}'),{attr:{opacity:0}},${r1(c.t0 + 0.6 + (8 - k) * 0.42)});`;
+    ends.forEach(([x, y], i) => { for (let k = 0; k < 3; k++) { const t = c.t0 + 0.7 + (i * 3 + k) * 0.3; js += `CC.show(tl,'${p}-cf${i}${k}',${r1(t)},1);` + `CC.track(tl,'${p}-cf${i}${k}','mv',[[${r1(t)},[960,560]],[${r1(t + 0.9)},[${x},${y}],'power1.in']]);` + `CC.show(tl,'${p}-cf${i}${k}',${r1(t + 0.92)},0);`; } });
+    js += [1, 2, 3, 4].map((i) => `CC.popIn(tl,'${p}-x${i}',${r1(b + 0.6 + i * 0.5)},{scale:0.3});`).join("");
     return { svg, ov: stamp(p + "-stp", "EMPTY", 1290, 480, "font-size:110px"), js: js + stampIn(p + "-stp", L("b7e") + 0.4) };
   });
   add("b7", "s53", L("b7f") - 0.15, "map", (c) => {
@@ -278,12 +309,12 @@ export function shotsB(S) {
 
   // ---------------- B8 · TAKEAWAY ----------------
   add("b8", "s56", L("b8a") - 0.3, "concept", (c) => {
-    // the belief that it cannot be touched: a glass dome over the crown cracks and falls away (crisp shards)
-    const p = c.p, b = L("b8b");
+    // the belief that it cannot be touched: the emperor's jewelled sarpech under a glass dome; the dome cracks and falls away
+    const p = c.p, b = L("b8b"), g = hall(p + "-set", { warm: false });
     const shards = [[-200, -60, -120, -260, -40, -120], [-40, -120, -120, -260, 40, -300], [40, -300, 120, -250, 30, -110], [30, -110, 120, -250, 200, -60], [-200, -60, -40, -120, -60, 10], [-60, 10, -40, -120, 30, -110], [30, -110, 60, 10, -60, 10], [60, 10, 30, -110, 200, -60]];
     const dome = shards.map((s, i) => `<g id="${p}-sh${i}"><path d="M${s[0]},${s[1]} L${s[2]},${s[3]} L${s[4]},${s[5]}Z" fill="#CFE0D6" fill-opacity="0.55" stroke="${INK}" stroke-width="3"/></g>`).join("");
-    const svg = SVG(`<rect x="-200" y="-200" width="2320" height="1480" fill="#2E3A3E"/><rect x="-200" y="820" width="2320" height="400" fill="#4A2A26"/>` +
-      `<g transform="translate(960,820) scale(2.2)"><rect x="-230" y="0" width="460" height="40" fill="#B8362E" stroke="${INK}" stroke-width="3"/><path d="M-160,0 C-160,-30 160,-30 160,0Z" fill="#9E2B25" stroke="${INK}" stroke-width="3"/><g transform="translate(0,-24) scale(0.8)">${crown(p + "-crn")}</g>${dome}<path id="${p}-ck" d="M-20,-290 L-5,-220 L-40,-170 L10,-120 L-10,-60" fill="none" stroke="#F4EEE2" stroke-width="5"/></g>`);
+    const svg = SVG(g + `<rect x="-200" y="820" width="2320" height="400" fill="#7A2E28"/>` +
+      `<g transform="translate(960,820) scale(2.2)"><rect x="-230" y="0" width="460" height="40" fill="#B8362E" stroke="${INK}" stroke-width="3"/><path d="M-160,0 C-160,-30 160,-30 160,0Z" fill="#9E2B25" stroke="${INK}" stroke-width="3"/><g transform="translate(0,-110) scale(0.9)">${sarpech(p + "-sp")}</g>${dome}<path id="${p}-ck" d="M-20,-290 L-5,-220 L-40,-170 L10,-120 L-10,-60" fill="none" stroke="#F4EEE2" stroke-width="5"/></g>`);
     let js = cam(p + "-cam", c.t0, c.t0 + 0.25, [1.12, 0, 60], [1.02, 0, 40], "power3.out") + cam(p + "-cam", c.t0 + 0.25, c.t1, [1.02, 0, 40], [1.1, 0, 80]) + draw(p + "-ck", b + 2.6, 0.5);
     shards.forEach((s, i) => { const dx = (s[0] + s[2] + s[4]) / 3; js += `tl.set(CC.$('${p}-sh${i}'),{x:0,y:0,rotation:0},${r1(c.t0)});tl.fromTo(CC.$('${p}-sh${i}'),{x:0,y:0,rotation:0},{x:${Math.round(dx * 0.6)},y:${260 + i * 18},rotation:${(i % 2 ? 1 : -1) * (20 + i * 6)},duration:0.9,ease:'power2.in',immediateRender:false},${r1(b + 3.4)});`; });
     js += `tl.set(CC.$('${p}-ck'),{attr:{opacity:1}},${r1(c.t0)});tl.set(CC.$('${p}-ck'),{attr:{opacity:0}},${r1(b + 3.4)});`;
@@ -315,10 +346,12 @@ export function shotsB(S) {
     return { svg, ov, js: js + wipe(p + "-nc", L("b8e") + 2.4, c.t1 - 0.2) };
   });
   add("b8", "s60", L("b8e") + 5.9, "map", (c) => {
-    const p = c.p, [px, py] = city("panipat");
+    // framed so the Company flag sits left of the end-screen corner
+    const p = c.p, [px, py] = city("panipat"), [cx, cy] = city("calcutta");
+    const mx = (px + cx) / 2 + 60, my = (py + cy) / 2 + 40;
     const svg = mapSVG(p, { regions: EP02_END, borders: ["hyderabad", "bengal", "awadh"], flags: [{ id: "co", city: "calcutta", s: 1.2 }], markers: [{ id: "pp", city: "panipat", col: "#A8322D" }], arrows: [{ id: "ab", pts: [[66.4, 33.4], [70.4, 33.6], [73.6, 31.6], [76.97, 29.39]], col: PW.afghans.fill, w: 16 }], pins: [{ id: "pp", city: "panipat", label: "PANIPAT", side: "l", t: 1, size: 48 }] });
-    const js = cam(p + "-cam", c.t0, c.t1, camTo(px - 140, py + 40, 1.6), camTo(px - 140, py + 40, 1.85), "power1.out") + mapJS.arrow(p, "ab", c.t0 + 0.1, 2.4, true, 1.1) + mapJS.pin(p, "pp", c.t0 + 2.6) + mapJS.pulse(p, "pp", c.t0 + 2.8, c.t1, 0.8);
-    const ov = mapTag(p + "-mt", true).replace('class="maptag left"', 'class="maptag left" style="bottom:66px"') + `<div id="${p}-nx" class="card" style="left:96px;top:66px;padding:18px 28px;opacity:0"><div class="big" style="font-size:44px;color:#A8322D">NEXT EPISODE</div><div class="big" style="font-size:72px">WHY INDIA'S FATE WAS DECIDED AT PANIPAT</div></div>`;
+    const js = cam(p + "-cam", c.t0, c.t1, camTo(1136, 388, 1.3), camTo(1116, 382, 1.45), "power1.out") + mapJS.arrow(p, "ab", c.t0 + 0.1, 2.4, true, 1.1) + mapJS.pin(p, "pp", c.t0 + 2.6) + mapJS.pulse(p, "pp", c.t0 + 2.8, c.t1, 0.8);
+    const ov = mapTag(p + "-mt", true) + `<div id="${p}-nx" class="card" style="left:96px;top:66px;padding:18px 28px;opacity:0"><div class="big" style="font-size:44px;color:#A8322D">NEXT EPISODE</div><div class="big" style="font-size:72px">WHY INDIA'S FATE WAS DECIDED AT PANIPAT</div></div>`;
     return { svg, ov, js: js + popIn(p + "-nx", c.t0 + 3.4, { y: -30 }) };
   });
 }

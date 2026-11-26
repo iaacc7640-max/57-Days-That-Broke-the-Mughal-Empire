@@ -110,3 +110,14 @@ export const mapJS = {
 };
 export const city = M.city;
 export const P = M.P;
+
+// A character seated in the Peacock Throne (back, figure, front), for durbar shots and the restoration.
+import { throneBack, throneFront } from "../../../assets/kit/props.mjs";
+export function seated(p, key, x, y, s, { over, pose, seed = 2 } = {}, t0 = 0, t1 = 10) {
+  const svg = `<g transform="translate(${x},${y}) scale(${s})">${throneBack(p + "-tb")}<g transform="translate(0,-60)">${place(character(key, p, { seated: true, over, pose }), p, 0, 0, 1)}</g>${throneFront(p + "-tf")}</g>`;
+  return { svg, js: `CC.breathe(tl,'${p}',${r1(t0)},${r1(t1)});CC.blink(tl,'${p}',${r1(t0)},${r1(t1)},${seed});` };
+}
+// embed a map inside a scene (nested <svg> clips to its own box)
+export function miniMap(p, x, y, w, h, o) {
+  return mapSVG(p, o).replace('<svg viewBox="0 0 1920 1080" width="1920" height="1080">', `<svg x="${x}" y="${y}" width="${w}" height="${h}" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">`);
+}

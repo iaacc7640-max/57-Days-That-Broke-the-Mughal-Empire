@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 700" width="600" height="700"><rect width="600" height="700" fill="#6B5E50"/><g transform="translate(300,360) scale(0.9)"><g id="hg">
+    <path d="M-120,320 L-70,120 L70,120 L120,320Z" fill="#6E7478" stroke="#2B2622" stroke-width="4"/>
+    <path d="M-104,260 L104,260 M-90,200 L90,200 M-78,150 L78,150" stroke="#55595C" stroke-width="6"/>
+    <path d="M-90,130 C-110,40 -80,-30 0,-40 C80,-30 110,40 90,130Z" fill="#8A9094" stroke="#2B2622" stroke-width="4"/>
+    <g transform="translate(0,-28)"><g id="hg-kn" transform="scale(1.25)">
+    <path d="M-90,-30 L-50,-70 L50,-70 L90,-30 L0,80Z" fill="#DCEAF0" stroke="#2B2622" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M-90,-30 L90,-30 M-50,-70 L-30,-30 L0,-70 L30,-30 L50,-70 M-30,-30 L0,80 L30,-30 M-90,-30 L0,80 L90,-30" fill="none" stroke="#2B2622" stroke-width="2"/>
+    <path d="M-50,-70 L-30,-30 L-90,-30Z" fill="#acb7bb"/><path d="M30,-30 L90,-30 L0,80Z" fill="#848c90"/><path d="M-30,-30 L0,80 L-90,-30Z" fill="#acb7bb"/>
+    <path d="M0,-70 L30,-30 L-30,-30Z" fill="#FFFFFF"/>
+    <g transform="translate(-40,-48)"><g id="hg-kn-spark" transform="rotate(0) scale(1)">
+      <path d="M0,-34 L7,-7 L34,0 L7,7 L0,34 L-7,7 L-34,0 L-7,-7Z" fill="#FFFFFF" stroke="#2B2622" stroke-width="2"/>
+    </g></g>
+  </g></g>
+    <g transform="translate(-66,14) rotate(-14)"><path d="M-14,0 C-16,-30 -12,-60 0,-66 C12,-60 16,-30 14,0Z" fill="#8A9094" stroke="#2B2622" stroke-width="3"/><path d="M-12,-26 L12,-26 M-10,-48 L10,-48" stroke="#6E7478" stroke-width="3"/></g><g transform="translate(-22,4) rotate(-4)"><path d="M-14,0 C-16,-30 -12,-60 0,-66 C12,-60 16,-30 14,0Z" fill="#8A9094" stroke="#2B2622" stroke-width="3"/><path d="M-12,-26 L12,-26 M-10,-48 L10,-48" stroke="#6E7478" stroke-width="3"/></g><g transform="translate(22,4) rotate(4)"><path d="M-14,0 C-16,-30 -12,-60 0,-66 C12,-60 16,-30 14,0Z" fill="#8A9094" stroke="#2B2622" stroke-width="3"/><path d="M-12,-26 L12,-26 M-10,-48 L10,-48" stroke="#6E7478" stroke-width="3"/></g><g transform="translate(66,14) rotate(14)"><path d="M-14,0 C-16,-30 -12,-60 0,-66 C12,-60 16,-30 14,0Z" fill="#8A9094" stroke="#2B2622" stroke-width="3"/><path d="M-12,-26 L12,-26 M-10,-48 L10,-48" stroke="#6E7478" stroke-width="3"/></g>
+    <g transform="translate(96,70) rotate(-58)"><path d="M-16,0 C-18,-34 -12,-70 2,-76 C16,-70 18,-34 16,0Z" fill="#8A9094" stroke="#2B2622" stroke-width="3"/></g>
+  </g></g></svg>
