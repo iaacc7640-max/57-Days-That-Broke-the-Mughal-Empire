@@ -35,792 +35,887 @@
 "db": -24
 },
 {
-"t": 10.6,
+"t": 10.57,
 "sfx": "whoosh",
 "db": -22
 },
 {
-"t": 11.02,
+"t": 10.99,
 "sfx": "march",
 "db": -28
 },
 {
-"t": 13.92,
+"t": 13.89,
 "sfx": "tick",
 "db": -26
 },
 {
-"t": 14.22,
+"t": 14.19,
 "sfx": "tick",
 "db": -26
 },
 {
-"t": 14.52,
+"t": 14.49,
 "sfx": "tick",
 "db": -26
 },
 {
-"t": 14.92,
+"t": 14.89,
 "sfx": "tick",
 "db": -26
 },
 {
-"t": 15.22,
+"t": 15.19,
 "sfx": "tick",
 "db": -26
 },
 {
-"t": 17.94,
+"t": 17.91,
 "sfx": "whoosh",
 "db": -20
 },
 {
-"t": 18.26,
+"t": 18.23,
 "sfx": "paper slide",
 "db": -22
 },
 {
-"t": 20.16,
-"sfx": "tick",
-"db": -22
-},
-{
-"t": 22.46,
-"sfx": "tick",
-"db": -22
-},
-{
-"t": 24.56,
-"sfx": "tick",
-"db": -22
-},
-{
-"t": 26.56,
-"sfx": "tick",
-"db": -22
-},
-{
-"t": 28.55,
+"t": 20.21,
 "sfx": "whoosh",
 "db": -24
 },
 {
-"t": 29.27,
+"t": 20.43,
+"sfx": "paper slide",
+"db": -28
+},
+{
+"t": 22.41,
+"sfx": "whoosh",
+"db": -24
+},
+{
+"t": 22.63,
+"sfx": "paper slide",
+"db": -28
+},
+{
+"t": 24.51,
+"sfx": "whoosh",
+"db": -24
+},
+{
+"t": 24.73,
+"sfx": "paper slide",
+"db": -28
+},
+{
+"t": 26.51,
+"sfx": "whoosh",
+"db": -24
+},
+{
+"t": 26.73,
+"sfx": "paper slide",
+"db": -28
+},
+{
+"t": 18.03,
+"sfx": "court murmur",
+"db": -30
+},
+{
+"t": 28.52,
+"sfx": "whoosh",
+"db": -24
+},
+{
+"t": 29.24,
 "sfx": "paper slide",
 "db": -22
 },
 {
-"t": 37.53,
+"t": 36.45,
+"sfx": "court murmur",
+"db": -32
+},
+{
+"t": 37.05,
+"sfx": "paper slide",
+"db": -28
+},
+{
+"t": 40.1,
 "sfx": "paper slide",
 "db": -26
 },
 {
-"t": 44.98,
+"t": 44.95,
 "sfx": "stamp thud",
 "db": -12
 },
 {
-"t": 49.84,
+"t": 49.81,
 "sfx": "strings snap",
 "db": -30
 },
 {
-"t": 50.14,
+"t": 50.11,
 "sfx": "puppet lands",
 "db": -22
 },
 {
-"t": 52.14,
+"t": 52.11,
 "sfx": "crack",
 "db": -26
 },
 {
-"t": 56.0,
+"t": 55.97,
 "sfx": "whoosh",
 "db": -20
 },
 {
-"t": 56.32,
+"t": 56.29,
 "sfx": "paper slide",
 "db": -22
 },
 {
-"t": 62.32,
+"t": 62.29,
 "sfx": "paper slide",
 "db": -22
 },
 {
-"t": 70.79,
+"t": 70.76,
 "sfx": "paper slide",
 "db": -26
 },
 {
-"t": 71.49,
+"t": 71.46,
 "sfx": "paper slide",
 "db": -26
 },
 {
-"t": 72.19,
+"t": 72.16,
 "sfx": "paper slide",
 "db": -26
 },
 {
-"t": 74.84,
+"t": 74.81,
 "sfx": "paper slide",
 "db": -26
 },
 {
-"t": 79.72,
+"t": 79.79,
 "sfx": "crown wobble creak",
 "db": -30
 },
 {
-"t": 88.84,
+"t": 88.94,
 "sfx": "whoosh",
 "db": -20
 },
 {
-"t": 89.16,
+"t": 89.26,
 "sfx": "paper slide",
 "db": -22
 },
 {
-"t": 88.96,
+"t": 89.06,
 "sfx": "wind",
 "db": -22
 },
 {
-"t": 91.16,
+"t": 91.26,
 "sfx": "paper slide",
 "db": -26
 },
 {
-"t": 100.65,
+"t": 100.75,
 "sfx": "hooves",
 "db": -26
 },
 {
-"t": 104.65,
+"t": 104.75,
 "sfx": "tick",
 "db": -24
 },
 {
-"t": 107.8,
-"sfx": "hooves",
+"t": 107.89,
+"sfx": "hooves (4-beat walk + riders)",
 "db": -24
 },
 {
-"t": 108.2,
+"t": 108.3,
 "sfx": "paper slide",
 "db": -22
 },
 {
-"t": 108.95,
+"t": 109.05,
 "sfx": "paper slide",
 "db": -24
 },
 {
-"t": 112.95,
+"t": 113.05,
 "sfx": "paper slide",
 "db": -26
 },
 {
-"t": 119.58,
+"t": 119.68,
 "sfx": "paper slide",
 "db": -26
 },
 {
-"t": 121.12,
+"t": 121.22,
 "sfx": "stamp thud",
 "db": -12
 },
 {
-"t": 111.75,
+"t": 111.84,
 "sfx": "paper slide",
 "db": -26
 },
 {
-"t": 124.78,
+"t": 124.87,
 "sfx": "lamp hush",
 "db": -32
 },
 {
-"t": 134.16,
+"t": 128.94,
+"sfx": "map slide",
+"db": -26
+},
+{
+"t": 130.14,
+"sfx": "tick",
+"db": -24
+},
+{
+"t": 134.25,
 "sfx": "whoosh",
 "db": -20
 },
 {
-"t": 134.48,
+"t": 134.57,
 "sfx": "paper slide",
 "db": -22
 },
 {
-"t": 135.28,
+"t": 135.37,
 "sfx": "paper slide",
 "db": -22
 },
 {
-"t": 134.88,
+"t": 134.97,
 "sfx": "sword ring",
 "db": -30
 },
 {
-"t": 141.78,
+"t": 141.89,
 "sfx": "paper slide",
 "db": -22
 },
 {
-"t": 146.94,
+"t": 147.05,
 "sfx": "coins",
 "db": -26
 },
 {
-"t": 147.94,
+"t": 148.05,
 "sfx": "tick",
 "db": -24
 },
 {
-"t": 150.87,
+"t": 150.97,
 "sfx": "march",
 "db": -26
 },
 {
-"t": 152.87,
+"t": 152.97,
 "sfx": "tick",
 "db": -24
 },
 {
-"t": 157.07,
+"t": 157.17,
 "sfx": "tick",
 "db": -24
 },
 {
-"t": 160.07,
+"t": 160.17,
 "sfx": "court murmur",
 "db": -24
 },
 {
-"t": 163.47,
+"t": 163.57,
 "sfx": "paper slide",
 "db": -26
 },
 {
-"t": 169.45,
+"t": 169.55,
 "sfx": "rose falls",
 "db": -30
 },
 {
-"t": 171.63,
+"t": 171.74,
 "sfx": "stamp thud",
 "db": -12
 },
 {
-"t": 173.78,
+"t": 173.88,
 "sfx": "whoosh",
 "db": -20
 },
 {
-"t": 174.1,
+"t": 174.2,
 "sfx": "paper slide",
 "db": -22
 },
 {
-"t": 177.6,
+"t": 177.7,
 "sfx": "paper slide",
 "db": -26
 },
 {
-"t": 182.55,
+"t": 182.65,
 "sfx": "paper slide",
 "db": -22
 },
 {
-"t": 184.85,
+"t": 184.95,
 "sfx": "paper slide",
 "db": -22
 },
 {
-"t": 183.55,
+"t": 183.65,
 "sfx": "tick",
 "db": -24
 },
 {
-"t": 189.87,
+"t": 189.98,
 "sfx": "march",
 "db": -20
 },
 {
-"t": 195.02,
+"t": 190.78,
 "sfx": "paper slide",
 "db": -26
 },
 {
-"t": 198.28,
+"t": 194.23,
+"sfx": "camels walking",
+"db": -28
+},
+{
+"t": 194.53,
+"sfx": "paper slide",
+"db": -26
+},
+{
+"t": 194.83,
+"sfx": "camel gun (muffled pop)",
+"db": -18
+},
+{
+"t": 195.73,
+"sfx": "camel gun (muffled pop)",
+"db": -18
+},
+{
+"t": 196.63,
+"sfx": "camel gun (muffled pop)",
+"db": -18
+},
+{
+"t": 198.42,
 "sfx": "whoosh",
 "db": -20
 },
 {
-"t": 198.8,
+"t": 198.94,
 "sfx": "paper slide",
 "db": -22
 },
 {
-"t": 203.11,
+"t": 203.24,
 "sfx": "stamp thud",
 "db": -12
 },
 {
-"t": 204.37,
+"t": 204.5,
 "sfx": "distant cannon",
 "db": -14
 },
 {
-"t": 205.26,
+"t": 205.39,
 "sfx": "stamp thud",
 "db": -16
 },
 {
-"t": 211.18,
+"t": 211.31,
 "sfx": "paper slide",
 "db": -26
 },
 {
-"t": 214.86,
+"t": 214.96,
 "sfx": "march far",
 "db": -28
 },
 {
-"t": 217.06,
+"t": 217.16,
 "sfx": "paper slide",
 "db": -26
 },
 {
-"t": 221.98,
+"t": 222.08,
 "sfx": "paper slide",
 "db": -26
 },
 {
-"t": 221.78,
+"t": 221.88,
 "sfx": "footsteps",
 "db": -30
 },
 {
-"t": 226.91,
+"t": 227.09,
 "sfx": "whispers",
 "db": -32
 },
 {
-"t": 227.51,
+"t": 227.69,
 "sfx": "paper slide",
 "db": -28
 },
 {
-"t": 235.71,
+"t": 235.9,
 "sfx": "crowd hush",
 "db": -26
 },
 {
-"t": 241.05,
+"t": 241.23,
 "sfx": "dog bark (distant)",
 "db": -26
 },
 {
-"t": 245.05,
+"t": 245.23,
 "sfx": "dog bark (distant)",
 "db": -30
 },
 {
-"t": 240.25,
+"t": 240.43,
 "sfx": "paper slide",
 "db": -28
 },
 {
-"t": 248.03,
+"t": 248.21,
 "sfx": "door shuts",
 "db": -20
 },
 {
-"t": 248.73,
+"t": 248.91,
 "sfx": "door shuts",
 "db": -20
 },
 {
-"t": 249.43,
+"t": 249.61,
 "sfx": "door shuts",
 "db": -20
 },
 {
-"t": 250.92,
+"t": 251.1,
 "sfx": "quill scratch",
 "db": -24
 },
 {
-"t": 253.51,
+"t": 253.69,
 "sfx": "stamp thud",
 "db": -12
 },
 {
-"t": 255.44,
+"t": 255.62,
 "sfx": "whoosh",
 "db": -20
 },
 {
-"t": 255.76,
+"t": 255.94,
 "sfx": "paper slide",
 "db": -22
 },
 {
-"t": 256.56,
+"t": 256.74,
 "sfx": "chests dragged",
 "db": -26
 },
 {
-"t": 255.56,
+"t": 255.74,
 "sfx": "march",
 "db": -28
 },
 {
-"t": 264.41,
+"t": 264.57,
 "sfx": "coins pouring",
 "db": -20
 },
 {
-"t": 265.96,
+"t": 266.12,
 "sfx": "paper slide",
 "db": -22
 },
 {
-"t": 266.76,
+"t": 266.92,
 "sfx": "paper slide",
 "db": -26
 },
 {
-"t": 272.55,
+"t": 272.71,
 "sfx": "paper slide",
 "db": -26
 },
 {
-"t": 274.85,
+"t": 275.01,
 "sfx": "paper slide",
 "db": -26
 },
 {
-"t": 276.95,
+"t": 277.11,
 "sfx": "paper slide",
 "db": -26
 },
 {
-"t": 274.55,
+"t": 274.71,
 "sfx": "gem glint",
 "db": -24
 },
 {
-"t": 276.55,
+"t": 276.71,
 "sfx": "gem glint",
 "db": -24
 },
 {
-"t": 279.6,
+"t": 279.77,
 "sfx": "quill scratch",
 "db": -26
 },
 {
-"t": 280.64,
+"t": 280.81,
 "sfx": "stamp thud",
 "db": -12
 },
 {
-"t": 280.7,
+"t": 280.87,
 "sfx": "coins taken",
 "db": -24
 },
 {
-"t": 290.31,
+"t": 290.42,
 "sfx": "paper slide",
 "db": -26
 },
 {
-"t": 291.5,
+"t": 291.62,
 "sfx": "tick",
 "db": -24
 },
 {
-"t": 298.59,
-"sfx": "crown set",
-"db": -24
-},
-{
-"t": 299.39,
+"t": 296.91,
 "sfx": "footsteps",
 "db": -30
 },
 {
-"t": 299.99,
+"t": 298.56,
+"sfx": "seated",
+"db": -26
+},
+{
+"t": 299.51,
+"sfx": "footsteps",
+"db": -30
+},
+{
+"t": 300.11,
 "sfx": "paper slide",
 "db": -26
 },
 {
-"t": 303.37,
+"t": 303.53,
 "sfx": "army marches home",
 "db": -26
 },
 {
-"t": 306.71,
+"t": 306.88,
 "sfx": "tick",
 "db": -24
 },
 {
-"t": 307.62,
+"t": 307.78,
 "sfx": "tick",
 "db": -24
 },
 {
-"t": 308.62,
+"t": 308.78,
 "sfx": "tick",
 "db": -24
 },
 {
-"t": 313.32,
+"t": 313.5,
 "sfx": "whoosh",
 "db": -20
 },
 {
-"t": 313.64,
+"t": 313.82,
 "sfx": "paper slide",
 "db": -22
 },
 {
-"t": 314.24,
+"t": 314.43,
 "sfx": "paper slide",
 "db": -22
 },
 {
-"t": 318.8,
+"t": 318.99,
 "sfx": "paper slide",
 "db": -26
 },
 {
-"t": 330.22,
-"sfx": "paper slide",
-"db": -26
-},
-{
-"t": 339.21,
-"sfx": "tick",
-"db": -26
-},
-{
-"t": 339.46,
-"sfx": "tick",
-"db": -26
-},
-{
-"t": 339.71,
-"sfx": "tick",
-"db": -26
-},
-{
-"t": 339.96,
-"sfx": "tick",
-"db": -26
-},
-{
-"t": 343.32,
-"sfx": "stamp thud",
-"db": -12
-},
-{
-"t": 343.88,
-"sfx": "tick",
-"db": -24
-},
-{
-"t": 344.38,
-"sfx": "tick",
-"db": -24
-},
-{
-"t": 344.88,
-"sfx": "tick",
-"db": -24
-},
-{
-"t": 345.38,
-"sfx": "tick",
-"db": -24
-},
-{
-"t": 349.55,
+"t": 328.72,
 "sfx": "whoosh",
-"db": -20
-},
-{
-"t": 349.87,
-"sfx": "paper slide",
 "db": -22
 },
 {
-"t": 350.82,
-"sfx": "paper slide",
-"db": -26
-},
-{
-"t": 352.42,
-"sfx": "paper slide",
-"db": -28
-},
-{
-"t": 353.12,
-"sfx": "paper slide",
-"db": -28
-},
-{
-"t": 353.72,
-"sfx": "paper slide",
-"db": -28
-},
-{
-"t": 358.72,
+"t": 328.84,
 "sfx": "waves",
 "db": -24
 },
 {
-"t": 360.72,
+"t": 329.24,
 "sfx": "ship timber",
-"db": -32
+"db": -30
 },
 {
-"t": 360.47,
+"t": 332.68,
 "sfx": "paper slide",
 "db": -26
 },
 {
-"t": 368.24,
-"sfx": "paper slide",
-"db": -22
+"t": 339.53,
+"sfx": "tick",
+"db": -26
 },
 {
-"t": 370.24,
-"sfx": "paper slide",
-"db": -22
+"t": 339.78,
+"sfx": "tick",
+"db": -26
 },
 {
-"t": 372.04,
+"t": 340.03,
+"sfx": "tick",
+"db": -26
+},
+{
+"t": 340.28,
+"sfx": "tick",
+"db": -26
+},
+{
+"t": 339.68,
+"sfx": "coins draining",
+"db": -24
+},
+{
+"t": 343.63,
+"sfx": "stamp thud",
+"db": -12
+},
+{
+"t": 344.19,
 "sfx": "tick",
 "db": -24
 },
 {
-"t": 368.34,
+"t": 344.69,
 "sfx": "tick",
-"db": -32
+"db": -24
 },
 {
-"t": 369.34,
+"t": 345.19,
 "sfx": "tick",
-"db": -32
+"db": -24
 },
 {
-"t": 370.34,
+"t": 345.69,
 "sfx": "tick",
-"db": -32
+"db": -24
 },
 {
-"t": 371.34,
-"sfx": "tick",
-"db": -32
-},
-{
-"t": 372.34,
-"sfx": "tick",
-"db": -32
-},
-{
-"t": 373.34,
-"sfx": "tick",
-"db": -32
-},
-{
-"t": 374.34,
-"sfx": "tick",
-"db": -32
-},
-{
-"t": 375.34,
-"sfx": "tick",
-"db": -32
-},
-{
-"t": 376.34,
-"sfx": "tick",
-"db": -32
-},
-{
-"t": 376.97,
+"t": 349.86,
 "sfx": "whoosh",
 "db": -20
 },
 {
-"t": 377.29,
+"t": 350.18,
 "sfx": "paper slide",
 "db": -22
 },
 {
-"t": 383.62,
-"sfx": "stamp thud",
-"db": -12
-},
-{
-"t": 383.88,
-"sfx": "glass crack",
-"db": -20
-},
-{
-"t": 384.78,
-"sfx": "shards fall",
-"db": -24
-},
-{
-"t": 392.76,
-"sfx": "rivals march",
-"db": -26
-},
-{
-"t": 394.1,
-"sfx": "stamp thud",
-"db": -12
-},
-{
-"t": 396.84,
-"sfx": "paper slide",
-"db": -22
-},
-{
-"t": 401.09,
+"t": 351.13,
 "sfx": "paper slide",
 "db": -26
 },
 {
-"t": 403.67,
-"sfx": "wind",
-"db": -26
-},
-{
-"t": 406.22,
+"t": 352.73,
 "sfx": "paper slide",
-"db": -26
-},
-{
-"t": 409.82,
-"sfx": "hooves far",
 "db": -28
 },
 {
-"t": 412.32,
+"t": 353.43,
+"sfx": "paper slide",
+"db": -28
+},
+{
+"t": 354.03,
+"sfx": "paper slide",
+"db": -28
+},
+{
+"t": 359.11,
+"sfx": "waves",
+"db": -24
+},
+{
+"t": 361.11,
+"sfx": "ship timber",
+"db": -32
+},
+{
+"t": 360.86,
+"sfx": "paper slide",
+"db": -26
+},
+{
+"t": 368.63,
+"sfx": "paper slide",
+"db": -22
+},
+{
+"t": 370.63,
+"sfx": "paper slide",
+"db": -22
+},
+{
+"t": 372.43,
 "sfx": "tick",
 "db": -24
 },
 {
-"t": 413.12,
+"t": 368.73,
+"sfx": "tick",
+"db": -32
+},
+{
+"t": 369.73,
+"sfx": "tick",
+"db": -32
+},
+{
+"t": 370.73,
+"sfx": "tick",
+"db": -32
+},
+{
+"t": 371.73,
+"sfx": "tick",
+"db": -32
+},
+{
+"t": 372.73,
+"sfx": "tick",
+"db": -32
+},
+{
+"t": 373.73,
+"sfx": "tick",
+"db": -32
+},
+{
+"t": 374.73,
+"sfx": "tick",
+"db": -32
+},
+{
+"t": 375.73,
+"sfx": "tick",
+"db": -32
+},
+{
+"t": 376.73,
+"sfx": "tick",
+"db": -32
+},
+{
+"t": 377.37,
+"sfx": "whoosh",
+"db": -20
+},
+{
+"t": 377.69,
+"sfx": "paper slide",
+"db": -22
+},
+{
+"t": 384.02,
+"sfx": "stamp thud",
+"db": -12
+},
+{
+"t": 384.28,
+"sfx": "glass crack",
+"db": -20
+},
+{
+"t": 385.18,
+"sfx": "shards fall",
+"db": -24
+},
+{
+"t": 393.16,
+"sfx": "rivals march",
+"db": -26
+},
+{
+"t": 394.5,
+"sfx": "stamp thud",
+"db": -12
+},
+{
+"t": 397.38,
+"sfx": "paper slide",
+"db": -22
+},
+{
+"t": 401.63,
+"sfx": "paper slide",
+"db": -26
+},
+{
+"t": 404.14,
+"sfx": "wind",
+"db": -26
+},
+{
+"t": 406.69,
+"sfx": "paper slide",
+"db": -26
+},
+{
+"t": 410.29,
+"sfx": "hooves far",
+"db": -28
+},
+{
+"t": 412.79,
+"sfx": "tick",
+"db": -24
+},
+{
+"t": 413.59,
 "sfx": "paper slide",
 "db": -26
 }

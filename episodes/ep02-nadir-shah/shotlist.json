@@ -1,41 +1,41 @@
 {
- "total": 418.4,
+ "total": 418.9,
  "acts": {
   "cold": {
    "start": 0,
-   "end": 18.062
+   "end": 18.032
   },
   "b1": {
-   "start": 18.062,
-   "end": 88.964
+   "start": 18.032,
+   "end": 89.06
   },
   "b2": {
-   "start": 88.964,
-   "end": 134.276
+   "start": 89.06,
+   "end": 134.372
   },
   "b3": {
-   "start": 134.276,
-   "end": 173.899
+   "start": 134.372,
+   "end": 174.004
   },
   "b4": {
-   "start": 173.899,
-   "end": 221.778
+   "start": 174.004,
+   "end": 221.885
   },
   "b5": {
-   "start": 221.778,
-   "end": 255.556
+   "start": 221.885,
+   "end": 255.737
   },
   "b6": {
-   "start": 255.556,
-   "end": 313.436
+   "start": 255.737,
+   "end": 313.625
   },
   "b7": {
-   "start": 313.436,
-   "end": 377.088
+   "start": 313.625,
+   "end": 377.487
   },
   "b8": {
-   "start": 377.088,
-   "end": 418.4
+   "start": 377.487,
+   "end": 418.9
   }
  },
  "shots": [
@@ -76,456 +76,520 @@
    "act": "cold",
    "type": "object",
    "start": 9.4,
-   "end": 10.721,
-   "dur": 1.321
+   "end": 10.691,
+   "dur": 1.291
   },
   {
    "id": "s06",
    "act": "cold",
    "type": "map",
-   "start": 10.721,
-   "end": 13.621,
+   "start": 10.691,
+   "end": 13.591,
    "dur": 2.9
   },
   {
    "id": "s07",
    "act": "cold",
    "type": "map",
-   "start": 13.621,
-   "end": 16.688,
+   "start": 13.591,
+   "end": 16.658,
    "dur": 3.067
   },
   {
    "id": "s08",
    "act": "cold",
    "type": "object",
-   "start": 16.688,
-   "end": 18.062,
+   "start": 16.658,
+   "end": 18.032,
    "dur": 1.374
   },
   {
    "id": "s09",
    "act": "b1",
-   "type": "split",
-   "start": 18.062,
-   "end": 28.667,
-   "dur": 10.605
+   "type": "crowd",
+   "start": 18.032,
+   "end": 20.332,
+   "dur": 2.3
+  },
+  {
+   "id": "s09b",
+   "act": "b1",
+   "type": "character",
+   "start": 20.332,
+   "end": 22.532,
+   "dur": 2.2
+  },
+  {
+   "id": "s09c",
+   "act": "b1",
+   "type": "crowd",
+   "start": 22.532,
+   "end": 24.632,
+   "dur": 2.1
+  },
+  {
+   "id": "s09d",
+   "act": "b1",
+   "type": "character",
+   "start": 24.632,
+   "end": 26.632,
+   "dur": 2
+  },
+  {
+   "id": "s09e",
+   "act": "b1",
+   "type": "set",
+   "start": 26.632,
+   "end": 28.637,
+   "dur": 2.005
   },
   {
    "id": "s10",
    "act": "b1",
-   "type": "character",
-   "start": 28.667,
-   "end": 36.483,
+   "type": "crowd",
+   "start": 28.637,
+   "end": 36.453,
    "dur": 7.816
+  },
+  {
+   "id": "s10b",
+   "act": "b1",
+   "type": "crowd",
+   "start": 36.453,
+   "end": 40.003,
+   "dur": 3.55
   },
   {
    "id": "s11",
    "act": "b1",
    "type": "character",
-   "start": 36.483,
-   "end": 43.491,
-   "dur": 7.008
+   "start": 40.003,
+   "end": 43.461,
+   "dur": 3.458
   },
   {
    "id": "s12",
    "act": "b1",
    "type": "concept",
-   "start": 43.491,
-   "end": 50.141,
+   "start": 43.461,
+   "end": 50.111,
    "dur": 6.65
   },
   {
    "id": "s12b",
    "act": "b1",
    "type": "object",
-   "start": 50.141,
-   "end": 56.121,
+   "start": 50.111,
+   "end": 56.091,
    "dur": 5.98
   },
   {
    "id": "s13",
    "act": "b1",
    "type": "map",
-   "start": 56.121,
-   "end": 61.818,
+   "start": 56.091,
+   "end": 61.788,
    "dur": 5.697
   },
   {
    "id": "s14",
    "act": "b1",
    "type": "character",
-   "start": 61.818,
-   "end": 70.488,
+   "start": 61.788,
+   "end": 70.458,
    "dur": 8.67
   },
   {
    "id": "s15",
    "act": "b1",
    "type": "map",
-   "start": 70.488,
-   "end": 79.219,
-   "dur": 8.731
+   "start": 70.458,
+   "end": 79.29,
+   "dur": 8.832
   },
   {
    "id": "s16",
    "act": "b1",
    "type": "concept",
-   "start": 79.219,
-   "end": 88.964,
-   "dur": 9.745
+   "start": 79.29,
+   "end": 89.06,
+   "dur": 9.77
   },
   {
    "id": "s17",
    "act": "b2",
    "type": "set",
-   "start": 88.964,
-   "end": 96.309,
-   "dur": 7.345
+   "start": 89.06,
+   "end": 96.404,
+   "dur": 7.344
   },
   {
    "id": "s18",
    "act": "b2",
    "type": "map",
-   "start": 96.309,
-   "end": 107.8,
+   "start": 96.404,
+   "end": 107.895,
    "dur": 11.491
   },
   {
    "id": "s19",
    "act": "b2",
    "type": "character",
-   "start": 107.8,
-   "end": 118.631,
+   "start": 107.895,
+   "end": 118.726,
    "dur": 10.831
   },
   {
    "id": "s20",
    "act": "b2",
    "type": "map",
-   "start": 118.631,
-   "end": 124.277,
-   "dur": 5.646
+   "start": 118.726,
+   "end": 124.373,
+   "dur": 5.647
   },
   {
    "id": "s21",
    "act": "b2",
    "type": "character",
-   "start": 124.277,
-   "end": 134.276,
-   "dur": 9.999
+   "start": 124.373,
+   "end": 128.545,
+   "dur": 4.172
+  },
+  {
+   "id": "s21b",
+   "act": "b2",
+   "type": "map",
+   "start": 128.545,
+   "end": 134.372,
+   "dur": 5.827
   },
   {
    "id": "s22",
    "act": "b3",
    "type": "character",
-   "start": 134.276,
-   "end": 141.782,
-   "dur": 7.506
+   "start": 134.372,
+   "end": 141.887,
+   "dur": 7.515
   },
   {
    "id": "s23",
    "act": "b3",
    "type": "archival",
-   "start": 141.782,
-   "end": 146.742,
+   "start": 141.887,
+   "end": 146.847,
    "dur": 4.96
   },
   {
    "id": "s24",
    "act": "b3",
    "type": "map",
-   "start": 146.742,
-   "end": 150.316,
+   "start": 146.847,
+   "end": 150.421,
    "dur": 3.574
   },
   {
    "id": "s25",
    "act": "b3",
    "type": "map",
-   "start": 150.316,
-   "end": 160.068,
+   "start": 150.421,
+   "end": 160.173,
    "dur": 9.752
   },
   {
    "id": "s26",
    "act": "b3",
    "type": "character",
-   "start": 160.068,
-   "end": 167.145,
+   "start": 160.173,
+   "end": 167.25,
    "dur": 7.077
   },
   {
    "id": "s27",
    "act": "b3",
    "type": "character",
-   "start": 167.145,
-   "end": 173.899,
+   "start": 167.25,
+   "end": 174.004,
    "dur": 6.754
   },
   {
    "id": "s28",
    "act": "b4",
    "type": "set",
-   "start": 173.899,
-   "end": 182.248,
+   "start": 174.004,
+   "end": 182.353,
    "dur": 8.349
   },
   {
    "id": "s29",
    "act": "b4",
    "type": "stat",
-   "start": 182.248,
-   "end": 189.872,
+   "start": 182.353,
+   "end": 189.977,
    "dur": 7.624
   },
   {
    "id": "s30",
    "act": "b4",
    "type": "crowd",
-   "start": 189.872,
-   "end": 198.404,
-   "dur": 8.532
+   "start": 189.977,
+   "end": 194.227,
+   "dur": 4.25
+  },
+  {
+   "id": "s30b",
+   "act": "b4",
+   "type": "crowd",
+   "start": 194.227,
+   "end": 198.536,
+   "dur": 4.309
   },
   {
    "id": "s31",
    "act": "b4",
    "type": "character",
-   "start": 198.404,
-   "end": 204.12,
+   "start": 198.536,
+   "end": 204.252,
    "dur": 5.716
   },
   {
    "id": "s32",
    "act": "b4",
    "type": "map",
-   "start": 204.12,
-   "end": 207.427,
+   "start": 204.252,
+   "end": 207.559,
    "dur": 3.307
   },
   {
    "id": "s33",
    "act": "b4",
    "type": "character",
-   "start": 207.427,
-   "end": 214.856,
-   "dur": 7.429
+   "start": 207.559,
+   "end": 214.962,
+   "dur": 7.403
   },
   {
    "id": "s34",
    "act": "b4",
    "type": "set",
-   "start": 214.856,
-   "end": 221.778,
-   "dur": 6.922
+   "start": 214.962,
+   "end": 221.885,
+   "dur": 6.923
   },
   {
    "id": "s35",
    "act": "b5",
    "type": "character",
-   "start": 221.778,
-   "end": 226.911,
-   "dur": 5.133
+   "start": 221.885,
+   "end": 227.092,
+   "dur": 5.207
   },
   {
    "id": "s36",
    "act": "b5",
    "type": "crowd",
-   "start": 226.911,
-   "end": 233.515,
+   "start": 227.092,
+   "end": 233.696,
    "dur": 6.604
   },
   {
    "id": "s37",
    "act": "b5",
    "type": "character",
-   "start": 233.515,
-   "end": 239.302,
+   "start": 233.696,
+   "end": 239.483,
    "dur": 5.787
   },
   {
    "id": "s38",
    "act": "b5",
    "type": "set",
-   "start": 239.302,
-   "end": 247.477,
-   "dur": 8.175
+   "start": 239.483,
+   "end": 247.659,
+   "dur": 8.176
   },
   {
    "id": "s39",
    "act": "b5",
    "type": "set",
-   "start": 247.477,
-   "end": 250.817,
-   "dur": 3.34
+   "start": 247.659,
+   "end": 250.998,
+   "dur": 3.339
   },
   {
    "id": "s40",
    "act": "b5",
    "type": "stamp",
-   "start": 250.817,
-   "end": 255.556,
+   "start": 250.998,
+   "end": 255.737,
    "dur": 4.739
   },
   {
    "id": "s41",
    "act": "b6",
    "type": "crowd",
-   "start": 255.556,
-   "end": 264.211,
-   "dur": 8.655
+   "start": 255.737,
+   "end": 264.374,
+   "dur": 8.637
   },
   {
    "id": "s42",
    "act": "b6",
    "type": "stat",
-   "start": 264.211,
-   "end": 271.4,
+   "start": 264.374,
+   "end": 271.563,
    "dur": 7.189
   },
   {
    "id": "s43",
    "act": "b6",
    "type": "object",
-   "start": 271.4,
-   "end": 279.499,
-   "dur": 8.099
+   "start": 271.563,
+   "end": 279.668,
+   "dur": 8.105
   },
   {
    "id": "s44",
    "act": "b6",
    "type": "stamp",
-   "start": 279.499,
-   "end": 284.049,
+   "start": 279.668,
+   "end": 284.218,
    "dur": 4.55
   },
   {
    "id": "s45",
    "act": "b6",
    "type": "object",
-   "start": 284.049,
-   "end": 290.005,
-   "dur": 5.956
+   "start": 284.218,
+   "end": 290.123,
+   "dur": 5.905
   },
   {
    "id": "s46",
    "act": "b6",
    "type": "map",
-   "start": 290.005,
-   "end": 295.842,
+   "start": 290.123,
+   "end": 295.96,
    "dur": 5.837
   },
   {
    "id": "s47",
    "act": "b6",
    "type": "character",
-   "start": 295.842,
-   "end": 303.165,
-   "dur": 7.323
+   "start": 295.96,
+   "end": 303.327,
+   "dur": 7.367
   },
   {
    "id": "s48",
    "act": "b6",
    "type": "map",
-   "start": 303.165,
-   "end": 313.436,
-   "dur": 10.271
+   "start": 303.327,
+   "end": 313.625,
+   "dur": 10.298
   },
   {
    "id": "s49",
    "act": "b7",
    "type": "title",
-   "start": 313.436,
-   "end": 318.803,
+   "start": 313.625,
+   "end": 318.992,
    "dur": 5.367
   },
   {
    "id": "s50",
    "act": "b7",
    "type": "quote",
-   "start": 318.803,
-   "end": 330.217,
-   "dur": 11.414
+   "start": 318.992,
+   "end": 328.842,
+   "dur": 9.85
+  },
+  {
+   "id": "s50b",
+   "act": "b7",
+   "type": "set",
+   "start": 328.842,
+   "end": 332.681,
+   "dur": 3.839
   },
   {
    "id": "s51",
    "act": "b7",
    "type": "quote",
-   "start": 330.217,
-   "end": 338.765,
-   "dur": 8.548
+   "start": 332.681,
+   "end": 339.079,
+   "dur": 6.398
   },
   {
    "id": "s52",
    "act": "b7",
    "type": "stat",
-   "start": 338.765,
-   "end": 349.669,
+   "start": 339.079,
+   "end": 349.983,
    "dur": 10.904
   },
   {
    "id": "s53",
    "act": "b7",
    "type": "map",
-   "start": 349.669,
-   "end": 358.716,
-   "dur": 9.047
+   "start": 349.983,
+   "end": 359.106,
+   "dur": 9.123
   },
   {
    "id": "s54",
    "act": "b7",
    "type": "character",
-   "start": 358.716,
-   "end": 367.836,
+   "start": 359.106,
+   "end": 368.226,
    "dur": 9.12
   },
   {
    "id": "s55",
    "act": "b7",
    "type": "split",
-   "start": 367.836,
-   "end": 377.088,
-   "dur": 9.252
+   "start": 368.226,
+   "end": 377.487,
+   "dur": 9.261
   },
   {
    "id": "s56",
    "act": "b8",
    "type": "concept",
-   "start": 377.088,
-   "end": 387.41,
-   "dur": 10.322
+   "start": 377.487,
+   "end": 387.808,
+   "dur": 10.321
   },
   {
    "id": "s57",
    "act": "b8",
    "type": "map",
-   "start": 387.41,
-   "end": 396.538,
-   "dur": 9.128
+   "start": 387.808,
+   "end": 397.079,
+   "dur": 9.271
   },
   {
    "id": "s58",
    "act": "b8",
    "type": "title",
-   "start": 396.538,
-   "end": 403.671,
-   "dur": 7.133
+   "start": 397.079,
+   "end": 404.139,
+   "dur": 7.06
   },
   {
    "id": "s59",
    "act": "b8",
    "type": "character",
-   "start": 403.671,
-   "end": 409.721,
+   "start": 404.139,
+   "end": 410.189,
    "dur": 6.05
   },
   {
    "id": "s60",
    "act": "b8",
    "type": "map",
-   "start": 409.721,
-   "end": 418.4,
-   "dur": 8.679
+   "start": 410.189,
+   "end": 418.9,
+   "dur": 8.711
   }
  ]
 }

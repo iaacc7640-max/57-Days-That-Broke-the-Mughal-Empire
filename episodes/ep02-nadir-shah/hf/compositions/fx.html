@@ -5,7 +5,7 @@
 #fx-vig{position:absolute;inset:0;background:radial-gradient(ellipse at center, rgba(20,16,14,0) 62%, rgba(20,16,14,0.12) 100%)}
 </style>
 <div id="root" data-composition-id="fx" data-width="1920" data-height="1080">
-  <div id="fx-layer" class="clip" data-start="0" data-duration="418.4" data-track-index="0" data-layout-ignore><div id="fx-grain"></div><div id="fx-vig"></div></div>
+  <div id="fx-layer" class="clip" data-start="0" data-duration="418.9" data-track-index="0" data-layout-ignore><div id="fx-grain"></div><div id="fx-vig"></div></div>
 </div>
 <script>
 (function(){
@@ -14,7 +14,7 @@
   var g = document.getElementById("fx-grain"), o = { v: 0 };
   function put(t){ var f = Math.floor(t * 15), x = ((f * 7919) % 197) - 98, y = ((f * 104729) % 193) - 96; g.style.transform = "translate(" + x + "px," + y + "px)"; }
   put(0);
-  tl.fromTo(o, { v: 0 }, { v: 418.4, duration: 418.4, ease: "none", onUpdate: function(){ put(o.v); } }, 0);
+  tl.fromTo(o, { v: 0 }, { v: 418.9, duration: 418.9, ease: "none", onUpdate: function(){ put(o.v); } }, 0);
   window.__timelines["fx"] = tl;
 })();
 </script>

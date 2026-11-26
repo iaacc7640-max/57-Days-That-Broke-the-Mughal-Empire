@@ -15,9 +15,9 @@ In 1739, Nadir Shah of Persia crushed the Mughal army at Karnal, sacked Delhi an
 ⏱️ TIMESTAMPS:
 00:00 A Persian king in Delhi
 00:18 The Pleasure King
-01:28 Warning Shots
+01:29 Warning Shots
 02:14 The Storm from Persia
-02:53 Karnal, 1739
+02:54 Karnal, 1739
 03:41 Delhi
 04:15 The Loot
 05:13 Aftershocks
@@ -54,7 +54,7 @@ In 1739, Nadir Shah of Persia crushed the Mughal army at Karnal, sacked Delhi an
 - Tags (14): Nadir Shah, Nader Shah, Mughal Empire, Muhammad Shah Rangeela, Battle of Karnal, Sack of Delhi 1739, Peacock Throne, Kohinoor, Indian history, Fall of the Mughals, East India Company, Jon Wilson India Conquered, Baji Rao, animated history documentary
 - Category: Education · Language: English · Captions: upload `captions.srt` (English)
 - Playlist: **The Fall of the Mughals**
-- Thumbnail: `thumbnail-a.jpg` (A/B test with `thumbnail-b.jpg` if Test & Compare is available)
+- Thumbnail: `thumbnail-b.jpg` (Nadir Shah gripping the Kohinoor) or `thumbnail-a.jpg` (Kohinoor over the burning skyline); both say "DELHI FELL" — A/B test them with Test & Compare
 
 ## Pinned comment (pin within 10 minutes of publishing)
 Was Nadir Shah's invasion the real beginning of British India? Jon Wilson thinks those 57 days opened the door for the East India Company — others say the Mughal decline started long before. Where do you stand? 👇
@@ -66,9 +66,9 @@ Reply starters:
 4. (thank-you) Thank you for watching and for such a thoughtful comment — this is exactly the debate we hoped for.
 5. (next episode) Abdali comes back again and again… the next episode follows him all the way to Panipat. 🔔
 
-## End screen (last 20 s: 06:38–06:58)
-- On screen: 06:36 question card → 06:43 Ahmad Shah Abdali at the pass → 06:49 map with the Afghan arrow to PANIPAT and the
-  "NEXT EPISODE" card (top-left). The bottom-right 420×260 area is kept clear throughout.
+## End screen (last 20 s: 06:39–06:59)
+- On screen: 06:37 question card → 06:44 Ahmad Shah Abdali at the pass → 06:50 map with the Afghan arrow to PANIPAT and the
+  "NEXT EPISODE" card (top-left). The bottom-right 420×260 area is kept clear throughout (the Company flag on the map now sits left of it).
 - Element 1 (bottom-right, "Video"): Episode 3 — "Why India's Fate Was Decided at Panipat" — **link when published**.
 - Element 2 ("Playlist"): The Fall of the Mughals — **link when published** (create the playlist with this video first).
 - Element 3: Subscribe button.

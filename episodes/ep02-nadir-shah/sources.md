@@ -44,9 +44,12 @@
 Second candidate *Nadir Shah on the Peacock Throne after his defeat of Muhammad Shah* (c. 1850, San Diego Museum of
 Art, public domain) could not be downloaded: Wikimedia returned HTTP 429 (rate limit) for 15+ minutes; skipped and
 replaced by a drawn scene (s43). Every other picture in the film is original flat-vector art drawn in code.
-Coastlines: Natural Earth (public domain) via npm `world-atlas` (land-50m). Historical borders are hand-drawn and
-simplified.
+Coastlines and the borders used for Persia (modern Iran + Afghanistan): Natural Earth (public domain) via npm
+`world-atlas` (land-50m, countries-50m). Mughal and regional borders are hand-drawn simplified polygons. Every pin is
+placed from real coordinates in `assets/maps/places.json`.
 
 ## Audio
-All narration is local Kokoro-82M (`bm_george`). All music and sound effects are synthesised in code
+All narration is local Kokoro-82M (`bm_george`). v2 name respellings are in `assets/characters/pronunciation.json`;
+they were checked with pocketsphinx phoneme decoding (PyPI) because Whisper models could not be downloaded
+(huggingface.co and openaipublic.azureedge.net are blocked from this cloud session). All music and sound effects are synthesised in code
 (`assets/audio/ccaudio.py`, `tools/mix.py`); no downloaded audio.
